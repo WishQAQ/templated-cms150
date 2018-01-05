@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=gbk">
+<meta charset=gbk>
+<meta http-equiv="X-UA-Compatible" content="IE=10,IE=9,IE=8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<link type="text/css" media="all" href="/gong/css/gong.css"
+rel="stylesheet">
+<title>培训师工具屋- 专注NLP教练技术 体会感悟人生！</title>
+<meta name="keywords" content="欲思博客,网赚博客,福利,wordpress教程,前端开发">
+<meta name="description" content="欲思博客是一个关注前端开发、网站建设、wordpress主题的独立博客，有时也分享一些个人福利和网络赚钱心得！">
+<link type="text/css" media="all" href="/gong/css/gong.css" rel="stylesheet">
+<link href='http://www.youziku.com/webfont/CSS/2a9e38be0c2d14642bad578680088b78' rel='stylesheet' type='text/css'/>
+
+
+
+  
+function postDigg(ftype,aid)   
+{   
+	var taget_obj = document.getElementById('diggNum'+aid);
+	var saveid = GetCookie('diggid');
+	if(saveid != null)
+	{
+		var saveids = saveid.split(',');
+		var hasid = false;
+		saveid = '';
+		j = 1;
+		for(i=saveids.length-1;i>=0;i--)
+		{
+			if(saveids[i]==aid && hasid) continue;
+			else {
+				if(saveids[i]==aid && !hasid) hasid = true;
+				saveid += (saveid=='' ? saveids[i] : ','+saveids[i]);
+				j++;
+				if(j==20 && hasid) break;
+				if(j==19 && !hasid) break;
+			}
+		}
+		if(hasid) { alert("您已经顶过该帖，请不要重复顶帖 ！"); return; }
+		else saveid += ','+aid;
+		SetCookie('diggid',saveid,1);
+	}
+	else
+	{
+		SetCookie('diggid',aid,1);
+	}
+/*此处是调用dedeajax2.js文件里面的ajax类，实现无刷新数据的处理 */
+	myajax = new DedeAjax(taget_obj,false,false,'','',''); 
+	var url = "/plus/digg_ajax_list.php?action="+ftype+"&id="+aid;
+	myajax.SendGet2(url);
+}   
+
+function getDigg(aid)   
+{   
+    var taget_obj = document.getElementById('diggNum'+aid);   
+    myajax = new DedeAjax(taget_obj,false,false,'','','');   
+    myajax.SendGet2("/plus/digg_ajax_list.php?id="+aid);   
+    DedeXHTTP = null;   
+}   
+</script>
+
+
+    <!--[if lt IE 9]>
+      
+      </script>
+      
+      </script>
+    <![endif]-->
+    <!--[if lte IE 8]>
+    <![endif]-->
+
+  </head>
+<body class="articlelist">
+    <div style="position: absolute; left: -1px; bottom: -1px; z-index: 0; width: 0px; height: 0px; overflow: hidden; visibility: hidden; display: none;"
+    id="BAIDU_DUP_fp_wrapper">
+      <iframe style="width: 0px; height: 0px; visibility: hidden; display: none;"
+      src="/gong/images/o.htm" id="BAIDU_DUP_fp_iframe">
+      </iframe>
+    </div>
+    <header id="header" class="header">
+      <div class="container-inner">
+        <div class="yusi-logo">
+          <a href="http://yusi123.com/">
+            <h1>
+              <span class="yusi-mono">
+                培训师工具屋
+              </span>
+              <span class="yusi-bloger">
+                - 好好学习 天天向上 拥有平衡式人生！
+              </span>
+            </h1>
+          </a>
+        </div>
+      </div>
+     
+     
+      <div id="nav-header" class="navbar">
+<ul class="nav">
+    
+    
+    <li  class='current-menu-parent a' class="menu-item menu-item-type-custom menu-item-object-custom "><a href="/" title="培训师工具屋">首页</a></li>
+     
+     
+     
+     
+     <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu  "><a  id="1"  href="/zmryt/" >每日一贴</a>    
+              <ul class="sub-menu">       
+                       
+             </ul>    
+           </li><li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu  "><a  id="2"  href="/zjpwk/" >教练文库</a>    
+              <ul class="sub-menu">       
+                         
+                  <li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="/zjpwk/jljs/">教练技术</a> </li>  
+                         
+                  <li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="/zjpwk/nlp/">NLP</a> </li>  
+                         
+                  <li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="/zjpwk/cm/">催眠</a> </li>  
+                         
+                  <li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="/zjpwk/xtpl/">系统排列</a> </li>  
+                         
+                  <li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="/zjpwk/wxzl/">完型治疗</a> </li>  
+                         
+                  <li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="/zjpwk/qzgx/">亲子关系</a> </li>  
+                         
+                  <li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="/zjpwk/tdxl/">团队训练</a> </li>  
+                         
+                  <li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="/zjpwk/ytxw/">源头学问</a> </li>  
+                         
+                  <li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="/zjpwk/nlpsj/">nlp书籍</a> </li>  
+                         
+                  <li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="/zjpwk/qt/">其它</a> </li>  
+                       
+             </ul>    
+           </li><li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu  "><a  id="3"  href="/zpxgj/" >培训工具</a>    
+              <ul class="sub-menu">       
+                         
+                  <li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="/zpxgj/pxgs/">培训故事</a> </li>  
+                         
+                  <li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="/zpxgj/pxyx/">培训游戏</a> </li>  
+                         
+                  <li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="/zpxgj/pxdy/">培训电影</a> </li>  
+                         
+                  <li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="/zpxgj/pxqc/">培训器材</a> </li>  
+                       
+             </ul>    
+           </li><li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu  "><a  id="4"  href="/zzxsp/" >在线视频</a>    
+              <ul class="sub-menu">       
+                       
+             </ul>    
+           </li> 
+       
+       
+       <li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="http://bbs.pxsgjw.com/forum.php" target="_blank">资源下载</a></li>
+       <li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="/zzltz/" target="_blank">资料套装</a>  
+
+          <li style="float:right;">
+            <div class="toggle-search">
+              <i class="fa fa-search">
+              </i>
+            </div>
+            <div class="search-expand" style="display: none;">
+              <div class="search-expand-inner">
+                <form name="formsearch" action="/search.php" target="_blank" class="searchform themeform">
+                  <div>
+                  <input class="searcht" type="ext"  name="q" value="search..." onfocus="if(this.value==''){this.value='';}" onblur="if(this.value=='') {this.value='';}">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <div class="screen-mini">
+          <button data-type="screen-nav" class="btn btn-inverse screen-nav">
+            <i class="fa fa-list">
+            </i>
+          </button>
+        </div>
+      </div>
+    </header>
+    
+    <section class="container">
+      <div class="speedbar">
+        <div class="toptip">
+          <strong class="text-success">
+            <i class="fa fa-volume-up">
+            </i>
+          </strong>
+          请在Chrome、Firefox等现代浏览器浏览本站。另外提供付费解决WP主题修改定制等技术服务，如果需要请
+          <code>
+            <a href="http://yusi123.com/go/add_qq" rel="external nofollow" target="_blank"
+            title="联系QQ">
+              <i class="fa fa-qq">
+              </i>
+              点击
+            </a>
+          </code>
+          加我 QQ 说你的需求。
+        </div>
+      </div>
+<!-- /header -->
+
+<div class="channel-nav w960 center clear">
+	<ul>
+              
+	</ul>
+	<span class="back">
+		<a href="/">返回首页</a>
+	</span>
+</div><!-- /channel-nav -->
+
+<div class="w960 center clear mt1">
+	<div class="pleft">
+		<div class="place">
+			<strong>当前位置:</strong>：<a href="/">主页</a> &gt; <a href='/tags.html'>TAG标签</a> &gt;  站内公告
+		</div><!-- /place -->
+		<div class="listbox">
+			<ul class="e2">
+<li>
+      				<a href='/zgywm/dgbz/28.html' class='preview'><img src='/uploads/z_adtp/jylcsyt-lp.jpg'/></a>
+					<a href="/zgywm/dgbz/28.html" class="title">订购资料流程</a>
+					<span class="info">
+						<small>日期：</small>2014-05-23 01:55:59
+						<small>点击：</small>157
+						<small>好评：</small>0
+					</span>
+					<p class="intro">
+						...
+					</p>
+				</li><li>
+      				<a href='/zgywm/dgbz/27.html' class='preview'><img src='/images/defaultpic.gif'/></a>
+					<a href="/zgywm/dgbz/27.html" class="title">常见问题参考</a>
+					<span class="info">
+						<small>日期：</small>2014-05-23 01:55:45
+						<small>点击：</small>84
+						<small>好评：</small>0
+					</span>
+					<p class="intro">
+						1、如何订购资料？ 您可以首先浏览我们的网站了解商品。看到您满意的商品您可以直接在我们的网站上实现订购。您也可以和我们网站的客服人员联系订购。网上订购流程简便易操作，支持现金支付、货到付款、支付宝、网银在线支付。 2、通过工具屋订购的资料质量...
+					</p>
+				</li><li>
+      				<a href='/zgywm/dgbz/26.html' class='preview'><img src='/images/defaultpic.gif'/></a>
+					<a href="/zgywm/dgbz/26.html" class="title">订购者必读</a>
+					<span class="info">
+						<small>日期：</small>2014-05-03 03:17:25
+						<small>点击：</small>78
+						<small>好评：</small>0
+					</span>
+					<p class="intro">
+						进站必读 该网站为个人网站，本人是秉承终身学习，本着分享产生力量的原则来维护该网站。 对于日常维护网站的工作人员可以称呼某某老师。 订购说明： 佛曰一花一世界，一叶一菩提。相遇即是缘，本站诚挚希望和每一位朋友都能常乐和气无嫌隙。为避免日后发生...
+					</p>
+				</li>
+			</ul>
+		</div><!-- /listbox -->
+		<div class="dede_pages">
+			<ul class="pagelist">
+             <span class="pageinfo">共 <strong>2</strong>页<strong>11</strong>条</span> <li><a href='/tag/zhannagonggao_14_1.html'>首页</a></li>
+ <li><a href='/tag/zhannagonggao_14_1.html'>上一页</a></li>
+ <li><a href='/tag/zhannagonggao_14_1.html'>1</a></li>
+<li class="thisclass">2</li>
+  <li>末页</li> 
+			</ul>
+		</div><!-- /pages -->
+	</div><!-- /pleft -->
+	
+	<div class="pright">
+		<div class="commend">
+			<dl class="tbox">
+				<dt><strong>推荐内容</strong></dt>
+				<dd>
+					<ul class="d4">
+           
+					</ul>
+				</dd>
+			</dl>
+		</div><!-- /commend -->
+		
+		<div class="hot mt1">
+			<dl class="tbox">
+				<dt><strong>热点内容</strong></dt>
+				<dd>
+					<ul class="c1 ico2">
+                    <li><a href="/zzltz/nlp/dsb.html">NLP教练技术《导师版》工具包</a></li>
+<li><a href="/zzltz/nlp/jlb.html">教练技术《教练版》工具包</a></li>
+<li><a href="/zjpwk/nlp/190.html">从NLP的角度看大脑的工作原理</a></li>
+<li><a href="/zjpwk/jljs/186.html">教练技术案例之-服装生产厂</a></li>
+<li><a href="/zjpwk/jljs/185.html">做为家长-需要掌握的教练技术的</a></li>
+<li><a href="/zjpwk/qt/194.html">员工为什么反感培训？</a></li>
+<li><a href="/zjpwk/188.html">教练语录</a></li>
+<li><a href="/zjpwk/jljs/191.html">教练技术实践案例之--自我控制</a></li>
+<li><a href="/zpxgj/pxdy/195.html">电影《加油，印度》中的教练技术</a></li>
+<li><a href="/zpxgj/pxdy/193.html">每一位创业者都需要看的10部电影</a></li>
+
+					</ul>
+				</dd>
+			</dl>
+		</div>
+
+
+	</div><!-- /pright -->
+</div>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <div class="copyright pull-left">
+          <a href="http://yusi123.com/" title="欲思博客">
+            欲思博客
+          </a>
+          版权所有，保留一切权利 ! Theme
+          <a href="http://yusi123.com/3233.html">
+            Yusi
+          </a>
+          ·
+          <a href="http://yusi123.com/sitemap.xml" title="站点地图">
+            站点地图
+          </a>
+          ? 2011-2014 · 赣ICP备13005641号 · 托管于
+          <a rel="nofollow" target="_blank" href="http://yusi123.com/go/aliyun">
+            阿里云
+          </a>
+          &amp;
+          <a rel="nofollow" target="_blank" href="http://yusi123.com/go/qiniu">
+            七牛
+          </a>
+        </div>
+        <div class="trackcode pull-right">
+         
+          
+          <a href="http://tongji.baidu.com/hm-web/welcome/ico?s=b52ad73b0742bc99858449915680c213"
+          target="_blank">
+            网站统计
+          </a>
+        </div>
+      </div>
+    </footer>
+    <div style="display: none;" class="rollto">
+      <button class="btn btn-inverse" data-type="totop" title="回顶部">
+        <i class="fa fa-arrow-up">
+        </i>
+      </button>
+    </div>
+    
+
+  window._deel = {
+	name: '欲思博客',
+	url: 'http://yusi123.com/wp-content/themes/yusi',
+	ajaxpager: 'on',
+	commenton: 0,
+	roll: [2, 5],
+	appkey: {
+	  tqq: '801497376',
+	  tsina: '3036462609'
+	}
+  }
+  if (document.domain == "images.yusi123.com") {
+	window.location.href = 'http://yusi123.com/?referrer=http://images.yusi123.com';
+  }
+</script>    
+
+<!-- /footer -->
+
+</body>
+</html>

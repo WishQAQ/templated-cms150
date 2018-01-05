@@ -1,0 +1,1 @@
+<li><a href="[field:arcurl/]"class="post-thumbnail"title="[field:title/]"rel="bookmark"><img style="height:117px; width:324px"src="[field:litpic/]"alt="[field:title/]"/></a></li>

@@ -1,0 +1,8 @@
+INSERT INTO `dede_myad` VALUES('1','0','0','indexTopBanner1','上01-619*77','0','1297933028','1300525028','<a href=\"#\"  target=\"_blank\"><img src=\"/gong/images/ad01.jpg\"/></a>','');
+INSERT INTO `dede_myad` VALUES('2','0','0','indexTopBanner2','上02-619*77','0','1297933605','1300525605','<a href=\"#\"  target=\"_blank\"><img src=\"/gong/images/ad02.jpg\"/></a>','');
+INSERT INTO `dede_myad` VALUES('3','0','0','innerTopBanner1','首页右侧03-368*137','0','1297934052','1300526052','<a href=\"#\"  target=\"_blank\"><img class=\"mt10\" src=\"/gong/images/ad03.jpg\"/></a>','');
+INSERT INTO `dede_myad` VALUES('21','0','0','yx','首页右侧04-368*137','0','1413572758','1416164758','<a href=\"#\"  target=\"_blank\"><img class=\"g430\" src=\"/gong/images/ad04.jpg\"/></a>','');
+INSERT INTO `dede_myad` VALUES('22','0','0','y03','首页右侧05-368*137','0','1414011235','1416603235','<a href=\"#\"  target=\"_blank\"><img class=\"mt10\" src=\"/gong/images/ad05.jpg\"/></a>','');
+INSERT INTO `dede_myad` VALUES('23','0','0','y06','首页右侧06-368*137','0','1414011297','1416603297','<a href=\"#\"  target=\"_blank\"><img class=\"gg430 mt10\" src=\"/gong/images/ad06.jpg\"/></a>','');
+INSERT INTO `dede_myad` VALUES('24','0','0','y07','首页右侧07-368*137','0','1414011414','1416603414','<a href=\"#\"  target=\"_blank\"><img class=\"gg430 mt10\" src=\"/gong/images/ad07.jpg\"/></a>','');
+INSERT INTO `dede_myad` VALUES('25','0','0','y08','文章页底部广告 - 950*70','0','1414064827','1416656827','<a href=\"#\"  target=\"_blank\"><img class=\"gg430 mt10\" src=\"/gong/images/ad08.jpg\"/></a>','');

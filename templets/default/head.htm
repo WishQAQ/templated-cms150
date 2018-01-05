@@ -1,0 +1,58 @@
+<div id="top-part">
+  <div id="top-bar"class="navbar navbar-inverse">
+    <div id="logo">
+      <hgroup itemscope itemtype="http://schema.org/WPHeader">
+        <h1 class="logoimg"><a href="/"title="{dede:global.cfg_webname/}"rel="home">{dede:global.cfg_webname/}</a></h1>
+      </hgroup>
+    </div>
+    <ul class="nav">
+      <!--<li class="dropdown"id="profile-messages"><a title=""href="#"data-toggle="dropdown"data-target="#profile-messages"class="dropdown-toggle"><i class="icon icon-fixed-width icon-signin"></i><span class="text">登录</span><b class="caret"></b></a>
+			<ul class="dropdown-menu">
+				<form class="user-login"name="loginform"action="http://www.wpdaxue.com/login?redirect_to=http%3A%2F%2Fwww.wpdaxue.com%2F"method="post">
+					<li><i class="icon-fixed-width icon-user"></i><input class="ipt"placeholder="用户名"type="text"name="log"value=""size="18"></li>
+					<li><i class="icon-fixed-width icon-lock"></i><input class="ipt"placeholder="密码"type="password"name="pwd"value=""size="18"></li>
+					<li><input name="rememberme"id="rememberme"type="checkbox"checked="checked"value="forever"/>记住我的登录信息</li>
+					<li class="btn"><input class="login-btn"type="submit"name="submit"value="登录"></li>
+					<li><a class="pw-reset"rel="nofollow"href="http://www.wpdaxue.com/login?action=lostpassword"><i class="icon-info-sign"></i>忘记密码？</a></li>
+					<input type="hidden"name="redirect_to"value=""/><input type="hidden"name="wpuf_login"value="true"/><input type="hidden"name="action"value="login"/><input type="hidden"id="_wpnonce"name="_wpnonce"value="e2bc99b6dd"/><input type="hidden"name="_wp_http_referer"value="/"/>
+				</form>
+			</ul>
+			</li>
+			<li class="user-btn user-reg"><a href="http://www.wpdaxue.com/register"title="注册"rel="nofollow"><i class="icon-fixed-width icon-key"></i><span class="text">注册</span></a></li>-->
+      
+      <li id="qqqun"class="other-nav">{dede:global.qqmail/}</li>
+      <!--<li id="swb"class="other-nav"><wb:follow-button uid="2991975565"type="red_2"width="136"height="24"></wb:follow-button></li>-->
+    </ul>
+    <div id="search">
+      <div class="toggle-search"> <i class="icon-fixed-width icon-search icon-white"></i> </div>
+      <div class="search-expand">
+        <div class="search-expand-inner">
+          <form class="searchform themeform"action="{dede:global.cfg_cmsurl/}/plus/search.php">
+            <div>
+              <input type="text"class="search"name="q"x-webkit-speech=""value="输入内容并按回车键"/>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <header id="header"role="banner">
+    <nav id="main-nav" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement"> <a href="#" class="visible-phone"><i class="icon-align-justify"></i>导航菜单</a>
+      <ul>
+        <li{dede:field name="typeid" runphp="yes"}(@me=="")?@me=" class='current-menu-item'":@me="";{/dede:field} class="{dede:field.currentstyle/}submenu"> <a href="/" title="{dede:global.cfg_webname/}"><i class="icon-fixed-width icon-home"></i>网站首页</a>
+        </li>
+        {dede:channelartlist typeid='1,2,3,33,9' row='5'}
+        <li class="{dede:field.currentstyle/}"><a id="{dede:field name='id'/}" href="{dede:field name='typeurl'/}"> <i class="icon-fixed-width icon-00{dede:global.itemindex/}"></i>{dede:field name='typename'/}</a>
+          <ul class="sub-menu">
+            {dede:channel type='son' noself='yes'}
+            <li><a href="[field:typelink/]">[field:typename/]</a></li>
+            {/dede:channel}
+          </ul>
+        </li>
+        {/dede:channelartlist}
+        <li class="{dede:field.currentstyle/}"><a rel="nofollow" href="/member/article_add.php"><i class="icon-fixed-width icon-005"></i>在线投稿</a></li>
+      </ul>
+      <div class="clear"> </div>
+    </nav>
+  </header>
+</div>

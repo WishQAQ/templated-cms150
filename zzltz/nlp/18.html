@@ -1,0 +1,953 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>NLP教练技术《导师版》工具包_培训师工具屋</title>
+<meta name="keywords" content="NLP,教练,技术,导师版,工具包,导师,介绍," />
+<meta name="description" content="导师版介绍" />
+
+<link rel="stylesheet" type="text/css" href="/templets/gjw/images/index.css">
+<link rel="stylesheet" type="text/css" href="/templets/gjw/images/Extras.css">
+<script language="javascript" type="text/javascript" src="/include/dedeajax2.js"></script>
+<!--商品焦点图-->
+<SCRIPT src="/templets/gjw/js/jquery-1.2.6.pack.js" type=text/javascript></SCRIPT>
+
+<!--商品焦点图-->
+<script language="javascript" type="text/javascript">
+<!--
+function CheckLogin(){
+	  var taget_obj = document.getElementById('_ajax_feedback');
+	  myajax = new DedeAjax(taget_obj,false,false,'','','');
+	  myajax.SendGet2("/member/ajax_feedback.php");
+	  DedeXHTTP = null;
+}
+function postBadGood(ftype,fid)
+{
+	var taget_obj = document.getElementById(ftype+fid);
+	var saveid = GetCookie('badgoodid');
+	if(saveid != null)
+	{
+		var saveids = saveid.split(',');
+		var hasid = false;
+		saveid = '';
+		j = 1;
+		for(i=saveids.length-1;i>=0;i--)
+		{
+			if(saveids[i]==fid && hasid) continue;
+			else {
+				if(saveids[i]==fid && !hasid) hasid = true;
+				saveid += (saveid=='' ? saveids[i] : ','+saveids[i]);
+				j++;
+				if(j==10 && hasid) break;
+				if(j==9 && !hasid) break;
+			}
+		}
+		if(hasid) { alert('你刚才已表决过了喔！'); return false;}
+		else saveid += ','+fid;
+		SetCookie('badgoodid',saveid,1);
+	}
+	else
+	{
+		SetCookie('badgoodid',fid,1);
+	}
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	myajax.SendGet2("/plus/feedback.php?aid="+fid+"&action="+ftype+"&fid="+fid);
+}
+function postDigg(ftype,aid)
+{
+	var taget_obj = document.getElementById('newdigg');
+	var saveid = GetCookie('diggid');
+	if(saveid != null)
+	{
+		var saveids = saveid.split(',');
+		var hasid = false;
+		saveid = '';
+		j = 1;
+		for(i=saveids.length-1;i>=0;i--)
+		{
+			if(saveids[i]==aid && hasid) continue;
+			else {
+				if(saveids[i]==aid && !hasid) hasid = true;
+				saveid += (saveid=='' ? saveids[i] : ','+saveids[i]);
+				j++;
+				if(j==20 && hasid) break;
+				if(j==19 && !hasid) break;
+			}
+		}
+		if(hasid) { alert("你已经顶过该日志了~"); return; }
+		else saveid += ','+aid;
+		SetCookie('diggid',saveid,1);
+	}
+	else
+	{
+		SetCookie('diggid',aid,1);
+	}
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	var url = "/plus/digg_ajax.php?action="+ftype+"&id="+aid;
+	myajax.SendGet2(url);
+}
+function getDigg(aid)
+{
+	var taget_obj = document.getElementById('newdigg');
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	myajax.SendGet2("/plus/digg_ajax.php?id="+aid);
+	DedeXHTTP = null;
+}
+function check(){
+		if(document.formsearch.searchtype.value=="")
+		document.formsearch.action="http://www.google.cn/custom"
+		else
+		document.formsearch.action="/plus/search.php"
+	} 
+-->
+</script>
+
+</head>
+<body>
+<div class="header">
+   <div class="nav">
+    
+       <div id="logo"><a href="/" title="教练技术"><img src="/templets/gjw/images/logo.png" alt="教练技术"></a></div>
+       <!-- 导航开始 --> 
+   
+       <div id="dh">
+          <ul>
+            <li class="first"><a href="/" title="培训师工具屋">首页</a></li>
+           <li><a  id="1"  href="/zmryt/" class="tablink arwlink">每日一贴</a>    
+              <ul class="subnav">       
+                       
+             </ul>    
+           </li><li><a  id="2"  href="/zjpwk/" class="tablink arwlink">精品文库</a>    
+              <ul class="subnav">       
+                         
+                  <li><a href="/zjpwk/jljs/">教练技术</a> </li>  
+                         
+                  <li><a href="/zjpwk/nlp/">NLP</a> </li>  
+                         
+                  <li><a href="/zjpwk/cm/">催眠</a> </li>  
+                         
+                  <li><a href="/zjpwk/xtpl/">系统排列</a> </li>  
+                         
+                  <li><a href="/zjpwk/wxzl/">完型治疗</a> </li>  
+                         
+                  <li><a href="/zjpwk/qzgx/">亲子关系</a> </li>  
+                         
+                  <li><a href="/zjpwk/tdxl/">团队训练</a> </li>  
+                         
+                  <li><a href="/zjpwk/ytxw/">源头学问</a> </li>  
+                         
+                  <li><a href="/zjpwk/qt/">其它</a> </li>  
+                       
+             </ul>    
+           </li><li><a  id="3"  href="/zpxgj/" class="tablink arwlink">培训工具</a>    
+              <ul class="subnav">       
+                         
+                  <li><a href="/zpxgj/pxgs/">培训故事</a> </li>  
+                         
+                  <li><a href="/zpxgj/pxyx/">培训游戏</a> </li>  
+                         
+                  <li><a href="/zpxgj/pxdy/">培训电影</a> </li>  
+                         
+                  <li><a href="/zpxgj/pxqc/">培训器材</a> </li>  
+                       
+             </ul>    
+           </li><li><a  id="4"  href="/zzxsp/" class="tablink arwlink">在线视频</a>    
+              <ul class="subnav">       
+                       
+             </ul>    
+           </li> 
+           <li class="tool"><a href="http://bbs.pxsgjw.com/forum.php" target="_blank">资源下载</a></li>
+           <li ><a style="color: #FC0" href="/zzltz/" target="_blank">资料套装</a>
+               <ul>  
+               <li><a href="/zzltz/nlp/" target="_blank">NLP教练技术</a></li>
+               <li><a href="/zzltz/mszt/" target="_blank">名师专题</a></li>
+               </ul>
+           </li>     
+          </ul>
+       </div>
+
+      <!-- 搜索开始 -->
+          
+              
+                 <div class="so">
+          <form  name="formsearch" action="/search.php" target="_blank">
+          <input type="hidden" name="searchtype" value="titlekeyword">
+          <input class="input_text"  type="text" name="q" value="请输入您要搜索的关键词" onfocus="if(this.value==&#39;请输入您要搜索的关键词&#39;){this.value=&#39;&#39;;}" onblur="if(this.value==&#39;&#39;) {this.value=&#39;请输入您要搜索的关键词&#39;;}">
+          <input type="submit" class="input_search" value="搜索" />
+                 </form>
+
+                  </div>
+
+ <div class="clear" ></div>            
+<!-- 搜索结束 -->   
+
+
+   </div>
+</div>
+
+<!-- 登陆框开始 -->
+   <div class="top_dd">
+            
+
+
+        <div class="top_dd01">
+         
+<strong class="text-success">最新消息：</strong>
+原网站由于技术原因导致数据丢失，老站新开，谢谢新老客户共同探讨！
+<strong class="text-success">你还可以：</strong> <a  href="/">投稿</a> / <a  href="/">广告合作</a> /&nbsp; <a  href="/zzdh.html">培训机构导航</a>  / 联系邮箱：<strong class="text-info">pxsgjw@pxsgjw.com</strong>
+</div>
+   
+   <div class="zc">
+         <img src="/templets/gjw/images/tel.jpg" alt="[field:title /]">
+                                   
+   </div>
+
+
+      </div>
+<!-- 登陆框结束 -->    
+
+<!--头部结束-->
+
+<!--主体开始-->
+<div class="gong">
+<!--当前位置-->
+    <div class="dqwz"><p>您当前的位置：<a href='http://www.pxsgjw.com/'>网站首页</a> > <a href='/zzltz/'>资料套装</a> > <a href='/zzltz/nlp/'>NLP教练技术</a> > NLP教练技术《导师版》工具包</p></div>
+
+
+<!--商品参数开始-->
+
+<div class="cpnr_img">
+
+    <IMG  src="/uploads/z_sptp/001-dsb.gif" jqimg="/uploads/z_sptp/001-dsb.gif" width=350 height=350>
+</div>
+
+<!--商品规格开始-->
+<div class="cpnr_gg f_l">
+     <h1>NLP教练技术《导师版》工具包</h1>
+     <li>订购价格：<b>￥3698</b>元</li>
+     <li>商品编号：GJWA6363001</li>
+     <li>资料类型：纸质书籍；视频文件；录音文件；文档；电子书</li>
+     <li>资料载体：1000GB西数移动硬盘+35本纸质书籍</li>
+     <li>适合人群： NLP职业导师；职业培训师；企业高管；心理咨询师；教练技术，NLP研究者；</li>
+     <li>库存数量：3</li>
+     <li>销售情况：已有<small><script src="/plus/count.php?view=yes&aid=18&mid=1" type='text/javascript' language="javascript"></script></small>人关注此圣品</li>
+     <li>快递物流：<small>0元</small>可全国送达，默认发顺丰快递，下单后24小时内发货)</li>
+     <li>咨询电话：<small>4006-059-050</small></li>
+     
+
+<li>好东西要分享:<div class="bshare-custom fxd"><a class="bshare-qzone" title="分享到QQ空间"></a><a class="bshare-sinaminiblog" title="分享到新浪微博"></a><a class="bshare-renren" title="分享到人人网"></a><a class="bshare-qqmb" title="分享到腾讯微博"></a><a class="bshare-neteasemb" title="分享到网易微博"></a><a class="bshare-more bshare-more-icon more-style-addthis" title="更多平台"></a><span class="BSHARE_COUNT bshare-share-count">0</span></div><script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#style=-1&uuid=&pophcol=2&lang=zh"></script><script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/bshareC0.js"></script>
+</div></li>
+
+      <div class="ljdg_an"><a rel="nofollow" href="#ljdg"><img src="/templets/gjw/images/ljqg.jpg"></a><a href="/"><img src="/templets/gjw/images/zxzx.jpg"></a></div>
+
+
+<br class="clear" />
+
+</div>
+
+
+<!--商品参数结束-->
+
+
+<div class="gong" style="background:#FFF">
+<!--产品内容页左侧开始-->
+
+<div class="cplist_l f_l">
+ <h3>站内导航</h3> 
+     <div class="cplist_l_01">
+       
+         <ul>
+          
+         <li><a href='/zmryt/'>每日一贴</a> </li> 
+         
+         <li><a href='/zjpwk/'>精品文库</a> </li> 
+         
+         <li><a href='/zpxgj/'>培训工具</a> </li> 
+         
+         <li><a href='/zzxsp/'>在线视频</a> </li> 
+         
+         <li><a href='/zzltz/'>资料套装</a> </li> 
+         
+         <li><a href='/zjldx/'>教练短讯</a> </li> 
+         
+         </ul>
+       <br class="clear" />
+     </div>
+       
+    
+     <h3>推荐资料套装</h3> 
+     <div class="cplist_l_02">
+         <ul>
+            <li id="xglist_tp"><a href="/zzltz/20.html"><img src="/uploads/z_sptp/004-dzb.gif"></a></li>
+             <li id="xglist_nr"><h5><a href="/zzltz/20.html">《订制版》工具包</a></h5>
+                 <p>适合人群：订制</p>
+                 <span>订购价格：<i>商议</i>元</span>
+             </li>
+<li id="xglist_tp"><a href="/zzltz/21.html"><img src="/uploads/z_sptp/005-48s.gif"></a></li>
+             <li id="xglist_nr"><h5><a href="/zzltz/21.html">NLP绝版书籍48本</a></h5>
+                 <p>适合人群：NLP研究者</p>
+                 <span>订购价格：<i>2600</i>元</span>
+             </li>
+<li id="xglist_tp"><a href="/zzltz/19.html"><img src="/uploads/z_sptp/003-yyb.gif"></a></li>
+             <li id="xglist_nr"><h5><a href="/zzltz/19.html">《应用版》工具包</a></h5>
+                 <p>适合人群：看完该套资料2遍后觉得每个人都应该至少看一遍</p>
+                 <span>订购价格：<i>560</i>元</span>
+             </li>
+<li id="xglist_tp"><a href="/zzltz/nlp/18.html"><img src="/uploads/z_sptp/001-dsb.gif"></a></li>
+             <li id="xglist_nr"><h5><a href="/zzltz/nlp/18.html">《导师版》工具包</a></h5>
+                 <p>适合人群： NLP职业导师；职业培训师；企业高管；心理咨询师；教练技术，NLP研究者；</p>
+                 <span>订购价格：<i>3698</i>元</span>
+             </li>
+<li id="xglist_tp"><a href="/zzltz/nlp/17.html"><img src="/uploads/z_sptp/002-jlb.gif"></a></li>
+             <li id="xglist_nr"><h5><a href="/zzltz/nlp/17.html">《教练版》工具包</a></h5>
+                 <p>适合人群：参加过教练技术的人群；企业高管；职业培训师</p>
+                 <span>订购价格：<i>698</i>元</span>
+             </li>
+
+<br class="clear" />
+        </ul>
+     </div>
+      
+      
+      
+   <h3>客户最新评论</h3>
+      
+     <div class="cplist_l_02">
+          <ul>
+         <li id="xglist_tp"><a href="/zzltz/nlp/18.html" target="_blank" title="NLP教练技术《导师版》工具包"><img src="/uploads/z_sptp/001-dsb.gif"></a></li>
+
+<li id="xglist_nr"><a href="/zzltz/nlp/18.html" target="_blank" title="NLP教练技术《导师版》工具包">《导师版》工具包</a>
+<p>评说：资料很强大，希望郭老师以后能在学习上指导一二，不胜感激！</p>
+<span>评价人：<b>小工</b></span></li> 
+<br class="clear" />
+         </ul>
+    </div>     
+</div>
+
+<!--产品内容页左侧结束-->
+
+
+<!--产品内容页右侧开始-->
+<div class="cplist_r f_r"> 
+     <DIV>
+          <div id="cp_" class="cp_">
+                <ul>
+                    <li id="cp_1" class="hovercpc" onclick="g:HoverLi(1);">
+                       <h5>资料介绍</h5></li>
+                    <li id="cp_2" class="normalcpc" onclick="g:HoverLi(2);">
+                        <h5>支付配送</h5></li>
+                    <li id="cp_3" class="normalcpc" onclick="g:HoverLi(3);">
+                        <h5>售后保障</h5></li>
+                    <li id="cp_4" class="normalcpc" onclick="g:HoverLi(4);">
+                         <h5>客户评价</h5></li>
+      
+                </ul>
+           </div>
+ 
+     
+           <div class="cptt">
+              <div class="diss" id="cpc_01">
+                <img src="/uploads/z_adtp/spms-01.jpg" width="900" height="76">
+                <li style="background: #000; width:900px; text-align:center"><script type="text/javascript" src="/ckplayer/offlights.js"></script>
+<script type="text/javascript" src="/ckplayer/ckplayer.js"></script>
+<script type="text/javascript" src="/plus/ckplayer_common.php"></script>
+<div id="video" style="position:relative;z-index:100;width:830px;height:487px; margin:0 auto;"><div id="a1"></div></div>
+
+
+<script type="text/javascript">
+    var newcpt_share='/plus/ckplayer_share.php';
+	var newcontrol_rel='related.swf,/plus/ckplayer_related.php,1';
+    function Extension(str){//判断开始，下面是调用视频
+        var ext='';
+        if(str){
+                var file=str.toLowerCase();        
+                var filearr=file.split('.');
+                var exten=filearr[filearr.length-1];
+                if(exten=='flv' || exten=='f4v' || exten=='mp4' || exten=='rmov'){
+                        ext='video';        
+                }
+        }
+        return ext;
+    }
+    var _f='';//定义调用视频的f值
+	var _a='';//同上，定义a值
+	var _s=0;//同上，定义s值
+	var _flv='http://v.youku.com/v_show/id_XNjcxNzIyODUy.html'
+	if(Extension(_flv)){//如果是普通视频的话就直接调用
+        _f=_flv;
+        _s=0;
+	}
+	else{//如果不是的话就使用另一种调用方式
+        _f='http://www.pxsgjw.com/ckplayer/video.php?url=[$pat]';
+        _a=_flv;
+        _s=2;
+	}
+//判断结束，下面是调用视频，全部由上面的变量传值
+	var flashvars={
+		f:_f,a:_a,s:_s,c:'0',x:'',
+		l:ckdata['l'],
+		r:ckdata['r'],
+		t:ckdata['t'],
+		d:ckdata['d'],
+		u:ckdata['u'],
+		e:ckdata['e'],
+		p:ckdata['p'],
+		v:ckdata['v'],
+		z:ckdata['z'],
+		my_title:'NLP教练技术《导师版》工具包',
+		my_pic:'http://www.pxsgjw.com/uploads/z_sptp/001-dsb.gif',
+		my_url:encodeURIComponent(window.location.href)
+		};
+
+	var params={bgcolor:'#FFF',allowFullScreen:true,allowScriptAccess:'always'};
+	var attributes={id:'ckplayer_a1',name:'ckplayer_a1',menu:'false'};
+	swfobject.embedSWF('/ckplayer/ckplayer.swf', 'a1', '830', '487', '10.0.0','/ckplayer/expressInstall.swf', flashvars, params, attributes);
+	var video=['->video/mp4'];
+	var support=['iPad','iPhone','ios','android+false','msie10+false'];//默认的在ipad,iphone,ios设备中用html5播放,android,ie10上没有安装flash的也调用html5
+	CKobject.embedHTML5('video','ckplayer_a1',830,487,video,flashvars,support);
+	function ckmarqueeadv(){
+	return '{a href="' + ckdata['madurl'] + '"' + 'target="_blank"' + '}' + '{font color="#FFFFFF" size="12"}'+ ckdata['mad'] + '{/font}' + '{/a}';
+	}
+	function playerstop(){
+		//只有当调用视频播放器时设置e=0或4时会有效果
+		alert('播放完成');	
+	}
+	var _nn=0;
+	var watt=false;
+	function ckplayer_status(str){
+		_nn+=1;
+		if(_nn>200){
+			_nn=0;
+			document.getElementById('statusvalue').value='';
+		}
+		document.getElementById('statusvalue').value=str+'\n'+document.getElementById('statusvalue').value;
+		if(str=='video:play'){
+			if(!watt){
+				watt=true;
+				setInterval('getstart()',1000);
+			}
+		}
+
+	}
+	function getstart(){
+		var a=swfobject.getObjectById('ckplayer_a1').ckplayer_getstatus();
+		var ss='';
+		for (var k in a){
+			ss+=k+":"+a[k]+'\n';
+		}
+		document.getElementById('obj').innerHTML=ss;
+	}
+	function aboutstr(str,f){//查看str字符里是否有f
+		var about=false;
+		var strarray=new Array();
+		var farray=new Array();
+		farray=f.split(",");
+		if(str){
+			for(var i=0;i<farray.length;i++){
+				strarray=str.split(farray[i]);
+				if(strarray.length>1){
+					about=true;
+					break;
+				}
+			}
+		}
+		return about;
+	}
+	//开关灯
+	var box = new LightBox();
+	function closelights(){//关灯
+		box.Show();
+		CKobject._K_('video').style.width='830px';
+		CKobject._K_('video').style.height='487px';
+		swfobject.getObjectById('ckplayer_a1').width=830;
+		swfobject.getObjectById('ckplayer_a1').height=487;
+	}
+	function openlights(){//开灯
+		box.Close();
+		CKobject._K_('video').style.width='830px';
+		CKobject._K_('video').style.height='487px';
+		swfobject.getObjectById('ckplayer_a1').width=830;
+		swfobject.getObjectById('ckplayer_a1').height=487;
+	}
+  </script></li>
+                   <div class="cpjj">
+                    <p>导师版介绍</p>
+                   </div>
+           </div>
+         
+         
+         
+         
+              <div class="undiss" id="cpc_02">
+                  <div class="cpnry_zfps">
+                      <span style="text-align:center"><img src="/uploads/z_adtp/sparc_zffs.jpg" width="900" height="69"></span>
+                    <h5>支付方式：</h5>  
+                    <p>1、<b>货到付款：</b>可以选择宅急送或顺丰快递代收款，将货款及运费以现金方式（代收货款限100元-10000元），直接支付给快递人员。代收款手续费3%-4%与货款一同支付。客服电话：4006-059-050</p>
+    <p>2、<b>现金支付：</b>线下交易，此付款方式只支持直接同城自取客户使用！</p>
+    <p>3、<b>银行汇款/支付宝转账：</b>
+        <p><img src="/uploads/z_adtp/alipay.png" width="109" height="35">&#160;&#160;支付宝账号名：郭瑞士&#160;&#160;&#160;&#160;&#160;&#160;账号：jlgjw02@163.com</p>
+        <p><img src="/uploads/z_adtp/gs.png" width="109" height="35">&#160;&#160;&#160; 工行账号名： 郭瑞士&#160;&#160;&#160;&#160;&#160;&#160;账号：6222 0202 0002 4800 662</p>
+        <p><img src="/uploads/z_adtp/js.png" width="109" height="35">&#160;&#160;&#160; 建行账号名： 郭瑞士&#160;&#160;&#160;&#160;&#160;&#160;账号：6227 0042 2702 0060 420</p>
+        <p><img src="/uploads/z_adtp/ny.png" width="109" height="35">&#160;&#160;&#160; 农行账号名： 郭瑞士&#160;&#160;&#160;&#160;&#160;&#160;账号：6228 4802 1096 8009 410</p>
+    </p>
+    <p>注意！！请支付前与客服人员确定购买产品是否有货，以免增加不必要的手续！ 请汇款/转账后及时与客服人员联系并确定到账，以便及时发货！</p>
+    
+    
+      <h5>发货方式：</h5>  
+      <p><b> 顺丰快递：</b>站内商品默认一律发顺丰快递，全场免运费；</p>
+      <p><b> 宅急送：  </b>对于顺丰不到的地方优先发宅急送，全场免运费；</p>
+       <p><b>邮政EMS：</b>对于顺丰和宅急送均不能到达的地区发邮政EMS，全场免运费；</p>
+       
+       <h5>购物流程示意图：</h5>              
+            <span><img src="/uploads/z_adtp/jylcsyt.jpg" width="900" height="630"></span>
+           
+           
+                    
+                    </div>
+                </div>
+                
+                 <div class="undiss" id="cpc_03">
+                  <div class="cpnry_zfps">
+                <span style="text-align:center"> <img src="/uploads/z_adtp/sparc_shbz.jpg" width="902" height="69"></span>
+    <h5>退换货说明</h5>
+    <p><b>培训师工具屋承诺符合以下情况，由产品售出之日（以实际收货日期为准）起7日内可以退货，15日内可以换货，客户可与培训师工具屋客服中心联系办理退换货事宜。</b></p>
+    
+    <p>1．出现产品质量问题，光盘或者硬盘的毁坏；以及资料的不完整，缺少，所发资料不符。</p>
+    
+    <p>2．书籍没有折损，折旧，光盘没有划痕，硬盘以及包装没有损坏；保持培训师工具屋网站出售时的原质原样，不影响二次销售；</p>
+    
+    <p>3．到货时物流损坏或缺件情况</p>
+    
+    <p>物流损坏指在运输过程中造成的损坏、破碎故障，培训师工具屋服务中心人员核查情况属实（期间可能需要快递人员证明或要求您提供实物照片等，以便售后服务人员快速做出判断及时处理），无条件办理退换货事宜。</p>
+    
+    <p><b>特别说明，以下情况不予办理退换货：</b></p>
+    
+    <p>1、如您验收货物时无异议，我们将不承担产品损坏、短缺、脏污、数量或型号等与订单不符的退换货义务。</p>
+    
+    <p>2、如果成套商品中有部分商品存在质量问题，在办理退货时，必须提供成套商品；</p>
+    
+    <p>3、 3、在商品无任何问题情况下，培训师工具屋承诺：由您实际收到货物日期起7日内，只要未使用不影响二次销售，都可以全额退换货。培训师工具屋所售均为全新品，为保护消费者利益，以下情况视为影响二次销售：</p>
+    
+    <p>A、光盘有划痕；</p>
+    
+    <p>B、硬盘包装损坏以及硬盘被拆开等；</p>
+    
+    <p>C、密封产品原包装打开；</p>
+    
+    <p>D、产品被磨损、脏污；</p>
+    
+    <p>4、如发生退货，请于每天8：00-21：30致电客服，我们将提供服务。退款方式与您的支付方式一致（银行卡退款将在7个工作日生效）.</p>
+      
+     <h5>关于品质</h5> 
+      <p>培训师工具屋承诺所有资料均如实描述，并且站长本人都至少研究2遍以上，确保了正常学习观看之用。并不断为大家完善资料。请您务必仔细查看商品的描述说明，以免选错资料，造成误会。</p>
+       <h5>退换货流程</h5> 
+          <span><img src="/uploads/z_adtp/thhlc.jpg" width="900" height="374"></span>
+         </div>
+                </div>
+                 
+                 
+                   <div class="undiss" id="cpc_04">
+    
+         <!-- //主模板必须要引入/include/dedeajax2.js -->
+<a name='postform'></a>
+<div id="commentBox">
+	<form action="#" method="post" name="feedback">
+  <input type="hidden" name="dopost" value="send" />
+  <input type="hidden" name="comtype" value="comments">
+  <input type="hidden" name="aid" value="18" />
+  <input type="hidden" name="fid" id='feedbackfid' value="0" />		
+  <div class="commentPost" id="_ajax_feedback">
+		<div class="commentUserinfo">
+				 &nbsp;报上名号来：<input type="text" name="username" size="16"/>
+				 
+				 &nbsp;&nbsp;&nbsp;
+				 神兽验证马：<input type='text' name='validate' size='4' style="text-transform:uppercase;"/>
+		</div>
+		<div class="yanzhengma">
+				 <img src="/include/vdimgck.php" id="validateimg" style="cursor:pointer" onclick="this.src=this.src+'?'" title="点击我更换验证码" alt="点击我更换验证码"/>
+		</div>
+         <input type="hidden" name="notuser" id="dcmp-submit-guest" />
+         <label for="dcmp-submit-guest" /> </label>	
+						
+	</div>		
+	<div class="commentArea">
+		<textarea cols="60" name="msg" rows="5"></textarea>
+	</div>	
+	<div class="commentMood">
+	  <ul>                               
+        <li><input type="radio" name="face" value="1" checked="1" /><img src="/templets/gjw/images/mood/ico-mood-1.gif" width="19px" height="16px"/></li>
+        <li><input type="radio" name="face" value="2"/><img src="/templets/gjw/images/mood/ico-mood-2.gif" width="16px" height="16px"/></li>
+        <li><input type="radio" name="face" value="3"/><img src="/templets/gjw/images/mood/ico-mood-3.gif" width="16px" height="16px"/></li>
+        <li><input type="radio" name="face" value="4"/><img src="/templets/gjw/images/mood/ico-mood-4.gif" width="18px" height="16px"/></li>
+        <li><input type="radio" name="face" value="5"/><img src="/templets/gjw/images/mood/ico-mood-5.gif" width="16px" height="16px"/></li>
+        <li><input type="radio" name="face" value="6"/><img src="/templets/gjw/images/mood/ico-mood-6.gif" width="19px" height="16px"/></li>
+        <li><input type="radio" name="face" value="7"/><img src="/templets/gjw/images/mood/ico-mood-7.gif" width="17px" height="16px"/></li>
+        <li><input type="radio" name="face" value="8"/><img src="/templets/gjw/images/mood/ico-mood-8.gif" width="17px" height="16px"/></li> 
+        <li><input type="radio" name="face" value="9"/><img src="/templets/gjw/images/mood/ico-mood-9.gif" width="18px" height="16px"/></li>
+        <li><input type="radio" name="face" value="10"/><img src="/templets/gjw/images/mood/ico-mood-10.gif" width="18px" height="16px"/></li>
+        <li><input type="radio" name="face" value="11"/><img src="/templets/gjw/images/mood/ico-mood-11.gif" width="16px" height="16px"/></li>
+		</ul>
+	</div>	
+	<div class="commentSubmit">
+		<button type="button" onClick='PostComment()'>发表评论</button>
+	</div>	
+	</form>
+</div>
+<a name='commettop'></a>
+<div id="commentLayout">
+	<!-- //这两个ID的区块必须存在，否则JS会出错 -->
+	<div id='commetcontentNew'></div>
+	<div id='commetcontent'></div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+//由于评论载入时使用异步传输，因此必须在最后一步加载（DIGG和评论框须放在评论内容前面）
+//如果一定需要提前的把myajax.SendGet改为myajax.SendGet2，但可能会引起页面阻滞
+-->
+<script language='javascript'>
+function LoadCommets(page)
+{
+		var taget_obj = document.getElementById('commetcontent');
+		var waithtml = "<div style='line-height:50px'><img src='/images/loadinglit.gif' />评论加载中...</div>";
+		var myajax = new DedeAjax(taget_obj, true, true, '', 'x', waithtml);
+		myajax.SendGet2("/plus/feedback_ajax.php?dopost=getlist&aid=18&page="+page);
+		DedeXHTTP = null;
+}
+function PostComment()
+{
+		var f = document.feedback;
+		var nface = '6';
+		var nfeedbacktype = 'feedback';
+		var nvalidate = '';
+		var nnotuser = '';
+		var nusername = '';
+		var npwd = '';
+		var taget_obj = $DE('commetcontentNew');
+		var waithtml = "<div style='line-height:30px'><img src='/images/loadinglit.gif' />正在发送中...</div>";
+		if(f.msg.value=='')
+		{
+			alert("评论内容不能为空！");
+			return;
+		}
+		if(f.validate)
+		{
+			if(f.validate.value=='') {
+				alert("请填写验证码！");
+				return;
+			}
+			else {
+				nvalidate = f.validate.value;
+			}
+		}
+		if(f.msg.value.length > 500)
+		{
+			alert("你的评论是不是太长了？请填写500字以内的评论。");
+			return;
+		}
+		if(f.feedbacktype) {
+			for(var i=0; i < f.feedbacktype.length; i++)
+				if(f.feedbacktype[i].checked) nfeedbacktype = f.feedbacktype[i].value;
+		}
+		if(f.face) {
+			for(var j=0; j < f.face.length; j++)
+				if(f.face[j].checked) nface = f.face[j].value;
+		}
+		if(f.notuser.checked) nnotuser = '1';
+		if(f.username) nusername = f.username.value;
+		if(f.pwd) npwd = f.pwd.value;
+		
+		var myajax = new DedeAjax(taget_obj, false, true, '', '', waithtml);
+		myajax.sendlang = 'gb2312';
+		myajax.AddKeyN('dopost', 'send');
+		myajax.AddKeyN('aid', '18');
+		myajax.AddKeyN('fid', f.fid.value);
+		myajax.AddKeyN('face', nface);
+		myajax.AddKeyN('feedbacktype', nfeedbacktype);
+		myajax.AddKeyN('validate', nvalidate);
+		myajax.AddKeyN('notuser', nnotuser);
+		myajax.AddKeyN('username', nusername);
+		myajax.AddKeyN('pwd', npwd);
+		myajax.AddKeyN('msg', f.msg.value);
+		myajax.SendPost2('/plus/feedback_ajax.php');
+		f.msg.value = '';
+		f.fid.value = 0;
+		if(f.validate)
+		{
+			if($DE('validateimg')) $DE('validateimg').src = "/include/vdimgck.php?"+f.validate.value;
+			f.validate.value = '';
+		}
+}
+function quoteCommet(fid)
+{
+	document.feedback.fid.value = fid;
+}
+LoadCommets(1);
+</script><!-- //评论内容区结束 -->
+
+         
+                </div>
+                 
+           </div>
+
+    </DIV>
+     
+     
+     <a name="ljdg" id="ljdg"></a><br class="clear" />
+      <!--订单开始-->
+<div class="dd_bt"><h4>在线订购</h4>(为了您能快速的收到资料，请认真填写收货地址等信息！下单后3-5天内到货！咨询电话：<span>4006-059-050</span>)</div>
+     
+<div id="cpdd_01">
+      <form action="/plus/diy.php" name="dede_diyform1" enctype="multipart/form-data" method="post">
+
+          <input type="hidden" name="action" value="post" />
+
+          <input type="hidden" name="diyid" value="1" />
+
+          <input type="hidden" name="do" value="2" />
+
+	       <input type="hidden" name="required" value="xingming,shouhuo,shouji,youxiang" />
+
+          <div class="bdbox">
+
+	          <ul>
+
+                  <li><span class="bdl"><em>*</em>资料名称</span><span class="bdr"><span style="color: #06F;font-size:14px;">
+
+                  <input  name='spmc' id='spmc' size="60"  class='txt' value='NLP教练技术《导师版》工具包 3698 元' />
+
+                  </span></span></li>
+
+                  <li><span class="bdl">订购数量</span><span class="bdr"><select name='dgsl' style='width:150px'>
+
+                      <option value='1'>1</option>
+
+                      <option value='2'>2</option>
+
+                      <option value='3'>3</option>
+
+                      <option value='4'>4</option>
+
+                      <option value='5'>5</option>
+
+                      <option value='6'>6</option>
+
+                      <option value='7'>7</option>
+
+                      <option value='8'>8</option>
+
+                      <option value='9'>9</option>
+
+                      <option value='10'>10</option>
+
+                      
+
+                      </select> 套(团购请致电：4006-059-050预约)
+
+                      </span>
+
+                   </li>
+
+                    
+
+                  <li><span class="bdl"><em>*</em>收货姓名</span><span class="bdr"><input  name='xingming' id='xingming' size="18"  class='txt' value='' /></span></li>
+
+                  <li><span class="bdl"><em>*</em>详细地址</span><span class="bdr"><input  name='shouhuo' id='shouhuo' size="60" class='txt'  value='' /></span></li>
+
+                  <li><span class="bdl"><em>*</em>联系手机</span><span class="bdr"><input  name='shouji' id='shouji' size="25"  class='txt' value='' /></span></li>
+
+                  <li><span class="bdl"><em>*</em>常用邮箱</span><span class="bdr"><input name="youxiang" size="25" class="txt" value='' />（后续寺内公益活动通知接收邮箱）</span></li>
+
+                  <li class="gaod">
+
+                      <span class="bdl">付款方式</span>
+
+                      <span class="bdr"><input type='radio' name='fkfs' class='np' value='货到付款' checked>货到付款 (支持全国范围内，默认发顺丰快递)<br />
+
+                      <input type='radio' name='fkfs' class='np' value='银行付款'>银行付款（详情请联系客服）</span>
+
+			      </li>
+
+                  
+
+                  <li class="gaoe">
+
+                    <span class="bdl">送货时间</span>
+
+                    <span class="bdr">
+
+                      <input type='radio' name='shsj' class='np' value='工作日、双休日与假日均可送货' checked>工作日、双休日与假日均可送货<br />
+
+          <input type='radio' name='shsj' class='np' value='只工作日送货（双休日、假日不用送)'>只工作日送货（双休日、假日不用送)<br />
+
+          <input type='radio' name='shsj' class='np' value='只双休日、假日送货（工作日不用送）'>只双休日、假日送货（工作日不用送）<br />
+
+                    </span>
+
+                  </li>
+
+                  
+
+                  <li class="gaob"><span class="bdl">备注留言</span><span class="bdr"><textarea name="beizhu" id='beizhu' rows="4" cols="55" onfocus="if(value=='请尽快发货，送货之前请电话联系，谢谢！'){value=''}" onblur="if (value ==''){value='请尽快发货，送货之前请电话联系，谢谢！'}">请尽快发货，送货之前请电话联系，谢谢！</textarea></span>
+
+                  </li>
+ <input type='hidden' name='dgsj' id='dgsj' style='width:250px'  class='intxt' value='' />
+  <script type="text/javascript">
+
+                    window.onload = function(){
+
+                    var nowDate = new Date();
+
+                    var str = nowDate.getFullYear()+"-"+(nowDate.getMonth() + 1)+"-"+nowDate.getDate()+" "+nowDate.getHours()+":"+nowDate.getMinutes()+":"+nowDate.getSeconds();
+
+                    document.getElementById("dgsj").value=str;
+
+                    }
+
+                    </script>       
+              <li class="gaoc">
+
+                    <span class="bdl">验证码</span>
+
+                    <span class="bdr"><input name="vdcode" id="vdcode" type="text" class="ipt-txt" size="10" style="text-transform:uppercase;" />
+
+                        <a href="#mate_vdimgck"><img id="vdimgck_img" src="../../../include/vdimgck.php" hspace="6" align="absmiddle" onClick="vdimgck();" title="看不清换一张" /></a> <a href="#mate_vdimgck" onClick="vdimgck();">看不清换一张</a> 
+
+ 
+      <input type="hidden" name="dede_fields" value="spmc,text;dgsl,select;xingming,text;shouhuo,text;shouji,text;youxiang,text;fkfs,radio;shsj,radio;beizhu,multitext;dgsj,text" />
+<input type="hidden" name="dede_fieldshash" value="6cd5a1aebd7099e4724b9e296e999381" />
+                    </span>		
+
+                 </li>
+
+                 
+
+                 <li class="tijiao">
+              <input type="image" src="/templets/gjw/images/dd_ljtj.png" name="submit" value="提交" class="send" />
+              <input type="image" src="/templets/gjw/images/dd_qcct.png" onclick="javascript:document.forms['dede_diyform1'].reset(); return false;" name="reset" value="重置"  class="send" />
+
+
+                     
+                     
+                     
+                     
+                 </li>
+
+	        </ul>	
+
+	    </div>	
+
+
+ </form>  
+
+      <!--发货列表-->
+    <div id="dd_fhlb">
+     <p>最近发货列表</p>
+<ul>
+<li><span>2014-05-04
+</span> <a href="/zgywm/fhlb/39.html" target='_blank' title="北京-王先生-教练版工具包-已发货"> 北京-王先生-教练版工具包-已发货</a></li>
+	  
+
+</ul>
+</div>
+
+
+
+<!--发货列表-->
+</div>
+
+
+<script language="JavaScript" type="text/javascript">
+
+function vdimgck()
+
+{
+
+	document.getElementById("vdimgck_img").src = '../../../include/vdimgck.php?'+Math.random();
+
+}
+
+</script>
+<!--订单结束-->
+
+     
+  </div>
+ <!--产品内容页右侧结束-->   
+ <br class="clear" /> 
+
+</div>    
+     
+
+<footer>
+
+<div id="foot2">
+
+<!--返回顶部-->
+<div id="elevator_item">
+        <a id="elevator" onclick="return false;" title="回到顶部"></a>
+        <a class="qr"></a>
+  	<div class="qr-popup">
+    	<a class="code-link"><img class="code" src="/templets/gjw/img//wx.jpg"/></a>
+        <span>加兴善阁为微信好友</span>
+    <div class="arr"></div>
+  </div>
+<script src="js/jquery.min.js" type="text/javascript"></script> 
+<script type="text/javascript">
+$(function() {
+	$(window).scroll(function(){
+		var scrolltop=$(this).scrollTop();		
+		if(scrolltop>=200){		
+			$("#elevator_item").show();
+		}else{
+			$("#elevator_item").hide();
+		}
+	});		
+	$("#elevator").click(function(){
+		$("html,body").animate({scrollTop: 0}, 500);	
+	});		
+	$(".qr").hover(function(){
+		$(".qr-popup").show();
+	},function(){
+		$(".qr-popup").hide();
+	});	
+});
+</script>
+  
+</div>
+
+<div class="foot_nr">
+<p><a href="/zgywm/gjw/35.html" target="_blank">工具屋介绍</a>|<a href="/zgywm/gywm/37.html" target="_blank">关于我们</a>|<a href="/zgywm/gywm/38.html" target="_blank">联系我们</a><img src="/templets/gjw/images/lxwm01.jpg" width="713"  height="12" ><script language="javascript" type="text/javascript" src="http://js.users.51.la/15599164.js"></script>
+<noscript><a href="http://www.51.la/?15599164" target="_blank"><img alt="&#x6211;&#x8981;&#x5566;&#x514D;&#x8D39;&#x7EDF;&#x8BA1;" src="http://img.users.51.la/15599164.asp" style="border:none" /></a></noscript>
+</p></div>
+</div>
+</footer>
+
+
+
+
+<script type="text/javascript" language="javascript">
+//111111111111
+function g(o){return document.getElementById(o);}
+function HoverLi(n){
+//如果有N个标签,就将i<=N;
+for(var i=1;i<=4;i++){g('cp_'+i).className='normalcpc';g('cpc_0'+i).className='undiss';}g('cpc_0'+n).className='diss';g('cp_'+n).className='hovercpc';
+}
+//如果要做成点击后再转到请将<li>中的onmouseover 改成 onclick;
+
+</script>
+
+
+</body>
+</html>

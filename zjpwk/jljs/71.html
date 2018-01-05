@@ -1,0 +1,770 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>萨提亚课程学习心得汇编_培训师工具屋</title>
+<meta name="keywords" content="萨提亚" />
+<meta name="description" content="一、萨提亚学习心得：爸爸妈妈，你们为什么不离婚？ 你有没有小孩子做事拖拖拉拉，无法按时吃饭让你大为头痛？ 你有没有小孩子自控能力较差、沉迷于网络游戏无法自拔？ 你有没有小孩子在你面前表现 出叛逆？ 如何重建父母与孩子间的信任？ …… 面对孩子的各" />
+<!--[if IE 6]>
+	<script>alert('你的IE浏览器版本太低，请使用更高版本或Chrome')</script>
+<![endif]-->
+<link rel="stylesheet" type="text/css" href="/templets/gjw/images/index.css">
+<link href="/templets/gjw/images/Extras.css" rel="stylesheet" media="screen" type="text/css" />
+<link  rel="stylesheet" type="text/css" href="/templets/gjw/images/shCoreDefault.css"/> 
+<script type="text/javascript" src="/templets/gjw/js/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="/templets/gjw/js/all.js"></script>
+<!--[if IE 6]>
+<script type="text/javascript" src="/templets/gjw/images/DD_belatedPNG.js"></script>
+<script>
+DD_belatedPNG.fix('.png_bg');
+</script>
+<![endif]-->
+<script language="javascript" type="text/javascript" src="/include/dedeajax2.js"></script>
+<script type="text/javascript"  src="/templets/gjw/js/shCore.js"></script>
+<script language="javascript" type="text/javascript">
+<!--
+function CheckLogin(){
+	  var taget_obj = document.getElementById('_ajax_feedback');
+	  myajax = new DedeAjax(taget_obj,false,false,'','','');
+	  myajax.SendGet2("/member/ajax_feedback.php");
+	  DedeXHTTP = null;
+}
+function postBadGood(ftype,fid)
+{
+	var taget_obj = document.getElementById(ftype+fid);
+	var saveid = GetCookie('badgoodid');
+	if(saveid != null)
+	{
+		var saveids = saveid.split(',');
+		var hasid = false;
+		saveid = '';
+		j = 1;
+		for(i=saveids.length-1;i>=0;i--)
+		{
+			if(saveids[i]==fid && hasid) continue;
+			else {
+				if(saveids[i]==fid && !hasid) hasid = true;
+				saveid += (saveid=='' ? saveids[i] : ','+saveids[i]);
+				j++;
+				if(j==10 && hasid) break;
+				if(j==9 && !hasid) break;
+			}
+		}
+		if(hasid) { alert('你刚才已表决过了喔！'); return false;}
+		else saveid += ','+fid;
+		SetCookie('badgoodid',saveid,1);
+	}
+	else
+	{
+		SetCookie('badgoodid',fid,1);
+	}
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	myajax.SendGet2("/plus/feedback.php?aid="+fid+"&action="+ftype+"&fid="+fid);
+}
+function postDigg(ftype,aid)
+{
+	var taget_obj = document.getElementById('newdigg');
+	var saveid = GetCookie('diggid');
+	if(saveid != null)
+	{
+		var saveids = saveid.split(',');
+		var hasid = false;
+		saveid = '';
+		j = 1;
+		for(i=saveids.length-1;i>=0;i--)
+		{
+			if(saveids[i]==aid && hasid) continue;
+			else {
+				if(saveids[i]==aid && !hasid) hasid = true;
+				saveid += (saveid=='' ? saveids[i] : ','+saveids[i]);
+				j++;
+				if(j==20 && hasid) break;
+				if(j==19 && !hasid) break;
+			}
+		}
+		if(hasid) { alert("你已经顶过该日志了~"); return; }
+		else saveid += ','+aid;
+		SetCookie('diggid',saveid,1);
+	}
+	else
+	{
+		SetCookie('diggid',aid,1);
+	}
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	var url = "/plus/digg_ajax.php?action="+ftype+"&id="+aid;
+	myajax.SendGet2(url);
+}
+function getDigg(aid)
+{
+	var taget_obj = document.getElementById('newdigg');
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	myajax.SendGet2("/plus/digg_ajax.php?id="+aid);
+	DedeXHTTP = null;
+}
+function check(){
+		if(document.formsearch.searchtype.value=="")
+		document.formsearch.action="http://www.google.cn/custom"
+		else
+		document.formsearch.action="/plus/search.php"
+	} 
+-->
+</script>
+</head>
+
+
+<body>
+
+<div class="header">
+   <div class="nav">
+    
+       <div id="logo"><a href="/" title="教练技术"><img src="/templets/gjw/images/logo.png" alt="教练技术"></a></div>
+       <!-- 导航开始 --> 
+   
+       <div id="dh">
+          <ul>
+            <li class="first"><a href="/" title="培训师工具屋">首页</a></li>
+           <li><a  id="1"  href="/zmryt/" class="tablink arwlink">每日一贴</a>    
+              <ul class="subnav">       
+                       
+             </ul>    
+           </li><li><a  id="2"  href="/zjpwk/" class="tablink arwlink">教练文库</a>    
+              <ul class="subnav">       
+                         
+                  <li><a href="/zjpwk/jljs/">教练技术</a> </li>  
+                         
+                  <li><a href="/zjpwk/nlp/">NLP</a> </li>  
+                         
+                  <li><a href="/zjpwk/cm/">催眠</a> </li>  
+                         
+                  <li><a href="/zjpwk/xtpl/">系统排列</a> </li>  
+                         
+                  <li><a href="/zjpwk/wxzl/">完型治疗</a> </li>  
+                         
+                  <li><a href="/zjpwk/qzgx/">亲子关系</a> </li>  
+                         
+                  <li><a href="/zjpwk/tdxl/">团队训练</a> </li>  
+                         
+                  <li><a href="/zjpwk/ytxw/">源头学问</a> </li>  
+                         
+                  <li><a href="/zjpwk/qt/">其它</a> </li>  
+                       
+             </ul>    
+           </li><li><a  id="3"  href="/zpxgj/" class="tablink arwlink">培训工具</a>    
+              <ul class="subnav">       
+                         
+                  <li><a href="/zpxgj/pxgs/">培训故事</a> </li>  
+                         
+                  <li><a href="/zpxgj/pxyx/">培训游戏</a> </li>  
+                         
+                  <li><a href="/zpxgj/pxdy/">培训电影</a> </li>  
+                         
+                  <li><a href="/zpxgj/pxqc/">培训器材</a> </li>  
+                       
+             </ul>    
+           </li><li><a  id="4"  href="/zzxsp/" class="tablink arwlink">在线视频</a>    
+              <ul class="subnav">       
+                       
+             </ul>    
+           </li> 
+           <li class="tool"><a href="http://bbs.pxsgjw.com/forum.php" target="_blank">资源下载</a></li>
+           <li ><a style="color: #FC0" href="/zzltz/" target="_blank">资料套装</a>
+               <ul>  
+               <li><a href="/zzltz/nlp/" target="_blank">NLP教练技术</a></li>
+               <li><a href="/zzltz/mszt/" target="_blank">名师专题</a></li>
+               </ul>
+           </li>     
+          </ul>
+       </div>
+
+      <!-- 搜索开始 -->
+          
+              
+                 <div class="so">
+          <form  name="formsearch" action="/search.php" target="_blank">
+          <input type="hidden" name="searchtype" value="titlekeyword">
+          <input class="input_text"  type="text" name="q" value="请输入您要搜索的关键词" onfocus="if(this.value=='请输入您要搜索的关键词'){this.value='';}" onblur="if(this.value=='') {this.value='请输入您要搜索的关键词';}">
+          <input type="submit" class="input_search" value="搜索" />
+                 </form>
+
+                  </div>
+
+ <div class="clear" ></div>            
+<!-- 搜索结束 -->   
+
+
+   </div>
+</div>
+
+<!-- 登陆框开始 -->
+   <div class="top_dd">
+            
+
+
+        <div class="top_dd01">
+         
+<strong class="text-success">最新消息：</strong>
+原网站由于技术原因导致数据丢失，老站新开，谢谢新老客户共同探讨！
+<strong class="text-success">你还可以：</strong> <a  href="/">投稿</a> / <a  href="/">广告合作</a> /&nbsp; <a  href="/">培训机构导航</a>  / 联系邮箱：<strong class="text-info">pxsgjw@pxsgjw.com</strong>
+</div>
+   
+   <div class="zc">
+         <img src="/templets/gjw/images/tel.jpg" alt="[field:title /]">
+                                   
+   </div>
+
+
+      </div>
+<!-- 登陆框结束 -->
+<!--中部分开始-->
+<!--中间区域-->   
+<div class="gong">
+
+<div class="dqwz"><p>当前位置: <a href='http://www.pxsgjw.com/'>网站首页</a> > <a href='/zjpwk/'>教练文库</a> > <a href='/zjpwk/jljs/'>教练技术</a> > </p>
+</div>
+
+
+
+
+
+<article class="left" > 
+   <div class="nry_cs">
+      <h1>萨提亚课程学习心得汇编</h1>
+	  <div class="nr_cs">
+				<span>发布时间:2014-05-07 05:25</span>
+<span>浏览次数： <script src="/plus/count.php?view=yes&aid=71&mid=1" type='text/javascript' language="javascript"></script></span>				
+<span>分类: <a href=" /zjpwk/jljs/ "> 教练技术 </a> </span>
+</a>
+	  </div>
+  </div>
+    
+    
+    <div class="nr_l">
+<div class="neirong">
+<p>一、萨提亚学习心得：爸爸妈妈，你们为什么不离婚？</p><p>你有没有小孩子做事拖拖拉拉，无法按时吃饭让你大为头痛？</p><p>你有没有小孩子自控能力较差、沉迷于网络游戏无法自拔？</p><p>你有没有小孩子在你面前表现 出&quot;叛逆&quot;？</p><p>如何重建父母与孩子间的信任？</p><p>……</p><p>面对孩子的各种偏差行为，父母往往由厌烦到生气，然后是痛苦。</p><p>这些都是在《萨提亚亲子--行为矫正版》上家长们提出的最为常见的问题。2010年8月10-12号，在萨提亚亲子的课堂上，来自马来西亚的心理学博士 林文采老师面对各个年龄段孩子的偏差行为，从理论与实操方面讲解了一系列的行为矫正、沟通方法，教父母更理解孩子所需的心灵营养，用温和而坚持的力量来调整孩子的不适当行为，养育一个心理素质优秀，品行端正的好孩子。</p><p>&quot;爸爸妈妈，你们为什么不离婚？&quot;</p><p>一个小的时候让父母很放心的孩子，因为长期的父母不在一起，得不到父亲日常的关注，难免有一种被忽视的感受。当父母缺乏沟通磕磕绊绊的时候，孩子内心累积的情绪就迸发出来，在学校成绩下滑、并且沉迷于网络游戏，有一次妈妈教育他的时候，他极其不耐烦的对妈妈说：你和爸爸你们为什么不离婚？</p><p>我们因此也看到，孩子年龄虽小，但内心已经承担了很多父母没有想到的东西，也看到了父母的影响</p><p>对孩子有多大！孩子有没有快乐，除了天性的那一部分，其余的绝大部分都是来自父母。如何让自己的孩子有个健康快乐的心情？林老师说，物质是一方面，更多的来自心灵。</p><p>温和而坚持的力量</p><p>面对已经行为偏差的孩子，在课堂上的学员们说：对孩子讲道理看起来没什么用。想必很多做父母的也体验过这种情况。如何去除掉偏差行为、培养孩子一个良好的习惯，林老师说：父母&quot;温和而坚持的力量&quot;是很有效的。父母在与孩子有良好关系的基础上，对孩子多一些耐心，温和的与孩子订立界线，那么慢慢的孩子就会学到什么该做、什么不该做，自然而然好习惯也就慢慢养成了。</p><p>《萨提亚亲子关系之孩子行为矫正版》是中国NLP学院首次独家引进的亲子课程，其内容是林文采博士近30年临床辅导经验与自己育儿心得（她有四个优秀的孩子）的结晶，课中的&quot;界限六律&quot;&quot;孩子偏差行为改变技术&quot;&quot;正确的孩子性教育&quot;&quot;父母与青少年的冲突&quot;等新理念、新技能给全体家长们耳目一新的感觉，家长们非常兴奋，三天课程结束时，学员们仍意犹未尽。</p><p><br /></p><p>在课堂上，林老师还给学员们讲解、示范了儿童绘画治疗与游戏治疗，非常有趣。让父母们学到专业又简单可操作的心理学方法，与孩子在轻松的绘画与游戏中，了解孩子的内心世界，与孩子有更多深层次的沟通，让孩子的成长更加健康。林博士最后强调：中国老话说，治病不如防病。《行为矫正》是亡羊补牢的做法，亲子教育最好的途径是父母本身的成长，所以作为本课程的姊妹篇：《萨提亚亲子关系之父母成长版》对家长们来说，意义更为深远，希望父母能够认识到这一点，在没做父母前，就好好地补上这一课。</p><p>三天的课程转眼间就结束了，父母们带着满满的热情与好奇回到家里，学会换一种方法与孩子相处，相信在培养一个健康优秀的孩子这条路上，我们大家一路同行！</p><p>对下期课程感兴趣的新老学员，可以点击这里</p><p>（作者：金志芳 萨提亚——孩子行为矫正版第一期学员）</p><p>二、孩子的“问题行为”</p><p>曾有一位妈妈说“如果没有孩子拒绝与她沟通，没有那么的痛，她还没有意识到、也没有那么多的动力来面对自己。”她孩子的“问题行为”让她意识到自己还有很多不成熟的部分，自己在处理自己的情绪、家庭亲密关系方面还有很多可以提升的空间。</p><p>我见这位妈妈是在一次萨提亚学员聚会上，看她满脸的喜悦，而不是往日的紧张焦虑，我也心怀喜悦，轻轻的回应说“这是孩子给你的礼物”，“这真是孩子给我的礼物，让我意识到自己的成长，很感谢他！”</p><p>萨提亚女士认为，家庭是一个系统，某一个家庭成员行为上出了问题，需要我们从系统的角度来看。常常出问题的那个人，只是一个被识别出的病人（Identified Patient），因为他最敏感，系统的问题就会反应在他身上。例如：</p><p>孩子很胆小，缺乏自信，也许是在亲子互动中父母的表达方式；</p><p>孩子缺乏安全感，有可能和父母之间的亲密关系有关，一个常常有矛盾冲突的家庭，给孩子就是一个缺乏安全的环境；</p><p>有人说自己的孩子像个小魔王，他天生并不会成为“魔王”，往往也是家庭系统互动中给孩子的成长造成影响。</p><p>人的成长有很多影响因素，没有什么完全的逻辑关系，但是透过“系统”的思考，可以看到整个系统的互动。即使父母关系不好，不当着孩子有剧烈的冲突，但是孩子也会感觉到家庭成员之间的关系（气场）。</p><p>我邀请你做一个想象，想象家庭的每个成员都可以任由你摆姿势，那么你就作为雕塑家，把你认为的家庭典型的互动呈现出来：</p><p>请你先安排他们的位置，谁离谁更近一些？他们各自面对着谁？有的会看着对方，而有的人，则面朝外面，和其他人保持距离。</p><p>接下来安排他们的高低位置，谁在这个家庭中最有权威？他（她）能够自由的表达自己的情绪（或高兴，或生气，或抱怨，或难过），谁会更多的压抑自己的情绪，总是在照顾其他人的感受。你可以给他们不同的位置，以体现他们在家中的地位，或许有的需要高高在上，必要的话要让她（他）站在凳子上，而有的则会跪蹲在地上。</p><p>现在，你可以看着你的雕塑作品，作为一个旁观者，感觉这个家庭，感觉每个家庭成员，他们的感受是什么？他们对自己、对别人有什么看法和期待？他们用什么方式表达对别人的关心和爱？而对方能否感受到？每个人从这个家庭中有怎样的学习？</p><p>有了系统思考的概念，我们就会放缓给别人“对或错”的评判、给人贴标签，而是对别人的行为有更多的接纳和好奇，“他（她）的行为背后，是否有一些人际系统的动力？那些会是什么？”（例如孩子说谎，可能是要回避来自家长的惩罚，而惩罚对他来说是一段擦去不掉的记忆。）</p><p>也衷心希望天下的父母亲，把孩子成长中出现的问题作为“他们送给自己的礼物”，借此自我觉察，既能够帮助到自己成长，也能够帮助到孩子的成长。</p><p>（作者：任伟）</p><p>三、连接我们内在的资源</p><p>在领导力中增加人性的力量</p><p>Angie老师的“萨提亚转化式领导力工作坊”结束了，学员有来自企业的高管、人力资源总监、培训经理，也有领导力发展的培训专家、私营公司的老板，大家体会到如何兼顾自我、他人和情境，在自己的领导力中增加对自我觉察、对他人（员工）的觉察。如果用一句话来表达我的收获，那就是：在做事情的同时，同时关注到自己和他人作为“人”的人性部分。作为领导者，能够运用自己的内在资源，与团队、业务伙伴建立更富有人性的连接。</p><p>正如一位总经理在学习之后回馈说：“我这一周有很多发现，自我肯定的感觉真好，感觉不太累心了，我也发现当我关注自己之后我会去更多的欣赏我的员工，鼓励他们自我肯定，从事件中找出正向的内容，有助于从渴望的层面达成一致意见。”</p><p>商业解决方案中也需要关注人的因素</p><p>“商业就是问题解决，需要关注人在人性方面的需求吗？”当时学员中不少都是善于分析和问题解决的高管，也不乏小有名气的领导力培训专家。然而透过Angie引导的体验性活动，大家越来越意识到在问题解决方案对与错的下面，是每个人对被欣赏、接纳、尊重、有价值、安全感的渴望。有位董事长分享“我都把掏心窝的话讲给对方了，我是觉得自己很平等，但对方似乎无动于衷。现在想想当时的交流方式，的确会给人居高临下的感觉，而且并没有感觉接纳、欣赏和有价值。”</p><p>照亮并整合自己内在的资源</p><p>在Angie的信念中有一条：“每一个客户、群体都有他们自己的智慧和资源，凭借这些资源和智慧，他们会知道下一步做什么和怎么做。帮助者的角色，就是帮他们和自己的智慧、资源进行连结。”</p><p>随着工作坊的进行，时不时地涌现出令人感动的场面，在场的大部分学员都被自己或他人“人性”的部分所触动，也感受到当我们与这部分资源相连接的时候的力量：</p><p>“我在这个角色扮演中能够深切体会到自己下属的不容易，我却很少给她以欣赏。”</p><p>“她的话触动了我的不自信，每遇到此自己就会自动化防御。”</p><p>“我这次最大的收获是自己个人的成长，感觉到自己的再度出生。”</p><p>我们都是人，彼此有着丰富的内在资源，我们可以欣赏我们自己，我们都是同一生命力的明证，透过自己和他人的生命，大家都有所学习和成长。</p><p>与你互动：您是怎样理解领导力的？如何在工作中发挥你的“人”的那一部分？</p><p>后记：今天早晨做梦想到了自己小时候的家所在的胡同名“六和里”，萨提亚女士提到内在和谐、关系和睦，世界和平，有三个和，而这次在梦中与“六和里”相遇，很有趣。</p><p>（作者：任伟）</p><p>四、马来西亚最多孩子出问题的地方</p><p>前几日去听林文采博士《萨提亚亲子关系--孩子行为矫正版》连续三天的课程，因为林博士是马来西亚人，所以课堂上自然有很多取之于马来西亚的案例，其中的一个案例让我颇有感触，说的是马来西亚柔佛州的首府--新山市，林老师说：这是马来西亚最多孩子出问题的地方。</p><p>新山市、柔佛州的首府，位于马来西亚在马来半岛最南端，也是欧亚大陆最南端的城市，与邻国新加坡隔柔佛海峡相望，并通过新柔长堤与新加坡相连。新山市经济发达、人口众多，为马来西亚第二大城市，素有&quot;大马南方门户&quot;之称。新山一般被视为新加坡面对马来西亚市场的腹地，彼此的角色被认为类似于中国的深圳和香港。</p><p>那么，如此一个繁荣的城市为什么却是最多孩子出问题的地方呢？</p><p>原因其实很简单：新山是马来西亚最靠近新加坡的城市，而由于新马两国经济发展的差异，每天早上都有大批的新山人跨过柔肤海峡到新加坡去做工，直到晚上才回家休息，这每天穿行在新柔长堤的人流中自然有很多已经为人父母的人，他们总不能拖家带口的去新加坡的做工，于是就有大批的孩子白天脱离的父母的照顾、无人看管。而且，他们的父母晚上回到家中已是身心俱惫，哪还有心思来管教孩子，因此，我把这些孩子成为&quot;准留守儿童&quot;，在如此的环境，孩子不出问题才怪！</p><p>写到这里，让我不禁想起了中国的5000万留守儿童，只有180万人口的新山已经成为马来西亚最多孩子出问题的地方，那我们中国岂不是是世界上最多孩子出问题的地方？！而且，现在所说的留守儿童已经不再仅仅是农民工留在农村老家的儿童，它已经扩展到了城市里面的上班族的孩子，这些孩子和新山的孩子一样，也是&quot;准留守儿童&quot;。他们只能在晚上才能见到自己的父母，而且是身心俱惫的父母。</p><p>看到这种情况，真希望各位为人父、为人母的人多看一些亲子方面的书籍、多和有经验的父母的交流、多上一些亲子关系方面的课程。和自己的孩子保持一个和谐良好的关系，不是每一个父母都真切渴望的吗？</p><p>（作者：姚星光 萨提亚——孩子行为矫正版第一期学员）</p><p>五、面对冲突与矛盾，有一个选择就是找到可以成长的方案</p><p>如何面对人与人之间的差异，对于建立健康的人际关系、促进个人成长都很有帮助。萨提亚模式信念之一就是：人们因相同彼此连结，因相异而互相成长。</p><p>在我的生活和工作中，我也努力把人与人之间的差异、冲突看成彼此成长的机会，几天前杭州之行就有一个很好的案例。</p><p>我是去给一家成长中的IT公司做项目管理培训，学员主要是该公司各地区的总经理和销售经理，也有来自总部的技术总监和营销总监。前一天半大家相安无事，学习、案例讨论，也有个别几位参与程度不高。</p><p>第二天中午，我们没有在酒店吃午饭，被这次培训的组织者培训经理安排去酒店附近的肯德基吃快餐。20多人来到肯德基，里面排队买餐的人很多，培训经理原本大家排好队，每个人拿走自己的餐，他最后结帐，然而肯德基的流程是结帐前餐不能拿离柜台，要清点。这下麻烦了，看来每个人要想点自己的餐会很复杂，培训经理为此和肯德基的人还争执起来，抱怨对方不够灵活。大家下来后发现这么麻烦，有人也有抱怨，说“既没有省钱、也不方便，还不如。。。。。。”我看出培训经理也一肚子火。</p><p>终于买回去了，在酒店大家聊起此事，似乎还有不少抱怨，因为最后干脆统一订餐，我也没有吃到“鳕鱼汉堡”，全是鸡肉堡。大家抱怨的时候，培训经理也在回避此事，一直在讲自己也是根据大家的意愿，因为前一天晚饭的时候有人曾经觉得“酒店饭不好吃，还不如肯德基”。可是中午我们问到底谁提议和赞同去肯德基，却发现只有几个人，似乎很多人当时听到这个提议的时候并没有反应。“没有反对”就表示“默认”，这也反应出这个团队大家的行为模式。</p><p>一次不开心的午餐经历，除了抱怨，我们还能做什么呢？</p><p>交流中我们发现这次午餐中存在团队沟通不畅、错误理解意图的现象，下午要讲的是项目回顾，公司的营销总监提议是否可以此为案例，作一次案例分析，讲到这里，他显得很兴奋。</p><p>一听要拿肯德基事件做案例研讨，大家一下子来了精神，我首先澄清一点，我们在这个过程中是在找经验，而不是揪某个人的错，大家的回顾应该是坦诚的、且是安全的。</p><p>于是我开始用聚焦式会谈引导：</p><p>1． 先请大家从各自角度还原事实的真象：原来大家在沟通中有很多误解，比如培训经理在征求意见的时候，以为不表态就是同意，而其他人以为是玩笑；</p><p>2． 再请大家分享一下不同时段各自的感受：很多人都提到在肯德基等待时的无聊，培训经理也表达自己当时的焦急。</p><p>3． 接下来分析问题出在哪里，培训经理在征求意见、协调组织过程中，以及团队其他成员的配合方面出现的偏差；</p><p>4． 最后大家谈谈从这个案例中给各自带来的启发。</p><p>大家研讨的很热烈，气氛也很轻松，培训经理原本的防御心态也消除了，大家有说有笑地学习。两周之后，他们的下属还要参加同样内容的项目管理培训，大家甚至提议，希望在那次项目管理培训中也故意安排这样一个“肯德基午餐”和案例研讨。</p><p>真没想到，一次不开心的经历，被转化成一次难忘的成长经历，我在这个过程中也很有收获，培训不一定要按照培训师既定的内容和进度，根据学员的状况，适时地捕捉成长和学习的机会，会对学员更加有效。</p><p>我的Satir导师John Banmen曾经讲过：“面对冲突与矛盾，有一个选择就是找到可以成长的方案”。</p><p>（作者：任伟）</p><p>六、萨提亚模式的助人过程</p><p>每次和朋友们分享自己学习和应用萨提亚模式的体会，对方都抱有很高的兴趣，但是往往只理解这是个很好的学问，但是却看不清一个全貌。参考Sharon Loeschen的文章，结合我自己的体会，撰写此文希望能够让朋友们更好的理解。</p><p>我并不把萨提亚仅看作一名心理治疗大师，更多的把她看作一名助人成长的大师，但凡是有心做些要去助己或是助人的事情的人，都可以从萨提亚模式中获得启发。</p><p>A． &nbsp; &nbsp;萨提亚模式的助人目标</p><p>萨提亚模式的助人目标是帮助人称为自己的主人，具体的讲，就是帮助对方：</p><p>1． &nbsp;提高自我价值（自我价值是对自己的价值的判断、信念或感受）；</p><p>2． &nbsp;能够为自己做出选择；</p><p>3． &nbsp;能够为自己负责任；</p><p>4． &nbsp;做到和谐一致，表里一致。</p><p>我以前是一个迫不及待就要给人答案的人，总以为自己掌握着真理，其实内心也有些不安，似乎需要通过别人的接受来证明自己存在的价值。萨提亚的助人目标在提醒着我，“我是在助人吗？”“我有没有照顾和尊重到对方？”我也在提醒自己，我是一个陪伴者、一个促动者，对于别人，自己应该多些耐心、多些好奇、多些观察。</p><p>B． &nbsp; &nbsp; 萨提亚模式的助人成长（改变）的要素：</p><p>1． &nbsp;自我价值：自我价值是我们成长的核心，如何建立高的自我价值，使我们成长的目标；</p><p>2． &nbsp;关爱和滋养：人在被关爱的环境下，会更好的促成成长，这里的关爱不是“溺爱”，就像我们在做助人的工作时，发自内心地关爱对方，会帮助对方走出困境；</p><p>3． &nbsp;觉察：觉察是迈向改变的第一步，以前我会直接给人解决方案，现在我更多的是辅导对方看清楚问题的真相和全貌，得到更多的觉察；</p><p>4． &nbsp;接纳：接纳自己和接纳他人都同等重要，这也是萨提亚助人的重要环节；</p><p>5． &nbsp;改变：改变永远是可能的</p><p>C． &nbsp; &nbsp;萨提亚助人的过程：</p><p>萨提亚并没有把自己的治疗过程清晰地整理出来，她的学生Sharon Loeschen根据大家的实践，整理出萨提亚治疗的6个阶段，萨提亚模式是一个系统的方法，因此这6个阶段在实施过程中也不完全是线性，可以灵活运用。萨提亚助人的过程分以下六个阶段：</p><p>1． &nbsp;与人接触（Making Contact）：与对方建立人与人之间的联结，彼此有一份亲善；</p><p>2． &nbsp;肯定事实（Validating）：肯定多方所做的努力、痛苦、感受、观点和期待等，让对方感到被理解和肯定，有更多能力面对问题；</p><p>3． &nbsp;引发自我觉察（Facilitating Awareness）：帮助对方看清楚事情的全貌、彼此关系，以及历时演变过程，帮助对方发现功能不良的环节，在这个环节中不仅要觉察系统、系统内人与人之间的关系，也要觉察和探索自我，把焦点从“问题”转向“如何应对问题”上；</p><p>4． &nbsp;促进自我接纳（Promoting Acceptance）：有些人不能做到接纳自己或者他人，会怀着一份敌意和反感，却在这个过程中把自我成长的责任转移给他人。有了对自己和他人的接纳，就会用积极正向的角度看待自己的过去和现在，也就会承担起做出改变的责任，也愿意去探求新的可能性；</p><p>5． &nbsp;促使改变发生（Making Changes）：作为治疗师，在这个环节会非常有创造性地引导对方挑战自己的常规应对方式，做出选择和改变；</p><p>6． &nbsp;巩固改变成果（Reinforcing Changes）：改变不是一蹴而就的，改变常常会有反复，治疗师会常常带对方再次体验改变后的美妙感觉，强化和巩固其努力的成果。</p><p>D． &nbsp; &nbsp;萨提亚助人过程对我的启发：</p><p>自从学习萨提亚之后，我也常常反思我作为培训师的角色，培训师往往以内容传授为导向的，而咨询师更关注客户的改变，没有“改变”，就是失败的咨询。我也开始让自己成为一名关注“改变”的培训师，或者是一名关注“改变”的助人者。</p><p>1． &nbsp;与人接触（Making Contact）：是我在任何一次培训或者服务之前要问自己的问题，“我有没有与客户建立某种联结？”也许是一个电话，或是一封电子邮件等等，当对方感到我的那份诚意，也会给予必要的支持和友善的建议，这对未来的合作会有很多帮助。</p><p>2． &nbsp;肯定事实（Validating）：有一种培训手段就是把对方打昏，觉得自己搞得一无是处，这在某些场合也许很管用，不过我会越来越小心的使用。相信每个人都在力所能及的范围内做到了最好，肯定他们已经取得的成绩，怀着那份好奇，看看到底问题可能出在哪里。</p><p>3． &nbsp;引发自我觉察（Facilitating Awareness）：这块是我最喜欢做的环节，常用的比喻就是“盲人摸象”，通过各种团队促动技术（Facilitation），帮助团队或者个人看清楚整个问题的全貌，当问题被定义清楚的时候，就基本解决了一半。在此我也越来越有耐心等待他们的觉察，我不相信我比他们还了解自己，我也怀疑自己给的判断是否与他们相适应。</p><p>4． &nbsp;促进自我接纳（Promoting Acceptance）：接纳现状之后就不要把问题总推给别人，我们自己能够做些什么？我们能够承担哪些责任？</p><p>5． &nbsp;促使改变发生（Making Changes）：培训之后最难的是改变，对方从熟悉的状态走入一个不熟悉的状态，会引起恐慌和不适应，我需要告诉大家，这都是正常的。我们需要好好盘点我们已有的资源和可以争取到的资源，随着信息的引入和创造力的发挥，我会帮助客户会发现合适的解决方案。在这个过程中，我有时是只关注过程的促动师，有时也会扮演某方面的专家，提供必要的指导，但无论怎样，我都坚信“客户已经掌握了所有解决他们当前问题的资源”。</p><p>6． &nbsp;巩固改变成果（Reinforcing Changes）：这个环节更容易应用到个人身上，因为商业培训往往很难做持久的跟进，这和企业自己的态度也有关系。让我常常感到痛心的是，客户花了银子做培训，却没有花精力巩固培训成果。现在我在服务中也越来越增加这方面的内容，尝试与客户建立某种约定，一方面表达可以提供长期的支持，另一方面希望看到持续的改进效果。</p><p><br /></p>
+</div>
+<div class="bshare-custom"><a title="分享到" href="http://www.bShare.cn/" id="bshare-shareto" class="bshare-more">分享到</a><a title="分享到QQ空间" class="bshare-qzone">QQ空间</a><a title="分享到新浪微博" class="bshare-sinaminiblog">新浪微博</a><a title="分享到人人网" class="bshare-renren">人人网</a><a title="分享到腾讯微博" class="bshare-qqmb">腾讯微博</a><a title="分享到网易微博" class="bshare-neteasemb">网易微博</a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a><span class="BSHARE_COUNT bshare-share-count">0</span></div><script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#style=-1&amp;uuid=4c521bae-605f-481d-84a4-7f66a7f0faa0&amp;pophcol=2&amp;lang=zh"></script><script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/bshareC0.js"></script>
+<script language="javascript" type="text/javascript"> 
+        <!-- 
+        document.body.oncopy = function () { 
+        setTimeout( function () { 
+        var text = clipboardData.getData("text"); 
+        if (text) { 
+        text = text + "\r\n该文章来源于培训师工具屋："+location.href; 
+        clipboardData.setData("text", text); 
+        } 
+        }, 100 ) 
+        } 
+        --> 
+</script> 
+
+<script language='javascript'> 
+function ImgReSize(e) 
+{ 
+  if(e.width>830) //600可根据你文章的内容区域大小，可调整 
+  { 
+    e.width=830;   //等同上面你设的那个数值 
+    e.style.width=""; 
+  } 
+  if(e.height>10) 
+  { 
+    e.style.height=""; 
+  } 
+} 
+</script>  
+
+<div class="feiye">
+
+
+ 上一篇：<a href='/zjpwk/jljs/70.html'>教练技术学员必看-揭秘亿万富翁神奇公式</a>   
+ 下一篇：<a href='/zjpwk/jljs/73.html'>教练技术中核心的四大技巧</a>  
+</div>      
+<div class="clear" ></div> 
+<div class="plq">
+
+ <!-- //加载评论区 -->
+    <!-- //主模板必须要引入/include/dedeajax2.js -->
+<a name='postform'></a>
+<div id="commentBox">
+	<form action="#" method="post" name="feedback">
+  <input type="hidden" name="dopost" value="send" />
+  <input type="hidden" name="comtype" value="comments">
+  <input type="hidden" name="aid" value="71" />
+  <input type="hidden" name="fid" id='feedbackfid' value="0" />		
+  <div class="commentPost" id="_ajax_feedback">
+		<div class="commentUserinfo">
+				 &nbsp;报上名号来：<input type="text" name="username" size="16"/>
+				 
+				 &nbsp;&nbsp;&nbsp;
+				 神兽验证马：<input type='text' name='validate' size='4' style="text-transform:uppercase;"/>
+		</div>
+		<div class="yanzhengma">
+				 <img src="/include/vdimgck.php" id="validateimg" style="cursor:pointer" onclick="this.src=this.src+'?'" title="点击我更换验证码" alt="点击我更换验证码"/>
+		</div>
+         <input type="hidden" name="notuser" id="dcmp-submit-guest" />
+         <label for="dcmp-submit-guest" /> </label>	
+						
+	</div>		
+	<div class="commentArea">
+		<textarea cols="60" name="msg" rows="5"></textarea>
+	</div>	
+	<div class="commentMood">
+	  <ul>                               
+        <li><input type="radio" name="face" value="1" checked="1" /><img src="/templets/gjw/images/mood/ico-mood-1.gif" width="19px" height="16px"/></li>
+        <li><input type="radio" name="face" value="2"/><img src="/templets/gjw/images/mood/ico-mood-2.gif" width="16px" height="16px"/></li>
+        <li><input type="radio" name="face" value="3"/><img src="/templets/gjw/images/mood/ico-mood-3.gif" width="16px" height="16px"/></li>
+        <li><input type="radio" name="face" value="4"/><img src="/templets/gjw/images/mood/ico-mood-4.gif" width="18px" height="16px"/></li>
+        <li><input type="radio" name="face" value="5"/><img src="/templets/gjw/images/mood/ico-mood-5.gif" width="16px" height="16px"/></li>
+        <li><input type="radio" name="face" value="6"/><img src="/templets/gjw/images/mood/ico-mood-6.gif" width="19px" height="16px"/></li>
+        <li><input type="radio" name="face" value="7"/><img src="/templets/gjw/images/mood/ico-mood-7.gif" width="17px" height="16px"/></li>
+        <li><input type="radio" name="face" value="8"/><img src="/templets/gjw/images/mood/ico-mood-8.gif" width="17px" height="16px"/></li> 
+        <li><input type="radio" name="face" value="9"/><img src="/templets/gjw/images/mood/ico-mood-9.gif" width="18px" height="16px"/></li>
+        <li><input type="radio" name="face" value="10"/><img src="/templets/gjw/images/mood/ico-mood-10.gif" width="18px" height="16px"/></li>
+        <li><input type="radio" name="face" value="11"/><img src="/templets/gjw/images/mood/ico-mood-11.gif" width="16px" height="16px"/></li>
+		</ul>
+	</div>	
+	<div class="commentSubmit">
+		<button type="button" onClick='PostComment()'>发表评论</button>
+	</div>	
+	</form>
+</div>
+<a name='commettop'></a>
+<div id="commentLayout">
+	<!-- //这两个ID的区块必须存在，否则JS会出错 -->
+	<div id='commetcontentNew'></div>
+	<div id='commetcontent'></div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+//由于评论载入时使用异步传输，因此必须在最后一步加载（DIGG和评论框须放在评论内容前面）
+//如果一定需要提前的把myajax.SendGet改为myajax.SendGet2，但可能会引起页面阻滞
+-->
+<script language='javascript'>
+function LoadCommets(page)
+{
+		var taget_obj = document.getElementById('commetcontent');
+		var waithtml = "<div style='line-height:50px'><img src='/images/loadinglit.gif' />评论加载中...</div>";
+		var myajax = new DedeAjax(taget_obj, true, true, '', 'x', waithtml);
+		myajax.SendGet2("/plus/feedback_ajax.php?dopost=getlist&aid=71&page="+page);
+		DedeXHTTP = null;
+}
+function PostComment()
+{
+		var f = document.feedback;
+		var nface = '6';
+		var nfeedbacktype = 'feedback';
+		var nvalidate = '';
+		var nnotuser = '';
+		var nusername = '';
+		var npwd = '';
+		var taget_obj = $DE('commetcontentNew');
+		var waithtml = "<div style='line-height:30px'><img src='/images/loadinglit.gif' />正在发送中...</div>";
+		if(f.msg.value=='')
+		{
+			alert("评论内容不能为空！");
+			return;
+		}
+		if(f.validate)
+		{
+			if(f.validate.value=='') {
+				alert("请填写验证码！");
+				return;
+			}
+			else {
+				nvalidate = f.validate.value;
+			}
+		}
+		if(f.msg.value.length > 500)
+		{
+			alert("你的评论是不是太长了？请填写500字以内的评论。");
+			return;
+		}
+		if(f.feedbacktype) {
+			for(var i=0; i < f.feedbacktype.length; i++)
+				if(f.feedbacktype[i].checked) nfeedbacktype = f.feedbacktype[i].value;
+		}
+		if(f.face) {
+			for(var j=0; j < f.face.length; j++)
+				if(f.face[j].checked) nface = f.face[j].value;
+		}
+		if(f.notuser.checked) nnotuser = '1';
+		if(f.username) nusername = f.username.value;
+		if(f.pwd) npwd = f.pwd.value;
+		
+		var myajax = new DedeAjax(taget_obj, false, true, '', '', waithtml);
+		myajax.sendlang = 'gb2312';
+		myajax.AddKeyN('dopost', 'send');
+		myajax.AddKeyN('aid', '71');
+		myajax.AddKeyN('fid', f.fid.value);
+		myajax.AddKeyN('face', nface);
+		myajax.AddKeyN('feedbacktype', nfeedbacktype);
+		myajax.AddKeyN('validate', nvalidate);
+		myajax.AddKeyN('notuser', nnotuser);
+		myajax.AddKeyN('username', nusername);
+		myajax.AddKeyN('pwd', npwd);
+		myajax.AddKeyN('msg', f.msg.value);
+		myajax.SendPost2('/plus/feedback_ajax.php');
+		f.msg.value = '';
+		f.fid.value = 0;
+		if(f.validate)
+		{
+			if($DE('validateimg')) $DE('validateimg').src = "/include/vdimgck.php?"+f.validate.value;
+			f.validate.value = '';
+		}
+}
+function quoteCommet(fid)
+{
+	document.feedback.fid.value = fid;
+}
+LoadCommets(1);
+</script><!-- //评论内容区结束 -->
+		
+
+</div>
+
+
+
+
+  <div class="clear" ></div> 
+             </div>
+             
+             
+             
+   </article>    
+
+   
+
+
+
+<aside class="right" >
+
+
+<!--中部右开始-->
+
+<div class="line">站内导航</div>
+     <div class="cplist_l_01">
+       
+         <ul>
+          
+         <li><a href='/zmryt/'>每日一贴</a> </li> 
+         
+         <li><a href='/zjpwk/'>教练文库</a> </li> 
+         
+         <li><a href='/zpxgj/'>培训工具</a> </li> 
+         
+         <li><a href='/zzxsp/'>在线视频</a> </li> 
+         
+         <li><a href='/zzltz/'>资料套装</a> </li> 
+         
+         <li><a href='/zjldx/'>教练短讯</a> </li> 
+         
+         </ul>
+       <br class="clear" />
+     </div>
+
+
+
+<div class="line">自学资料包</div>
+ 
+<!--<a href=""><img src="/uploads/z_sptp/001-dsb.gif" width="285"  height="285" alt="NLP教练技术《导师版》工具包"></a>-->
+ <div class="cplist_l_02">
+         <ul>
+            <li id="xglist_tp"><a href="/zzltz/nlp/dsb.html"><img src="/uploads/z_sptp/001-dsb.gif"></a></li>
+             <li id="xglist_nr"><h5><a href="/zzltz/nlp/dsb.html">《导师版》工具包</a></h5>
+                 <p>适合人群：NLP职业导师；职业培训师；企业高管；心理咨询师；教练技术，NLP研究者；</p>
+                 <span>订购价格：<i>3898</i>元</span>
+             </li>
+<li id="xglist_tp"><a href="/zzltz/nlp/jlb.html"><img src="/uploads/z_sptp/002-jlb.gif"></a></li>
+             <li id="xglist_nr"><h5><a href="/zzltz/nlp/jlb.html">《教练版》工具包</a></h5>
+                 <p>适合人群：参加过教练技术的人群；企业高管；职业培训师</p>
+                 <span>订购价格：<i>598</i>元</span>
+             </li>
+<li id="xglist_tp"><a href="/zzltz/yyb.html"><img src="/uploads/z_sptp/003-yyb.gif"></a></li>
+             <li id="xglist_nr"><h5><a href="/zzltz/yyb.html">《应用版》工具包</a></h5>
+                 <p>适合人群：看完该套资料2遍后觉得每个人都应该至少看一遍</p>
+                 <span>订购价格：<i>560</i>元</span>
+             </li>
+<li id="xglist_tp"><a href="/zzltz/nlpsj.html"><img src="/uploads/z_sptp/005-48s.gif"></a></li>
+             <li id="xglist_nr"><h5><a href="/zzltz/nlpsj.html">NLP绝版书籍48本</a></h5>
+                 <p>适合人群：NLP研究者</p>
+                 <span>订购价格：<i>2600</i>元</span>
+             </li>
+<li id="xglist_tp"><a href="/zzltz/dzb.html"><img src="/uploads/z_sptp/004-dzb.gif"></a></li>
+             <li id="xglist_nr"><h5><a href="/zzltz/dzb.html">《订制版》工具包</a></h5>
+                 <p>适合人群：订制</p>
+                 <span>订购价格：<i>商议</i>元</span>
+             </li>
+
+<br class="clear" />
+        </ul>
+     </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <div class="line">阅读排行</div>
+   
+     <div class="ydph">
+     
+     <ul>
+               
+               <li><span>1</span> <a href="/zmryt/121.html"  title="从NLP的角度看看我们所用的词语"> 从NLP的角度看看我们所用的词语</a>
+                    </li>
+<li><span>2</span> <a href="/zmryt/115.html"  title="从《盟军夺宝队》电影看教练技术的区分"> 从《盟军夺宝队》电影看教练技术的区分</a>
+                    </li>
+<li><span>3</span> <a href="/zjldx/106.html"  title="教练技术的五项基本功"> 教练技术的五项基本功</a>
+                    </li>
+<li><span>4</span> <a href="/zmryt/105.html"  title="回忆教练技术带给我的信仰"> 回忆教练技术带给我的信仰</a>
+                    </li>
+<li><span>5</span> <a href="/zmryt/102.html"  title="从古龙的武侠小说看教练技术学习"> 从古龙的武侠小说看教练技术学习</a>
+                    </li>
+<li><span>6</span> <a href="/zmryt/99.html"  title="从《超凡蜘蛛侠2》中能发现教练技术技"> 从《超凡蜘蛛侠2》中能发现教练技术技</a>
+                    </li>
+<li><span>7</span> <a href="/zmryt/83.html"  title="NLP导师版工具包-解说配套文档"> NLP导师版工具包-解说配套文档</a>
+                    </li>
+<li><span>8</span> <a href="/zmryt/65.html"  title="教练技术资料教练版工具包解说视频配套"> 教练技术资料教练版工具包解说视频配套</a>
+                    </li>
+<li><span>9</span> <a href="/zmryt/64.html"  title="从《侠探杰克》中看教练技术的功效"> 从《侠探杰克》中看教练技术的功效</a>
+                    </li>
+<li><span>10</span> <a href="/zmryt/51.html"  title="培训师工具屋资料大解说"> 培训师工具屋资料大解说</a>
+                    </li>
+<li><span>11</span> <a href="/zmryt/48.html"  title="购买培训资料您应该知道的三大关键"> 购买培训资料您应该知道的三大关键</a>
+                    </li>
+<li><span>12</span> <a href="/zmryt/46.html"  title="NLP的系列课程都包含什么？"> NLP的系列课程都包含什么？</a>
+                    </li>
+<li><span>13</span> <a href="/zmryt/45.html"  title="NLP-教练技术-NLP教练技术概念解析"> NLP-教练技术-NLP教练技术概念解析</a>
+                    </li>
+<li><span>14</span> <a href="/zmryt/44.html"  title="如何有效的学习NLP、教练技术？"> 如何有效的学习NLP、教练技术？</a>
+                    </li>
+<li><span>15</span> <a href="/zzxsp/63.html"  title="冯晓强视频试看"> 冯晓强视频试看</a>
+                    </li>
+<li><span>16</span> <a href="/zzxsp/43.html"  title="朱建军意向对话技术培训05"> 朱建军意向对话技术培训05</a>
+                    </li>
+<li><span>17</span> <a href="/zjldx/52.html"  title="重复旧的做法,只能得到旧的结果"> 重复旧的做法,只能得到旧的结果</a>
+                    </li>
+	
+                 </ul>
+   
+
+    </div>
+
+
+     <div class="line">在线视频</div>             
+      <div class="sy_zxsp">
+         <ul>
+            <li><a href="/zzxsp/63.html" target="_blank"><img src="/uploads/z_zxsptp/63.jpg" alt="冯晓强视频试看"></a><span><a href="/zzxsp/63.html"  title="冯晓强视频试看"> 冯晓强视频试看</a></span> 
+                </li>
+<li><a href="/zzxsp/43.html" target="_blank"><img src="/uploads/z_zxsptp/20140502/05.jpg" alt="朱建军意向对话技术培训05"></a><span><a href="/zzxsp/43.html"  title="朱建军意向对话技术培训05"> 朱建军意向对话技术培训05</a></span> 
+                </li>
+<li><a href="/zzxsp/42.html" target="_blank"><img src="/uploads/z_zxsptp/20140502/04.jpg" alt="朱建军-意向对话技术培训04"></a><span><a href="/zzxsp/42.html"  title="朱建军-意向对话技术培训04"> 朱建军-意向对话技术培训04</a></span> 
+                </li>
+	
+         </ul>
+     </div>
+
+
+      <div class="line">热门标签</div>
+      <div class="list_rmbq">
+    <li class="tagcloud" style="border-bottom:none;">
+    <a href="http://www.pxsgjw.com" style="color:#fff;background-color:#6C6C6C">全部标签</a>
+    </li>
+    
+    <li class="tagcloud" style="border-bottom:none">
+    <a href="/tags.php?/%BD%CC%C1%B7%BC%BC%CA%F5%B0%B8%C0%FD/" style="font-size:14px;color:#985012" title="共有6篇关于教练技术案例的文章">教练技术案例</a></li>
+     
+    <li class="tagcloud" style="border-bottom:none">
+    <a href="/tags.php?/%BD%CC%C1%B7%BC%BC%CA%F5%BC%BC%C7%C9/" style="font-size:14px;color:#56b20" title="共有16篇关于教练技术技巧的文章">教练技术技巧</a></li>
+     
+    <li class="tagcloud" style="border-bottom:none">
+    <a href="/tags.php?/nlp%BC%BC%C7%C9/" style="font-size:14px;color:#8ecd4" title="共有7篇关于nlp技巧的文章">nlp技巧</a></li>
+     
+    <li class="tagcloud" style="border-bottom:none">
+    <a href="/tags.php?/nlp%B0%B8%C0%FD/" style="font-size:14px;color:#a87d24" title="共有7篇关于nlp案例的文章">nlp案例</a></li>
+     
+    <li class="tagcloud" style="border-bottom:none">
+    <a href="/tags.php?/%BD%CC%C1%B7%B9%A4%BE%DF/" style="font-size:14px;color:#b6a668" title="共有7篇关于教练工具的文章">教练工具</a></li>
+     
+    <li class="tagcloud" style="border-bottom:none">
+    <a href="/tags.php?/%D1%A7%D4%B1%B7%D6%CF%ED/" style="font-size:14px;color:#cd4f87" title="共有3篇关于学员分享的文章">学员分享</a></li>
+     
+    <li class="tagcloud" style="border-bottom:none">
+    <a href="/tags.php?/nlp%B4%CA%D3%EF/" style="font-size:14px;color:#78943c" title="共有3篇关于nlp词语的文章">nlp词语</a></li>
+     
+    <li class="tagcloud" style="border-bottom:none">
+    <a href="/tags.php?/%C5%E0%D1%B5%B5%E7%D3%B0/" style="font-size:14px;color:#2db338" title="共有2篇关于培训电影的文章">培训电影</a></li>
+     
+    <li class="tagcloud" style="border-bottom:none">
+    <a href="/tags.php?/%B4%DF%C3%DF%B5%E7%D3%B0/" style="font-size:14px;color:#f9653" title="共有1篇关于催眠电影的文章">催眠电影</a></li>
+     
+    <li class="tagcloud" style="border-bottom:none">
+    <a href="/tags.php?/%B8%F6%C8%CB%CB%E6%B1%CA/" style="font-size:14px;color:#ea2ac0" title="共有12篇关于个人随笔的文章">个人随笔</a></li>
+     
+    <li class="tagcloud" style="border-bottom:none">
+    <a href="/tags.php?/%BD%CC%C1%B7%BC%BC%CA%F5%C0%ED%C2%DB/" style="font-size:14px;color:#d0d8d" title="共有2篇关于教练技术理论的文章">教练技术理论</a></li>
+     
+    <li class="tagcloud" style="border-bottom:none">
+    <a href="/tags.php?/nlp%BE%F8%B0%E6%CA%E9%BC%AE/" style="font-size:14px;color:#1dbd62" title="共有2篇关于nlp绝版书籍的文章">nlp绝版书籍</a></li>
+     
+    <li class="tagcloud" style="border-bottom:none">
+    <a href="/tags.php?/%B9%DC%C0%ED%B9%CA%CA%C2/" style="font-size:14px;color:#683fdc" title="共有9篇关于管理故事的文章">管理故事</a></li>
+     
+    <li class="tagcloud" style="border-bottom:none">
+    <a href="/tags.php?/%CD%C5%B6%D3%BC%A4%C0%F8/" style="font-size:14px;color:#177c56" title="共有1篇关于团队激励的文章">团队激励</a></li>
+     
+    <li class="tagcloud" style="border-bottom:none">
+    <a href="/tags.php?/%BD%E2%CB%B5%CA%D3%C6%B5/" style="font-size:14px;color:#1db38f" title="共有0篇关于解说视频的文章">解说视频</a></li>
+     
+    <li class="tagcloud" style="border-bottom:none">
+    <a href="/tags.php?/%BD%CC%C1%B7%BC%BC%CA%F5%D7%CA%C1%CF/" style="font-size:14px;color:#a19fc" title="共有1篇关于教练技术资料的文章">教练技术资料</a></li>
+     
+    <li class="tagcloud" style="border-bottom:none">
+    <a href="/tags.php?/%BE%DB%BB%E1%D3%CE%CF%B7/" style="font-size:14px;color:#b228b" title="共有6篇关于聚会游戏的文章">聚会游戏</a></li>
+     
+    <li class="tagcloud" style="border-bottom:none">
+    <a href="/tags.php?/%C5%E0%D1%B5%D3%CE%CF%B7/" style="font-size:14px;color:#3c536f" title="共有1篇关于培训游戏的文章">培训游戏</a></li>
+     
+    <li class="tagcloud" style="border-bottom:none">
+    <a href="/tags.php?/%B1%CB%C9%D0/" style="font-size:14px;color:#68878b" title="共有1篇关于彼尚的文章">彼尚</a></li>
+     
+    <li class="tagcloud" style="border-bottom:none">
+    <a href="/tags.php?/%C8%F8%CC%E1%D1%C7/" style="font-size:14px;color:#61c41e" title="共有2篇关于萨提亚的文章">萨提亚</a></li>
+     
+    <li class="tagcloud" style="border-bottom:none">
+    <a href="/tags.php?/%BD%CC%C1%B7%B9%AB%CA%BD/" style="font-size:14px;color:#c05e66" title="共有1篇关于教练公式的文章">教练公式</a></li>
+     
+    <li class="tagcloud" style="border-bottom:none">
+    <a href="/tags.php?/%BD%CC%C1%B7%B9%CA%CA%C2/" style="font-size:14px;color:#c0adb3" title="共有1篇关于教练故事的文章">教练故事</a></li>
+     
+    <li class="tagcloud" style="border-bottom:none">
+    <a href="/tags.php?/%B3%A3%BC%FB%CE%CA%CC%E2/" style="font-size:14px;color:#383c49" title="共有3篇关于常见问题的文章">常见问题</a></li>
+     
+    <li class="tagcloud" style="border-bottom:none">
+    <a href="/tags.php?/%D5%BE%C4%DA%B9%AB%B8%E6/" style="font-size:14px;color:#846bff" title="共有1篇关于站内公告的文章">站内公告</a></li>
+     
+    <li class="tagcloud" style="border-bottom:none">
+    <a href="/tags.php?/%D6%EC%BD%A8%BE%FC/" style="font-size:14px;color:#ceaff8" title="共有1篇关于朱建军的文章">朱建军</a></li>
+     
+    <li class="tagcloud" style="border-bottom:none">
+    <a href="/tags.php?/%BD%CC%C1%B7%BC%BC%CA%F5%D4%B4%CD%B7/" style="font-size:14px;color:#8c9a4b" title="共有2篇关于教练技术源头的文章">教练技术源头</a></li>
+     
+    <li class="tagcloud" style="border-bottom:none">
+    <a href="/tags.php?/%C8%BA%C2%E4/" style="font-size:14px;color:#962210" title="共有1篇关于群落的文章">群落</a></li>
+     
+    <li class="tagcloud" style="border-bottom:none">
+    <a href="/tags.php?/NLP/" style="font-size:14px;color:#b2c398" title="共有1篇关于NLP的文章">NLP</a></li>
+     
+    <li class="tagcloud" style="border-bottom:none">
+    <a href="/tags.php?/%BD%CC%C1%B7%BC%BC%CA%F5/" style="font-size:14px;color:#fd6f46" title="共有1篇关于教练技术的文章">教练技术</a></li>
+     
+    <li class="tagcloud" style="border-bottom:none">
+    <a href="/tags.php?/%B9%B5%CD%A8/" style="font-size:14px;color:#750de" title="共有1篇关于沟通的文章">沟通</a></li>
+     
+       </div>
+
+
+
+     
+     
+     
+     
+     
+       
+
+</aside>
+
+<!--中部结束-->
+ <div class="clear" ></div> 
+</div>
+
+<!--中部结束-->
+
+
+
+
+
+
+
+
+
+
+<div id="footer">
+
+<div id="foot2">
+
+<!--返回顶部-->
+<div id="elevator_item">
+        <a id="elevator" onclick="return false;" title="回到顶部"></a>
+        <a class="qr"></a>
+  	<div class="qr-popup">
+    	<a class="code-link"><img class="code" src="/templets/gjw/images/pxsgjw-gzpt.jpg" width="150" height="150"/></a>
+        <span>关注微信平台</span>
+    <div class="arr"></div>
+  </div>
+<script src="js/jquery.min.js" type="text/javascript"></script> 
+<script type="text/javascript">
+$(function() {
+	$(window).scroll(function(){
+		var scrolltop=$(this).scrollTop();		
+		if(scrolltop>=200){		
+			$("#elevator_item").show();
+		}else{
+			$("#elevator_item").hide();
+		}
+	});		
+	$("#elevator").click(function(){
+		$("html,body").animate({scrollTop: 0}, 500);	
+	});		
+	$(".qr").hover(function(){
+		$(".qr-popup").show();
+	},function(){
+		$(".qr-popup").hide();
+	});	
+});
+</script>
+  
+</div>
+
+<div class="foot_nr">
+<p><a href="/zgywm/gjw/35.html" target="_blank">工具屋介绍</a>|<a href="/zgywm/gywm/37.html" target="_blank">关于我们</a>|<a href="/zgywm/gywm/38.html" target="_blank">联系我们</a><img src="/templets/gjw/images/lxwm01.jpg" width="713"  height="12" >
+
+<script language="javascript" type="text/javascript" src="http://js.users.51.la/15599164.js"></script>
+<noscript><a href="http://www.51.la/?15599164" target="_blank"><img alt="&#x6211;&#x8981;&#x5566;&#x514D;&#x8D39;&#x7EDF;&#x8BA1;" src="http://img.users.51.la/15599164.asp" style="border:none" /></a></noscript>
+
+
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fcea3f954548ea2c8d45e384344f4c12c' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</p></div>
+</div>
+</div>
+<!--QR code end-->
+<script type="text/javascript">       
+
+ SyntaxHighlighter.highlight();        
+
+ </script>
+
+</body>
+</html>

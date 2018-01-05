@@ -1,0 +1,746 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>NLP绝版书籍之-青蛙变王子_培训师工具屋</title>
+<meta name="keywords" content="nlp绝版书籍" />
+<meta name="description" content="传说中 , 这是可以改变命运的一本书 . 青蛙变王子虽然是童话故事， 然而在现实的生活中是否可能发生？ 透过本书你就能拥有那股神奇的力量， 让你在短短不到一小时之内改造心灵， 使你整个身心焕然一新， 本书是 N.L.P. 创始人一畅销著作之一， 它让你确实知" />
+<!--[if IE 6]>
+	<script>alert('你的IE浏览器版本太低，请使用更高版本或Chrome')</script>
+<![endif]-->
+<link rel="stylesheet" type="text/css" href="/templets/gjw/images/index.css">
+<link href="/templets/gjw/images/Extras.css" rel="stylesheet" media="screen" type="text/css" />
+<link  rel="stylesheet" type="text/css" href="/templets/gjw/images/shCoreDefault.css"/> 
+<script type="text/javascript" src="/templets/gjw/js/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="/templets/gjw/js/all.js"></script>
+<!--[if IE 6]>
+<script type="text/javascript" src="/templets/gjw/images/DD_belatedPNG.js"></script>
+<script>
+DD_belatedPNG.fix('.png_bg');
+</script>
+<![endif]-->
+<script language="javascript" type="text/javascript" src="/include/dedeajax2.js"></script>
+<script type="text/javascript"  src="/templets/gjw/js/shCore.js"></script>
+<script language="javascript" type="text/javascript">
+<!--
+function CheckLogin(){
+	  var taget_obj = document.getElementById('_ajax_feedback');
+	  myajax = new DedeAjax(taget_obj,false,false,'','','');
+	  myajax.SendGet2("/member/ajax_feedback.php");
+	  DedeXHTTP = null;
+}
+function postBadGood(ftype,fid)
+{
+	var taget_obj = document.getElementById(ftype+fid);
+	var saveid = GetCookie('badgoodid');
+	if(saveid != null)
+	{
+		var saveids = saveid.split(',');
+		var hasid = false;
+		saveid = '';
+		j = 1;
+		for(i=saveids.length-1;i>=0;i--)
+		{
+			if(saveids[i]==fid && hasid) continue;
+			else {
+				if(saveids[i]==fid && !hasid) hasid = true;
+				saveid += (saveid=='' ? saveids[i] : ','+saveids[i]);
+				j++;
+				if(j==10 && hasid) break;
+				if(j==9 && !hasid) break;
+			}
+		}
+		if(hasid) { alert('你刚才已表决过了喔！'); return false;}
+		else saveid += ','+fid;
+		SetCookie('badgoodid',saveid,1);
+	}
+	else
+	{
+		SetCookie('badgoodid',fid,1);
+	}
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	myajax.SendGet2("/plus/feedback.php?aid="+fid+"&action="+ftype+"&fid="+fid);
+}
+function postDigg(ftype,aid)
+{
+	var taget_obj = document.getElementById('newdigg');
+	var saveid = GetCookie('diggid');
+	if(saveid != null)
+	{
+		var saveids = saveid.split(',');
+		var hasid = false;
+		saveid = '';
+		j = 1;
+		for(i=saveids.length-1;i>=0;i--)
+		{
+			if(saveids[i]==aid && hasid) continue;
+			else {
+				if(saveids[i]==aid && !hasid) hasid = true;
+				saveid += (saveid=='' ? saveids[i] : ','+saveids[i]);
+				j++;
+				if(j==20 && hasid) break;
+				if(j==19 && !hasid) break;
+			}
+		}
+		if(hasid) { alert("你已经顶过该日志了~"); return; }
+		else saveid += ','+aid;
+		SetCookie('diggid',saveid,1);
+	}
+	else
+	{
+		SetCookie('diggid',aid,1);
+	}
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	var url = "/plus/digg_ajax.php?action="+ftype+"&id="+aid;
+	myajax.SendGet2(url);
+}
+function getDigg(aid)
+{
+	var taget_obj = document.getElementById('newdigg');
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	myajax.SendGet2("/plus/digg_ajax.php?id="+aid);
+	DedeXHTTP = null;
+}
+function check(){
+		if(document.formsearch.searchtype.value=="")
+		document.formsearch.action="http://www.google.cn/custom"
+		else
+		document.formsearch.action="/plus/search.php"
+	} 
+-->
+</script>
+</head>
+
+
+<body>
+
+<div class="header">
+   <div class="nav">
+    
+       <div id="logo"><a href="/" title="教练技术"><img src="/templets/gjw/images/logo.png" alt="教练技术"></a></div>
+       <!-- 导航开始 --> 
+   
+       <div id="dh">
+          <ul>
+            <li class="first"><a href="/" title="培训师工具屋">首页</a></li>
+           <li><a  id="1"  href="/zmryt/" class="tablink arwlink">每日一贴</a>    
+              <ul class="subnav">       
+                       
+             </ul>    
+           </li><li><a  id="2"  href="/zjpwk/" class="tablink arwlink">教练文库</a>    
+              <ul class="subnav">       
+                         
+                  <li><a href="/zjpwk/jljs/">教练技术</a> </li>  
+                         
+                  <li><a href="/zjpwk/nlp/">NLP</a> </li>  
+                         
+                  <li><a href="/zjpwk/cm/">催眠</a> </li>  
+                         
+                  <li><a href="/zjpwk/xtpl/">系统排列</a> </li>  
+                         
+                  <li><a href="/zjpwk/wxzl/">完型治疗</a> </li>  
+                         
+                  <li><a href="/zjpwk/qzgx/">亲子关系</a> </li>  
+                         
+                  <li><a href="/zjpwk/tdxl/">团队训练</a> </li>  
+                         
+                  <li><a href="/zjpwk/ytxw/">源头学问</a> </li>  
+                         
+                  <li><a href="/zjpwk/qt/">其它</a> </li>  
+                       
+             </ul>    
+           </li><li><a  id="3"  href="/zpxgj/" class="tablink arwlink">培训工具</a>    
+              <ul class="subnav">       
+                         
+                  <li><a href="/zpxgj/pxgs/">培训故事</a> </li>  
+                         
+                  <li><a href="/zpxgj/pxyx/">培训游戏</a> </li>  
+                         
+                  <li><a href="/zpxgj/pxdy/">培训电影</a> </li>  
+                         
+                  <li><a href="/zpxgj/pxqc/">培训器材</a> </li>  
+                       
+             </ul>    
+           </li><li><a  id="4"  href="/zzxsp/" class="tablink arwlink">在线视频</a>    
+              <ul class="subnav">       
+                       
+             </ul>    
+           </li> 
+           <li class="tool"><a href="http://bbs.pxsgjw.com/forum.php" target="_blank">资源下载</a></li>
+           <li ><a style="color: #FC0" href="/zzltz/" target="_blank">资料套装</a>
+               <ul>  
+               <li><a href="/zzltz/nlp/" target="_blank">NLP教练技术</a></li>
+               <li><a href="/zzltz/mszt/" target="_blank">名师专题</a></li>
+               </ul>
+           </li>     
+          </ul>
+       </div>
+
+      <!-- 搜索开始 -->
+          
+              
+                 <div class="so">
+          <form  name="formsearch" action="/search.php" target="_blank">
+          <input type="hidden" name="searchtype" value="titlekeyword">
+          <input class="input_text"  type="text" name="q" value="请输入您要搜索的关键词" onfocus="if(this.value=='请输入您要搜索的关键词'){this.value='';}" onblur="if(this.value=='') {this.value='请输入您要搜索的关键词';}">
+          <input type="submit" class="input_search" value="搜索" />
+                 </form>
+
+                  </div>
+
+ <div class="clear" ></div>            
+<!-- 搜索结束 -->   
+
+
+   </div>
+</div>
+
+<!-- 登陆框开始 -->
+   <div class="top_dd">
+            
+
+
+        <div class="top_dd01">
+         
+<strong class="text-success">最新消息：</strong>
+原网站由于技术原因导致数据丢失，老站新开，谢谢新老客户共同探讨！
+<strong class="text-success">你还可以：</strong> <a  href="/">投稿</a> / <a  href="/">广告合作</a> /&nbsp; <a  href="/">培训机构导航</a>  / 联系邮箱：<strong class="text-info">pxsgjw@pxsgjw.com</strong>
+</div>
+   
+   <div class="zc">
+         <img src="/templets/gjw/images/tel.jpg" alt="[field:title /]">
+                                   
+   </div>
+
+
+      </div>
+<!-- 登陆框结束 -->
+<!--中部分开始-->
+<!--中间区域-->   
+<div class="gong">
+
+<div class="dqwz"><p>当前位置: <a href='http://www.pxsgjw.com/'>网站首页</a> > <a href='/zjpwk/'>教练文库</a> > <a href='/zjpwk/qt/'>其它</a> > </p>
+</div>
+
+
+
+
+
+<article class="left" > 
+   <div class="nry_cs">
+      <h1>NLP绝版书籍之-青蛙变王子</h1>
+	  <div class="nr_cs">
+				<span>发布时间:2014-05-23 02:11</span>
+<span>浏览次数： <script src="/plus/count.php?view=yes&aid=100&mid=1" type='text/javascript' language="javascript"></script></span>				
+<span>分类: <a href=" /zjpwk/qt/ "> 其它 </a> </span>
+</a>
+	  </div>
+  </div>
+    
+    
+    <div class="nr_l">
+<div class="neirong">
+<p><span style="font-family:宋体">传说中</span>,<span style="font-family:宋体">这是可以改变命运的一本书</span>.<span style="font-family:宋体">青蛙变王子虽然是童话故事，</span><span style="font-family:宋体">然而在现实的生活中是否可能发生？</span><span style="font-family:宋体">透过本书你就能拥有那股神奇的力量，</span></p><p><span style="font-family:宋体">让你在短短不到一小时之内改造心灵，</span><span style="font-family:宋体">使你整个身心焕然一新，</span><span style="font-family:宋体">本书是</span>N.L.P.<span style="font-family:宋体">创始人一畅销著作之一，</span><span style="font-family:宋体">它让你确实知道该怎么做、如何做，</span><span style="font-family:宋体">是一本神奇、不可思议的好书。</span></p><p>&nbsp;</p><p><span style="font-family:宋体">目录</span></p><p><span style="font-family:宋体">前言</span></p><p><span style="font-family:宋体">读者大开眼界</span></p><p><span style="font-family:宋体">第一章</span><span style="font-family:宋体">感官经验</span></p><p style="text-indent:14px"><span style="font-family:宋体">解读先送（</span>ACCESSING&nbsp;CUSE<span style="font-family:宋体">）练习</span></p><p style="text-indent:14px"><span style="font-family:宋体">经验</span>V.S<span style="font-family:宋体">幻觉</span></p><p style="text-indent:14px"><span style="font-family:宋体">练习一</span></p><p style="text-indent:14px"><span style="font-family:宋体">练习二</span></p><p style="text-indent:14px"><span style="font-family:宋体">练习三</span></p><p style="text-indent:14px"><span style="font-family:宋体">练习四</span></p><p><span style="font-family:宋体">第二章</span><span style="font-family:宋体">改变个人历史和组织</span></p><p><span style="font-family:宋体">设心锚练习</span></p><p><span style="font-family:宋体">第三章</span><span style="font-family:宋体">重建架构</span></p><p>&nbsp;</p><p><span style="font-family:宋体">在侦探小说里，读者预期得到，作者会留给他一连串的书面线索——事情刚刚发生时的一些片段剧情描写。当这些片段拼凑起来后，小心的读者就有足够的根据，把这些呈现出来的线索，重塑出原先的完整的时间，甚至于了解关系人物的冬季和特殊事情的关键所在—或者，至少也明白作者将在小说结尾给你什答案。比较漫不经心的读者只想消遣，即使个人有什领悟，他（或她）也许也不自知。这种小说的作者有义务提供足够的蛛丝马迹，使读者可以重塑，但不能太明显。</span></p><p><span style="font-family:宋体"></span><span style="font-family:宋体">这本书也是这类神秘小说的书面记录。不过和传统的神秘小说有几个重大超别，这些记录下来的故事使用「说」的，而说故事和写故事的技巧并不相同。说故事的人应该要根据现场听众自觉的反应来决定提供什线索，他考虑的重点有二：一、口头上的，蓄意的反应—现场听众自觉地回馈给说故事者的讯号。二、非语言的，发自本然的，无意义的反应：灵光一闪，震惊、费力回忆—不自觉地回馈，连听众自己都没有发现的讯号，除了说故事者以外。说故事者要讲究的技巧是，善用这些无意义回馈，以便提供足够的线索，在现场听众还没有来得及领会之前，他们已经不自觉地</span>[<span style="font-family:宋体">想</span>]<span style="font-family:宋体">到解决方法。从这种艺术表演中，我们满心欢喜地得到想要的经验—这才发现，我们知道的远比我们想象的还多。</span></p><p><span style="font-family:宋体"></span><span style="font-family:宋体">我们很高兴在我们的研习会中开创这类的经验，然后本书所记录的内容，已经</span>[<span style="font-family:宋体">让</span>]<span style="font-family:宋体">来参加过研习会的人提供了足够的线索，但是，只有机灵的读者可以百分之百重塑事件的原貌。我们在术中明确提出，有关言喻的因素，是沟通之时最没有意思，影响力也最小的部分，不过，这也是我们唯一能够在这里提供给读者的一种线索。</span></p><p><span style="font-family:宋体"></span><span style="font-family:宋体">在面对面沟通时，分析所仰赖的基本装置是回馈环（译注：意指反应会产生互动关系层层相扣。），举例说，如果叫你描述一只猫和一只狗碰面的情况，你可能会这样说：「猫喵喵地叫</span>.......<span style="font-family:宋体">狗张牙咧嘴</span>.........<span style="font-family:宋体">猫拱起背</span>........<span style="font-family:宋体">狗吠叫</span>......<span style="font-family:宋体">猫—」所描述的这些特别的动作很重要，但它们也是连续性的动作之一，这点同样重要。甚至可以说，猫的任何特殊动作之所以能为我们所了解，因为把它放在和狗的互动中，这是唯一的理由。假如因为某种缘故，你的观察仅限定在猫身上，那你要重塑猫在和和什东西互动，这就是个很大的难题了，把猫单独拍离来看，它的行为比较不容易了解。</span></p><p><span style="font-family:宋体;font-size:14px">读者在书中终会发现，我们说的这一套，违反你既有的逻辑推理。突兀的切入点似乎与目的无关，还有，内容、心情、方向的变化也隐而不明，但我们愿意向你保证，回馈到当事人的行为脉络时，它们自然有它们的道理。如果这些看起来似乎很奇怪的连续性沟通方式，把它们摆回原有的行为脉络去的话，那套逻辑自然很快地呈现出来。因此，读者将面临的挑战是：你是希望精明能干地自己费力重塑这个脉络哦呢？还是干脆坐享这种互换的成果，慢慢对个人的本性的潜意识部分，有更多的了解和帮助？</span></p><p>&nbsp;</p>
+</div>
+<div class="bshare-custom"><a title="分享到" href="http://www.bShare.cn/" id="bshare-shareto" class="bshare-more">分享到</a><a title="分享到QQ空间" class="bshare-qzone">QQ空间</a><a title="分享到新浪微博" class="bshare-sinaminiblog">新浪微博</a><a title="分享到人人网" class="bshare-renren">人人网</a><a title="分享到腾讯微博" class="bshare-qqmb">腾讯微博</a><a title="分享到网易微博" class="bshare-neteasemb">网易微博</a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a><span class="BSHARE_COUNT bshare-share-count">0</span></div><script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#style=-1&amp;uuid=4c521bae-605f-481d-84a4-7f66a7f0faa0&amp;pophcol=2&amp;lang=zh"></script><script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/bshareC0.js"></script>
+<script language="javascript" type="text/javascript"> 
+        <!-- 
+        document.body.oncopy = function () { 
+        setTimeout( function () { 
+        var text = clipboardData.getData("text"); 
+        if (text) { 
+        text = text + "\r\n该文章来源于培训师工具屋："+location.href; 
+        clipboardData.setData("text", text); 
+        } 
+        }, 100 ) 
+        } 
+        --> 
+</script> 
+
+<script language='javascript'> 
+function ImgReSize(e) 
+{ 
+  if(e.width>830) //600可根据你文章的内容区域大小，可调整 
+  { 
+    e.width=830;   //等同上面你设的那个数值 
+    e.style.width=""; 
+  } 
+  if(e.height>10) 
+  { 
+    e.style.height=""; 
+  } 
+} 
+</script>  
+
+<div class="feiye">
+
+
+ 上一篇：没有了   
+ 下一篇：<a href='/zjpwk/qt/101.html'>NLP绝版书籍之-改变你的未来-如何使用NLP技巧</a>  
+</div>      
+<div class="clear" ></div> 
+<div class="plq">
+
+ <!-- //加载评论区 -->
+    <!-- //主模板必须要引入/include/dedeajax2.js -->
+<a name='postform'></a>
+<div id="commentBox">
+	<form action="#" method="post" name="feedback">
+  <input type="hidden" name="dopost" value="send" />
+  <input type="hidden" name="comtype" value="comments">
+  <input type="hidden" name="aid" value="100" />
+  <input type="hidden" name="fid" id='feedbackfid' value="0" />		
+  <div class="commentPost" id="_ajax_feedback">
+		<div class="commentUserinfo">
+				 &nbsp;报上名号来：<input type="text" name="username" size="16"/>
+				 
+				 &nbsp;&nbsp;&nbsp;
+				 神兽验证马：<input type='text' name='validate' size='4' style="text-transform:uppercase;"/>
+		</div>
+		<div class="yanzhengma">
+				 <img src="/include/vdimgck.php" id="validateimg" style="cursor:pointer" onclick="this.src=this.src+'?'" title="点击我更换验证码" alt="点击我更换验证码"/>
+		</div>
+         <input type="hidden" name="notuser" id="dcmp-submit-guest" />
+         <label for="dcmp-submit-guest" /> </label>	
+						
+	</div>		
+	<div class="commentArea">
+		<textarea cols="60" name="msg" rows="5"></textarea>
+	</div>	
+	<div class="commentMood">
+	  <ul>                               
+        <li><input type="radio" name="face" value="1" checked="1" /><img src="/templets/gjw/images/mood/ico-mood-1.gif" width="19px" height="16px"/></li>
+        <li><input type="radio" name="face" value="2"/><img src="/templets/gjw/images/mood/ico-mood-2.gif" width="16px" height="16px"/></li>
+        <li><input type="radio" name="face" value="3"/><img src="/templets/gjw/images/mood/ico-mood-3.gif" width="16px" height="16px"/></li>
+        <li><input type="radio" name="face" value="4"/><img src="/templets/gjw/images/mood/ico-mood-4.gif" width="18px" height="16px"/></li>
+        <li><input type="radio" name="face" value="5"/><img src="/templets/gjw/images/mood/ico-mood-5.gif" width="16px" height="16px"/></li>
+        <li><input type="radio" name="face" value="6"/><img src="/templets/gjw/images/mood/ico-mood-6.gif" width="19px" height="16px"/></li>
+        <li><input type="radio" name="face" value="7"/><img src="/templets/gjw/images/mood/ico-mood-7.gif" width="17px" height="16px"/></li>
+        <li><input type="radio" name="face" value="8"/><img src="/templets/gjw/images/mood/ico-mood-8.gif" width="17px" height="16px"/></li> 
+        <li><input type="radio" name="face" value="9"/><img src="/templets/gjw/images/mood/ico-mood-9.gif" width="18px" height="16px"/></li>
+        <li><input type="radio" name="face" value="10"/><img src="/templets/gjw/images/mood/ico-mood-10.gif" width="18px" height="16px"/></li>
+        <li><input type="radio" name="face" value="11"/><img src="/templets/gjw/images/mood/ico-mood-11.gif" width="16px" height="16px"/></li>
+		</ul>
+	</div>	
+	<div class="commentSubmit">
+		<button type="button" onClick='PostComment()'>发表评论</button>
+	</div>	
+	</form>
+</div>
+<a name='commettop'></a>
+<div id="commentLayout">
+	<!-- //这两个ID的区块必须存在，否则JS会出错 -->
+	<div id='commetcontentNew'></div>
+	<div id='commetcontent'></div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+//由于评论载入时使用异步传输，因此必须在最后一步加载（DIGG和评论框须放在评论内容前面）
+//如果一定需要提前的把myajax.SendGet改为myajax.SendGet2，但可能会引起页面阻滞
+-->
+<script language='javascript'>
+function LoadCommets(page)
+{
+		var taget_obj = document.getElementById('commetcontent');
+		var waithtml = "<div style='line-height:50px'><img src='/images/loadinglit.gif' />评论加载中...</div>";
+		var myajax = new DedeAjax(taget_obj, true, true, '', 'x', waithtml);
+		myajax.SendGet2("/plus/feedback_ajax.php?dopost=getlist&aid=100&page="+page);
+		DedeXHTTP = null;
+}
+function PostComment()
+{
+		var f = document.feedback;
+		var nface = '6';
+		var nfeedbacktype = 'feedback';
+		var nvalidate = '';
+		var nnotuser = '';
+		var nusername = '';
+		var npwd = '';
+		var taget_obj = $DE('commetcontentNew');
+		var waithtml = "<div style='line-height:30px'><img src='/images/loadinglit.gif' />正在发送中...</div>";
+		if(f.msg.value=='')
+		{
+			alert("评论内容不能为空！");
+			return;
+		}
+		if(f.validate)
+		{
+			if(f.validate.value=='') {
+				alert("请填写验证码！");
+				return;
+			}
+			else {
+				nvalidate = f.validate.value;
+			}
+		}
+		if(f.msg.value.length > 500)
+		{
+			alert("你的评论是不是太长了？请填写500字以内的评论。");
+			return;
+		}
+		if(f.feedbacktype) {
+			for(var i=0; i < f.feedbacktype.length; i++)
+				if(f.feedbacktype[i].checked) nfeedbacktype = f.feedbacktype[i].value;
+		}
+		if(f.face) {
+			for(var j=0; j < f.face.length; j++)
+				if(f.face[j].checked) nface = f.face[j].value;
+		}
+		if(f.notuser.checked) nnotuser = '1';
+		if(f.username) nusername = f.username.value;
+		if(f.pwd) npwd = f.pwd.value;
+		
+		var myajax = new DedeAjax(taget_obj, false, true, '', '', waithtml);
+		myajax.sendlang = 'gb2312';
+		myajax.AddKeyN('dopost', 'send');
+		myajax.AddKeyN('aid', '100');
+		myajax.AddKeyN('fid', f.fid.value);
+		myajax.AddKeyN('face', nface);
+		myajax.AddKeyN('feedbacktype', nfeedbacktype);
+		myajax.AddKeyN('validate', nvalidate);
+		myajax.AddKeyN('notuser', nnotuser);
+		myajax.AddKeyN('username', nusername);
+		myajax.AddKeyN('pwd', npwd);
+		myajax.AddKeyN('msg', f.msg.value);
+		myajax.SendPost2('/plus/feedback_ajax.php');
+		f.msg.value = '';
+		f.fid.value = 0;
+		if(f.validate)
+		{
+			if($DE('validateimg')) $DE('validateimg').src = "/include/vdimgck.php?"+f.validate.value;
+			f.validate.value = '';
+		}
+}
+function quoteCommet(fid)
+{
+	document.feedback.fid.value = fid;
+}
+LoadCommets(1);
+</script><!-- //评论内容区结束 -->
+		
+
+</div>
+
+
+
+
+  <div class="clear" ></div> 
+             </div>
+             
+             
+             
+   </article>    
+
+   
+
+
+
+<aside class="right" >
+
+
+<!--中部右开始-->
+
+<div class="line">站内导航</div>
+     <div class="cplist_l_01">
+       
+         <ul>
+          
+         <li><a href='/zmryt/'>每日一贴</a> </li> 
+         
+         <li><a href='/zjpwk/'>教练文库</a> </li> 
+         
+         <li><a href='/zpxgj/'>培训工具</a> </li> 
+         
+         <li><a href='/zzxsp/'>在线视频</a> </li> 
+         
+         <li><a href='/zzltz/'>资料套装</a> </li> 
+         
+         <li><a href='/zjldx/'>教练短讯</a> </li> 
+         
+         </ul>
+       <br class="clear" />
+     </div>
+
+
+
+<div class="line">自学资料包</div>
+ 
+<!--<a href=""><img src="/uploads/z_sptp/001-dsb.gif" width="285"  height="285" alt="NLP教练技术《导师版》工具包"></a>-->
+ <div class="cplist_l_02">
+         <ul>
+            <li id="xglist_tp"><a href="/zzltz/nlp/dsb.html"><img src="/uploads/z_sptp/001-dsb.gif"></a></li>
+             <li id="xglist_nr"><h5><a href="/zzltz/nlp/dsb.html">《导师版》工具包</a></h5>
+                 <p>适合人群：NLP职业导师；职业培训师；企业高管；心理咨询师；教练技术，NLP研究者；</p>
+                 <span>订购价格：<i>3898</i>元</span>
+             </li>
+<li id="xglist_tp"><a href="/zzltz/nlp/jlb.html"><img src="/uploads/z_sptp/002-jlb.gif"></a></li>
+             <li id="xglist_nr"><h5><a href="/zzltz/nlp/jlb.html">《教练版》工具包</a></h5>
+                 <p>适合人群：参加过教练技术的人群；企业高管；职业培训师</p>
+                 <span>订购价格：<i>598</i>元</span>
+             </li>
+<li id="xglist_tp"><a href="/zzltz/yyb.html"><img src="/uploads/z_sptp/003-yyb.gif"></a></li>
+             <li id="xglist_nr"><h5><a href="/zzltz/yyb.html">《应用版》工具包</a></h5>
+                 <p>适合人群：看完该套资料2遍后觉得每个人都应该至少看一遍</p>
+                 <span>订购价格：<i>560</i>元</span>
+             </li>
+<li id="xglist_tp"><a href="/zzltz/nlpsj.html"><img src="/uploads/z_sptp/005-48s.gif"></a></li>
+             <li id="xglist_nr"><h5><a href="/zzltz/nlpsj.html">NLP绝版书籍48本</a></h5>
+                 <p>适合人群：NLP研究者</p>
+                 <span>订购价格：<i>2600</i>元</span>
+             </li>
+<li id="xglist_tp"><a href="/zzltz/dzb.html"><img src="/uploads/z_sptp/004-dzb.gif"></a></li>
+             <li id="xglist_nr"><h5><a href="/zzltz/dzb.html">《订制版》工具包</a></h5>
+                 <p>适合人群：订制</p>
+                 <span>订购价格：<i>商议</i>元</span>
+             </li>
+
+<br class="clear" />
+        </ul>
+     </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <div class="line">阅读排行</div>
+   
+     <div class="ydph">
+     
+     <ul>
+               
+               <li><span>1</span> <a href="/zzxsp/63.html"  title="冯晓强视频试看"> 冯晓强视频试看</a>
+                    </li>
+<li><span>2</span> <a href="/zzxsp/43.html"  title="朱建军意向对话技术培训05"> 朱建军意向对话技术培训05</a>
+                    </li>
+<li><span>3</span> <a href="/zzxsp/42.html"  title="朱建军-意向对话技术培训04"> 朱建军-意向对话技术培训04</a>
+                    </li>
+<li><span>4</span> <a href="/zzxsp/25.html"  title="朱建军-意向对话技术培训03"> 朱建军-意向对话技术培训03</a>
+                    </li>
+<li><span>5</span> <a href="/zzxsp/24.html"  title="朱建军-意向对话技术培训02"> 朱建军-意向对话技术培训02</a>
+                    </li>
+<li><span>6</span> <a href="/zzxsp/23.html"  title="朱建军-意向对话技术培训01"> 朱建军-意向对话技术培训01</a>
+                    </li>
+<li><span>7</span> <a href="/zmryt/47.html"  title="企业教练技术完整课程包含什么？"> 企业教练技术完整课程包含什么？</a>
+                    </li>
+<li><span>8</span> <a href="/zmryt/49.html"  title="关于资料内容和学习效果说明"> 关于资料内容和学习效果说明</a>
+                    </li>
+<li><span>9</span> <a href="/zmryt/50.html"  title="关于资料介绍中的名词解释"> 关于资料介绍中的名词解释</a>
+                    </li>
+<li><span>10</span> <a href="/zmryt/121.html"  title="从NLP的角度看看我们所用的词语"> 从NLP的角度看看我们所用的词语</a>
+                    </li>
+<li><span>11</span> <a href="/zmryt/115.html"  title="从《盟军夺宝队》电影看教练技术的区分"> 从《盟军夺宝队》电影看教练技术的区分</a>
+                    </li>
+<li><span>12</span> <a href="/zjldx/106.html"  title="教练技术的五项基本功"> 教练技术的五项基本功</a>
+                    </li>
+<li><span>13</span> <a href="/zmryt/105.html"  title="回忆教练技术带给我的信仰"> 回忆教练技术带给我的信仰</a>
+                    </li>
+<li><span>14</span> <a href="/zmryt/102.html"  title="从古龙的武侠小说看教练技术学习"> 从古龙的武侠小说看教练技术学习</a>
+                    </li>
+<li><span>15</span> <a href="/zmryt/99.html"  title="从《超凡蜘蛛侠2》中能发现教练技术技"> 从《超凡蜘蛛侠2》中能发现教练技术技</a>
+                    </li>
+<li><span>16</span> <a href="/zmryt/83.html"  title="NLP导师版工具包-解说配套文档"> NLP导师版工具包-解说配套文档</a>
+                    </li>
+<li><span>17</span> <a href="/zmryt/65.html"  title="教练技术资料教练版工具包解说视频配套"> 教练技术资料教练版工具包解说视频配套</a>
+                    </li>
+	
+                 </ul>
+   
+
+    </div>
+
+
+     <div class="line">在线视频</div>             
+      <div class="sy_zxsp">
+         <ul>
+            <li><a href="/zzxsp/63.html" target="_blank"><img src="/uploads/z_zxsptp/63.jpg" alt="冯晓强视频试看"></a><span><a href="/zzxsp/63.html"  title="冯晓强视频试看"> 冯晓强视频试看</a></span> 
+                </li>
+<li><a href="/zzxsp/43.html" target="_blank"><img src="/uploads/z_zxsptp/20140502/05.jpg" alt="朱建军意向对话技术培训05"></a><span><a href="/zzxsp/43.html"  title="朱建军意向对话技术培训05"> 朱建军意向对话技术培训05</a></span> 
+                </li>
+<li><a href="/zzxsp/42.html" target="_blank"><img src="/uploads/z_zxsptp/20140502/04.jpg" alt="朱建军-意向对话技术培训04"></a><span><a href="/zzxsp/42.html"  title="朱建军-意向对话技术培训04"> 朱建军-意向对话技术培训04</a></span> 
+                </li>
+	
+         </ul>
+     </div>
+
+
+      <div class="line">热门标签</div>
+      <div class="list_rmbq">
+    <li class="tagcloud" style="border-bottom:none;">
+    <a href="http://www.pxsgjw.com" style="color:#fff;background-color:#6C6C6C">全部标签</a>
+    </li>
+    
+    <li class="tagcloud" style="border-bottom:none">
+    <a href="/tags.php?/%BD%CC%C1%B7%BC%BC%CA%F5%BC%BC%C7%C9/" style="font-size:14px;color:#2fb66b" title="共有30篇关于教练技术技巧的文章">教练技术技巧</a></li>
+     
+    <li class="tagcloud" style="border-bottom:none">
+    <a href="/tags.php?/%BD%CC%C1%B7%BC%BC%CA%F5%B0%B8%C0%FD/" style="font-size:14px;color:#cb41c" title="共有9篇关于教练技术案例的文章">教练技术案例</a></li>
+     
+    <li class="tagcloud" style="border-bottom:none">
+    <a href="/tags.php?/nlp%CA%E9%BC%AE/" style="font-size:14px;color:#cc3cc8" title="共有3篇关于nlp书籍的文章">nlp书籍</a></li>
+     
+    <li class="tagcloud" style="border-bottom:none">
+    <a href="/tags.php?/%BE%C6%D7%C0%D3%CE%CF%B7/" style="font-size:14px;color:#8fb541" title="共有1篇关于酒桌游戏的文章">酒桌游戏</a></li>
+     
+    <li class="tagcloud" style="border-bottom:none">
+    <a href="/tags.php?/%BE%DB%BB%E1%D3%CE%CF%B7/" style="font-size:14px;color:#5ec320" title="共有11篇关于聚会游戏的文章">聚会游戏</a></li>
+     
+    <li class="tagcloud" style="border-bottom:none">
+    <a href="/tags.php?/%D1%A7%D4%B1%B7%D6%CF%ED/" style="font-size:14px;color:#5a99a0" title="共有7篇关于学员分享的文章">学员分享</a></li>
+     
+    <li class="tagcloud" style="border-bottom:none">
+    <a href="/tags.php?/NLP%C7%D7%D7%D3/" style="font-size:14px;color:#417198" title="共有2篇关于NLP亲子的文章">NLP亲子</a></li>
+     
+    <li class="tagcloud" style="border-bottom:none">
+    <a href="/tags.php?/%BD%CC%C1%B7%BC%BC%CA%F5%B9%CA%CA%C2/" style="font-size:14px;color:#2e8264" title="共有1篇关于教练技术故事的文章">教练技术故事</a></li>
+     
+    <li class="tagcloud" style="border-bottom:none">
+    <a href="/tags.php?/%B7%EB%CF%FE%C7%BF%CA%D3%C6%B5/" style="font-size:14px;color:#ebac2e" title="共有1篇关于冯晓强视频的文章">冯晓强视频</a></li>
+     
+    <li class="tagcloud" style="border-bottom:none">
+    <a href="/tags.php?/%D6%EC%BD%A8%BE%FC%CA%D3%C6%B5/" style="font-size:14px;color:#c4436c" title="共有5篇关于朱建军视频的文章">朱建军视频</a></li>
+     
+    <li class="tagcloud" style="border-bottom:none">
+    <a href="/tags.php?/%B8%F6%C8%CB%CB%E6%B1%CA/" style="font-size:14px;color:#2821f6" title="共有20篇关于个人随笔的文章">个人随笔</a></li>
+     
+    <li class="tagcloud" style="border-bottom:none">
+    <a href="/tags.php?/%D5%BE%C4%DA%B9%AB%B8%E6/" style="font-size:14px;color:#c5692" title="共有12篇关于站内公告的文章">站内公告</a></li>
+     
+    <li class="tagcloud" style="border-bottom:none">
+    <a href="/tags.php?/%C8%F8%CC%E1%D1%C7/" style="font-size:14px;color:#5d5c5d" title="共有4篇关于萨提亚的文章">萨提亚</a></li>
+     
+    <li class="tagcloud" style="border-bottom:none">
+    <a href="/tags.php?/%D4%B4%CD%B7%D1%A7%CE%CA/" style="font-size:14px;color:#7080e7" title="共有16篇关于源头学问的文章">源头学问</a></li>
+     
+    <li class="tagcloud" style="border-bottom:none">
+    <a href="/tags.php?/nlp%B0%B8%C0%FD/" style="font-size:14px;color:#c89269" title="共有13篇关于nlp案例的文章">nlp案例</a></li>
+     
+    <li class="tagcloud" style="border-bottom:none">
+    <a href="/tags.php?/nlp%BC%BC%C7%C9/" style="font-size:14px;color:#126f4" title="共有13篇关于nlp技巧的文章">nlp技巧</a></li>
+     
+    <li class="tagcloud" style="border-bottom:none">
+    <a href="/tags.php?/nlp%B4%CA%D3%EF/" style="font-size:14px;color:#bd25f6" title="共有6篇关于nlp词语的文章">nlp词语</a></li>
+     
+    <li class="tagcloud" style="border-bottom:none">
+    <a href="/tags.php?/%C5%E0%D1%B5%B5%E7%D3%B0/" style="font-size:14px;color:#92dfa" title="共有4篇关于培训电影的文章">培训电影</a></li>
+     
+    <li class="tagcloud" style="border-bottom:none">
+    <a href="/tags.php?/%BD%CC%C1%B7%BC%BC%CA%F5%C0%ED%C2%DB/" style="font-size:14px;color:#ea5afa" title="共有4篇关于教练技术理论的文章">教练技术理论</a></li>
+     
+    <li class="tagcloud" style="border-bottom:none">
+    <a href="/tags.php?/%B9%DC%C0%ED%B9%CA%CA%C2/" style="font-size:14px;color:#a78f31" title="共有16篇关于管理故事的文章">管理故事</a></li>
+     
+    <li class="tagcloud" style="border-bottom:none">
+    <a href="/tags.php?/%CD%C5%B6%D3%BC%A4%C0%F8/" style="font-size:14px;color:#92b8c1" title="共有1篇关于团队激励的文章">团队激励</a></li>
+     
+    <li class="tagcloud" style="border-bottom:none">
+    <a href="/tags.php?/%BD%CC%C1%B7%BC%BC%CA%F5%D7%CA%C1%CF/" style="font-size:14px;color:#b516c" title="共有2篇关于教练技术资料的文章">教练技术资料</a></li>
+     
+       </div>
+
+
+
+     
+     
+     
+     
+     
+       
+
+</aside>
+
+<!--中部结束-->
+ <div class="clear" ></div> 
+</div>
+
+<!--中部结束-->
+
+
+
+
+
+
+
+
+
+
+<div id="footer">
+
+<div id="foot2">
+
+<!--返回顶部-->
+<div id="elevator_item">
+        <a id="elevator" onclick="return false;" title="回到顶部"></a>
+        <a class="qr"></a>
+  	<div class="qr-popup">
+    	<a class="code-link"><img class="code" src="/templets/gjw/images/pxsgjw-gzpt.jpg" width="150" height="150"/></a>
+        <span>关注微信平台</span>
+    <div class="arr"></div>
+  </div>
+<script src="js/jquery.min.js" type="text/javascript"></script> 
+<script type="text/javascript">
+$(function() {
+	$(window).scroll(function(){
+		var scrolltop=$(this).scrollTop();		
+		if(scrolltop>=200){		
+			$("#elevator_item").show();
+		}else{
+			$("#elevator_item").hide();
+		}
+	});		
+	$("#elevator").click(function(){
+		$("html,body").animate({scrollTop: 0}, 500);	
+	});		
+	$(".qr").hover(function(){
+		$(".qr-popup").show();
+	},function(){
+		$(".qr-popup").hide();
+	});	
+});
+</script>
+  
+</div>
+
+<div class="foot_nr">
+<p><a href="/zgywm/gjw/35.html" target="_blank">工具屋介绍</a>|<a href="/zgywm/gywm/37.html" target="_blank">关于我们</a>|<a href="/zgywm/gywm/38.html" target="_blank">联系我们</a><img src="/templets/gjw/images/lxwm01.jpg" width="713"  height="12" >
+
+<script language="javascript" type="text/javascript" src="http://js.users.51.la/15599164.js"></script>
+<noscript><a href="http://www.51.la/?15599164" target="_blank"><img alt="&#x6211;&#x8981;&#x5566;&#x514D;&#x8D39;&#x7EDF;&#x8BA1;" src="http://img.users.51.la/15599164.asp" style="border:none" /></a></noscript>
+
+
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fcea3f954548ea2c8d45e384344f4c12c' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</p></div>
+</div>
+</div>
+<!--QR code end-->
+<script type="text/javascript">       
+
+ SyntaxHighlighter.highlight();        
+
+ </script>
+
+</body>
+</html>

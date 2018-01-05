@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="content-type"content="text/html; charset=gbk">
+<title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
+<meta name="keywords"content="{dede:field name='keywords'/}"/>
+<meta name="description"content="{dede:field name='description' function='html2text(@me)'/}"/>
+<meta charset=gbk>
+<meta name="viewport"content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Cache-Control"content="no-transform">
+<meta http-equiv="Cache-Control"content="no-siteapp">
+<link type="text/css"media="all"href="/gong/css/gong.css"rel="stylesheet">
+<link href="/gong/css/share_style1_24.css"rel="stylesheet">
+<script type="text/javascript"src="/gong/js/jquery.js"></script><!--[if lt IE 9]><script src="http://www.wpdaxue.com/wp-content/themes/wpdx/js/html5.js"></script><script src="http://www.wpdaxue.com/wp-content/themes/wpdx/js/css3-mediaqueries.js"></script><![endif]--><!--[if IE 8]><link rel="stylesheet"href="http://www.wpdaxue.com/wp-content/themes/wpdx/css/ie8.css"><![endif]--><!--[if IE 7]><link rel="stylesheet"href="http://www.wpdaxue.com/wp-content/themes/wpdx/font-awesome/css/font-awesome-ie7.min.css"><link rel="stylesheet"href="http://www.wpdaxue.com/wp-content/themes/wpdx/css/ie7.css"><![endif]--><!--[if IE 6]><script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script><![endif]--><!--<script>var _hmt=_hmt||[];(function(){var hm=document.createElement("script");hm.src="//hm.baidu.com/hm.js?b6ca4c7f50ea42579ccbbbd85fd66206";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(hm,s)})();</script>-->
+</head>
+<body class="home blog">
+{dede:include filename="head.htm"/}<!--列表主体开始-->
+<div id="main-content">
+  <div id="content-header">
+    <div id="breadcrumb"><a itemprop="breadcrumb"href="/"title="返回首页"class="tip-bottom"><i class="icon-home"></i>首页</a><i class="icon-angle-right"></i><span class="current">{dede:field name='position'/}</span></div>
+  </div>
+  <div class="container-fluid"><!--顶部广告位-->
+    <div class="row-fluid gtop mobile-no">
+      <div class="span6"><script src='/plus/ad_js.php?aid=1'language='javascript'></script></div>
+      <div class="span6"><script src='/plus/ad_js.php?aid=2'language='javascript'></script></div>
+    </div>
+    <!--顶部广告位-->
+    <div class="row-fluid">
+      <section class="span8 archive-list">
+        <div class="widget-box"role="main"itemscope itemtype="http://schema.org/CollectionPage">
+          <header id="archive-head">
+            <h1 itemprop="headline">{dede:type}&nbsp;分类：[field:typename/]<a class="rss-cat-icon"title="订阅这个分类"href="[field:typelink /]"><i class="icon-rss"></i></a>{/dede:type}</h1>
+            <div class="archive-description">
+              <p>{dede:field name='description'function='html2text(@me)'/}</p>
+            </div>
+          </header>
+          <div class="widget-content">
+            <ul>
+              {dede:list pagesize='12'}
+              <li class="archive-thumb">
+                <article>
+                  <h2><a href="[field:arcurl/]"title="[field:fulltitle/]">[field:fulltitle/]</a></h2>
+                  <a class="pic float-left"href="[field:arcurl/]"title="[field:fulltitle/]"><img class="lazy"src="[field:litpic/]"style="height:120px; width:180px"/></a>
+                  <p>[field:description/]...</p>
+                  <p class="post-meta"><span><i class="icon-user"></i>[field:writer/]</span><span><i class="icon-time"></i>[field:pubdate function="MyDate('Y-m-d',@me)"/]</span><span><i class="icon-eye-open"></i>[field:click/]</span><span><i class="icon-comment-alt"></i><a href="[field:arcurl/]#comments"title="[field:fulltitle/]上的评论"><span class="ds-thread-count"data-thread-key="[field:id/]"data-count-type="comments"></span>评论</a></span><span><i class="icon-tag"></i>[field:id function='nic_arc_tag_link(@me)'/]</span></p>
+                  <div class="clear"></div>
+                </article>
+              </li>
+              {/dede:list}
+              <div class="pagination">
+                <ul>
+                </ul>
+              </div>
+            </ul>
+            <div class="page-nav">{dede:pagelist listitem="info,index,end,pre,next,pageno,option"listsize="5"/}</div>
+            <div class="clear"></div>
+          </div>
+        </div>
+      </section>
+      {dede:include filename="right.htm"/}</div>
+  </div>
+</div>
+<!--列表主体开始-->{dede:include filename="footer.htm"/}<!--多说公共JS代码start(一个网页只需插入一次)--><script type="text/javascript">var duoshuoQuery={short_name:"demo018"};(function(){var ds=document.createElement('script');ds.type='text/javascript';ds.async=true;ds.src=(document.location.protocol=='https:'?'https:':'http:')+'//static.duoshuo.com/embed.js';ds.charset='UTF-8';(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(ds)})();</script><!--多说公共JS代码end-->
+</body>
+</html>

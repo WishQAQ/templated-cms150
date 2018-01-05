@@ -1,0 +1,114 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="gb2312">
+<meta http-equiv="X-UA-Compatible" content="IE=10,IE=9,IE=8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<title>投稿</title>
+<link type="text/css"media="all"href="/gong/css/gong.css"rel="stylesheet">
+<link href="/gong/css/share_style1_24.css"rel="stylesheet">
+
+
+</head>
+
+<body class="home blog">
+<?php 
+pasterTempletDiy("default/head.htm"); 
+?>
+
+
+
+
+
+
+<div id="main-content">
+	<div id="content-header">
+		<div id="breadcrumb">
+			<a href="/"title="返回首页"class="tip-bottom"><i class="icon-home"></i>首页</a><i class="icon-angle-right"></i><span class="current">在线投稿</span>
+		</div>
+	</div>
+    
+    
+    
+	<div class="container-fluid">
+		<div class="row-fluid">
+			<div class="span12">
+				<div class="widget-box user-center page-group">
+					<div id="user-left">
+						<ul id="user-menu">
+							
+						</ul>
+					</div>
+					<div class="widget-content single-post"id="user-right"itemscope itemtype="http://schema.org/Article">
+						<div id="post-header">
+							<h1 class="page-title"itemprop="headline"><a href="/member/article_add.php">欢迎投稿</a></h1>
+						</div>
+						<div class="entry"itemprop="articleBody">
+							<form name="addcontent" action="article_add.php" method="post" enctype="multipart/form-data" onSubmit="return checkSubmit();">
+          <input type="hidden" name="dopost" value="save" />
+          <input type="hidden" name="channelid" value="<?php echo $channelid; ?>" />        
+				<ul class="submit-form">
+			<li> <strong>标题</strong>
+				<input id="tougao-title" name="title" class="input-block-level" type="text" size="40" placeholder="写点什么...">	
+				<p class="text-error hide"></p>
+			</li>
+			<li> <strong>作者</strong>
+				<input id="writer" name="writer" class="input-block-level" type="text" placeholder="网友" value="网友" size="100">	
+				<p class="text-error hide"></p>
+			</li>
+            
+          <li>
+          	<strong>隶属栏目</strong><br />            
+            <?php
+				$typeOptions = GetOptionList(0,$channelid);
+				echo "<select name='typeid' size='1'>\r\n";
+				echo "<option value='0' selected>请选择栏目...</option>\r\n";
+				echo $typeOptions;
+				echo "</select>";
+			?>
+          </li>
+      <?php
+       //自定义字段
+       PrintAutoFieldsAdd($cInfos['fieldset'],'autofield');
+      ?>                      
+			<li>
+				<strong>内容</strong>
+				<textarea id="tougao-content" rows="12" class="input-block-level" placeholder="写点什么..." name="body"></textarea>
+				<p class="text-error hide"></p>
+			</li>
+
+      <?php
+   		 
+      	//游客强制加验证码，会员则判断后台开关
+        if(preg_match("/3/",$safe_gdopen)){
+      ?>
+          <li class="yzm">
+            <strong>验证码：</strong>
+            <input name="vdcode" type="text" id="vdcode" maxlength="100" class="intxt" style='width:50px;text-transform:uppercase;' />
+            <img src="../include/vdimgck.php" alt="看不清？点击更换" align="absmiddle" style=" padding:0px; margin:0px" onClick="this.src=this.src+'?'" />
+            </li>
+      <?php }?>
+                  
+		</ul>
+		<div class="text-error"></div>
+        <button class="btn btn-primary" type="submit"><i class="icon-ok-circle icon-white icon12"></i> 立即提交</button>
+		
+</form>
+						</div>
+					</div>
+					<div class="clear">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+<?php 
+pasterTempletDiy("default/footer.htm"); 
+?>
+</body>
+</html>

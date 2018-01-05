@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=gbk">
+<meta charset=gbk>
+<meta http-equiv="X-UA-Compatible" content="IE=10,IE=9,IE=8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<link type="text/css" media="all" href="/gong/css/gong.css"
+rel="stylesheet">
+<title>培训师工具屋- 专注NLP教练技术 体会感悟人生！</title>
+<meta name="keywords" content="欲思博客,网赚博客,福利,wordpress教程,前端开发">
+<meta name="description" content="欲思博客是一个关注前端开发、网站建设、wordpress主题的独立博客，有时也分享一些个人福利和网络赚钱心得！">
+
+
+
+
+  
+function postDigg(ftype,aid)   
+{   
+	var taget_obj = document.getElementById('diggNum'+aid);
+	var saveid = GetCookie('diggid');
+	if(saveid != null)
+	{
+		var saveids = saveid.split(',');
+		var hasid = false;
+		saveid = '';
+		j = 1;
+		for(i=saveids.length-1;i>=0;i--)
+		{
+			if(saveids[i]==aid && hasid) continue;
+			else {
+				if(saveids[i]==aid && !hasid) hasid = true;
+				saveid += (saveid=='' ? saveids[i] : ','+saveids[i]);
+				j++;
+				if(j==20 && hasid) break;
+				if(j==19 && !hasid) break;
+			}
+		}
+		if(hasid) { alert("您已经顶过该帖，请不要重复顶帖 ！"); return; }
+		else saveid += ','+aid;
+		SetCookie('diggid',saveid,1);
+	}
+	else
+	{
+		SetCookie('diggid',aid,1);
+	}
+/*此处是调用dedeajax2.js文件里面的ajax类，实现无刷新数据的处理 */
+	myajax = new DedeAjax(taget_obj,false,false,'','',''); 
+	var url = "/plus/digg_ajax_list.php?action="+ftype+"&id="+aid;
+	myajax.SendGet2(url);
+}   
+
+function getDigg(aid)   
+{   
+    var taget_obj = document.getElementById('diggNum'+aid);   
+    myajax = new DedeAjax(taget_obj,false,false,'','','');   
+    myajax.SendGet2("/plus/digg_ajax_list.php?id="+aid);   
+    DedeXHTTP = null;   
+}   
+</script>
+
+    <!--[if lt IE 9]>
+      
+      </script>
+      
+      </script>
+    <![endif]-->
+    <!--[if lte IE 8]>
+    <![endif]-->
+
+<link type="text/css" rel="styleSheet" href="/gong/css/share.css">
+  </head>
+  
+  <body class="home blog">
+
+        <div style="position: absolute; left: -1px; bottom: -1px; z-index: 0; width: 0px; height: 0px; overflow: hidden; visibility: hidden; display: none;"
+    id="BAIDU_DUP_fp_wrapper">
+      <iframe style="width: 0px; height: 0px; visibility: hidden; display: none;"
+      src="/gong/images/o.htm" id="BAIDU_DUP_fp_iframe">
+      </iframe>
+    </div>
+    <header id="header" class="header">
+      <div class="container-inner">
+        <div class="yusi-logo">
+          <a href="http://yusi123.com/">
+            <h1>
+              <span class="yusi-mono">
+                培训师工具屋
+              </span>
+              <span class="yusi-bloger">
+                - 专注NLP教练技术 体会感悟人生！
+              </span>
+            </h1>
+          </a>
+        </div>
+      </div>
+     
+     
+      <div id="nav-header" class="navbar">
+<ul class="nav">
+    
+    
+    <li  class="menu-item menu-item-type-custom menu-item-object-custom "><a href="/" title="培训师工具屋">首页</a></li>
+     
+     
+     
+     
+     <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu  "><a  id="1"  href="/zmryt/" >每日一贴</a>    
+              <ul class="sub-menu">       
+                       
+             </ul>    
+           </li><li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu  "><a  id="2"  href="/zjpwk/" >教练文库</a>    
+              <ul class="sub-menu">       
+                         
+                  <li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="/zjpwk/jljs/">教练技术</a> </li>  
+                         
+                  <li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="/zjpwk/nlp/">NLP</a> </li>  
+                         
+                  <li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="/zjpwk/cm/">催眠</a> </li>  
+                         
+                  <li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="/zjpwk/xtpl/">系统排列</a> </li>  
+                         
+                  <li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="/zjpwk/wxzl/">完型治疗</a> </li>  
+                         
+                  <li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="/zjpwk/qzgx/">亲子关系</a> </li>  
+                         
+                  <li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="/zjpwk/tdxl/">团队训练</a> </li>  
+                         
+                  <li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="/zjpwk/ytxw/">源头学问</a> </li>  
+                         
+                  <li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="/zjpwk/nlpsj/">nlp书籍</a> </li>  
+                         
+                  <li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="/zjpwk/qt/">其它</a> </li>  
+                       
+             </ul>    
+           </li><li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu  current-menu-parent a"><a  id="3"  href="/zpxgj/" >培训工具</a>    
+              <ul class="sub-menu">       
+                         
+                  <li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="/zpxgj/pxgs/">培训故事</a> </li>  
+                         
+                  <li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="/zpxgj/pxyx/">培训游戏</a> </li>  
+                         
+                  <li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="/zpxgj/pxdy/">培训电影</a> </li>  
+                         
+                  <li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="/zpxgj/pxqc/">培训器材</a> </li>  
+                       
+             </ul>    
+           </li><li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu  "><a  id="4"  href="/zzxsp/" >在线视频</a>    
+              <ul class="sub-menu">       
+                       
+             </ul>    
+           </li> 
+       
+       
+       <li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="http://bbs.pxsgjw.com/forum.php" target="_blank">资源下载</a></li>
+       <li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="/zzltz/" target="_blank">资料套装</a>  
+
+          <li style="float:right;">
+            <div class="toggle-search">
+              <i class="fa fa-search">
+              </i>
+            </div>
+            <div class="search-expand" style="display: none;">
+              <div class="search-expand-inner">
+                <form name="formsearch" action="/search.php" target="_blank" class="searchform themeform">
+                  <div>
+                  <input class="searcht" type="ext"  name="q" value="search..." onfocus="if(this.value==''){this.value='';}" onblur="if(this.value=='') {this.value='';}">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <div class="screen-mini">
+          <button data-type="screen-nav" class="btn btn-inverse screen-nav">
+            <i class="fa fa-list">
+            </i>
+          </button>
+        </div>
+      </div>
+    </header>
+    
+    <section class="container">
+      <div class="speedbar">
+        <div class="toptip">
+          <strong class="text-success">
+            <i class="fa fa-volume-up">
+            </i>
+          </strong>
+          请在Chrome、Firefox等现代浏览器浏览本站。另外提供付费解决WP主题修改定制等技术服务，如果需要请
+          <code>
+            <a href="http://yusi123.com/go/add_qq" rel="external nofollow" target="_blank"
+            title="联系QQ">
+              <i class="fa fa-qq">
+              </i>
+              点击
+            </a>
+          </code>
+          加我 QQ 说你的需求。
+        </div>
+      </div>  
+
+      <div class="content-wrap">
+        <div class="content">
+		<header class="archive-header"><h1><i class="fa fa-folder-open"></i>&nbsp;分类： 培训故事 <a title="订阅 培训故事 " target="_blank" href="/zpxgj/pxgs/"><i class="rss fa fa-rss"></i></a></h1><div class="archive-header-info"><p>整理了学习nlp教练技术需要用的一些nlp教练技术故事集，帮助我们更好操作nlp教练技术。</p></div>
+	    </header>
+
+
+
+  
+         
+<article class="excerpt">
+            <header>
+            
+              <a class="label label-important" href="/zpxgj/pxgs/">
+                 培训故事
+                <i class="label-arrow">
+                </i>
+              </a>
+              
+              
+              <h2>
+                <a target="_blank" href="/zpxgj/pxgs/86.html" title="精选企业目标管理故事五则">
+                  精选企业目标管理故事五则
+                </a>
+              </h2>
+            </header>
+            <div class="focus">
+              <a target="_blank" href="/zpxgj/pxgs/86.html">
+                <img class="thumb" src="/uploads/lztp/115.jpg" alt="精选企业目标管理故事五则">
+              </a>
+            </div>
+            <span class="note">
+              第一个故事：爱丽丝的故事 “请你告诉我，我该走哪条路?” “那要看你想去哪里?”猫说。 “去哪儿无所谓。”爱丽丝说。 “那么走哪条路也就无所谓了。”猫说。 ——摘自刘易斯卡罗尔的《爱丽丝漫游奇境记》 赵日磊点评 ：这个故事讲的是人要有明确的目标，当...
+            </span>
+            <p class="auth-span">
+              <span class="muted">
+                <i class="fa fa-clock-o">
+                </i>
+6天前
+              </span>
+              <span class="muted">
+                <i class="fa fa-eye">
+                </i>
+                185℃
+              </span>
+              <span class="muted">
+                <i class="fa fa-comments-o">
+                </i>
+                <a target="_blank" href="/zpxgj/pxgs/86.html#comments">
+                  评论
+                </a>
+              </span>
+               <span class="muted" id="diggNum86">
+                    <a id="Addlike" class="action" href="javascript:" onclick="javascript:postDigg('good',86)">
+                      <i class="fa fa-heart-o">
+                      </i>
+                      <span class="count">
+                        0
+                      </span>
+                      喜欢
+                   </a>
+                  </span>
+            </p>
+          </article>   
+         
+<div class="pagination"><ul><li><a href='list_1.html'>首页</a></li>
+<li><a href='list_1.html'>上一页</a></li>
+<li><a href='list_1.html'>1</a></li>
+<li class="thisclass"><a>2</a></li>
+<li><a>末页</a></li>
+<li><span class="pageinfo">共 <strong>2</strong>页<strong>11</strong>条</span></li>
+</ul></div>	
+          
+          
+          
+          
+        </div>
+      </div>
+      <aside class="sidebar">
+        <div class="widget widget_text">
+          <div class="textwidget">
+            <div class="social">
+              <a data-original-title="新浪微博" href="http://yusi123.com/go/weibo" rel="external nofollow"
+              title="" target="_blank">
+                <i class="sinaweibo fa fa-weibo">
+                </i>
+              </a>
+              <a data-original-title="腾讯微博" href="http://yusi123.com/go/qqweibo" rel="external nofollow"
+              title="" target="_blank">
+                <i class="tencentweibo fa fa-tencent-weibo">
+                </i>
+              </a>
+              <a title="" data-original-title="" class="weixin">
+                <i class="weixins fa fa-weixin">
+                </i>
+                <div class="weixin-popover">
+                  <div class="popover bottom in">
+                    <div class="arrow">
+                    </div>
+                    <div class="popover-title">
+                      订阅号"欲思"
+                    </div>
+                    <div class="popover-content">
+                      <img src="/gong/images/weixin.gif">
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a data-original-title="Email" href="http://yusi123.com/go/email" rel="external nofollow"
+              title="" target="_blank">
+                <i class="email fa fa-envelope-o">
+                </i>
+              </a>
+              <a data-original-title="联系QQ" href="http://yusi123.com/go/add_qq" rel="external nofollow"
+              title="" target="_blank">
+                <i class="qq fa fa-qq">
+                </i>
+              </a>
+              <a data-original-title="订阅本站" href="http://yusi123.com/feed" rel="external nofollow"
+              target="_blank" title="">
+                <i class="rss fa fa-rss">
+                </i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="widget d_subscribe">
+          <div class="title">
+            <h2>
+              邮件订阅
+            </h2>
+          </div>
+          <form action="http://list.qq.com/cgi-bin/qf_compose_send" target="_blank"
+          method="post">
+            <p>
+              填写您的邮件地址，订阅更多的精彩内容：
+            </p>
+            <input name="t" value="qf_booked_feedback" type="hidden">
+            <input name="id" value="55de1906a6c38440856581343616feb803dc76d6413d684e"
+            type="hidden">
+            <input name="to" class="rsstxt" placeholder="your@email.com" required=""
+            type="email">
+            <input class="rssbutton" value="订阅" type="submit">
+          </form>
+        </div>
+        <div class="widget d_textbanner">
+          <a class="style01" href="http://yusi123.com/3233.html">
+            <div class="title">
+              <h2>
+                免费下载
+              </h2>
+            </div>
+            <h3>
+              本站主题：Yusi1.0(扁平化+响应式)
+            </h3>
+            <p>
+              支持 WordPress 3.8 及以上最新版，兼容 IE9+、Chrome、Firefox 等主流浏览器！
+            </p>
+          </a>
+        </div>
+        <div class="widget d_textbanner">
+          <a class="style02" href="http://yusi123.com/3108.html" target="_blank">
+            <div class="title">
+              <h2>
+                科学上网
+              </h2>
+            </div>
+            <h3>
+              Chrome浏览器红杏插件:程序员专用
+            </h3>
+            <p>
+              不需要繁琐的配置，不需要频繁拨号、断开（VPN该脸红了）。只在需要的时候，默默地发挥作用！
+            </p>
+          </a>
+        </div>
+        <div class="widget d_banner">
+          <div class="d_banner_inner">
+            
+              /*360*300，创建于2013-6-19*/
+              var cpro_id = "u1305741";
+            </script>
+            
+            </script>
+            <div id="BAIDU_DUP_wrapper_u1305741_0">
+              <iframe id="cproIframe_u1305741" src="/gong/images/acom_002.htm" marginwidth="0"
+              marginheight="0" scrolling="no" allowtransparency="true" align="center,center"
+              height="300" width="360" frameborder="0">
+              </iframe>
+            </div>
+            
+            </script>
+          </div>
+        </div>
+        
+        <div class="widget d_tag">
+          <div class="title">
+            <h2>
+              标签云
+            </h2>
+          </div>
+          <div class="d_tags">
+          
+            <a data-original-title="20个话题" title="" href="/tags.php?/%B8%F6%C8%CB%CB%E6%B1%CA/">
+              个人随笔 (20)
+            </a>
+            
+            <a data-original-title="19个话题" title="" href="/tags.php?/%BD%CC%C1%B7%BC%BC%CA%F5%BC%BC%C7%C9/">
+              教练技术技巧 (19)
+            </a>
+            
+            <a data-original-title="7个话题" title="" href="/tags.php?/%B5%E7%C9%CC%D0%C4%C0%ED%D1%A7/">
+              电商心理学 (7)
+            </a>
+            
+            <a data-original-title="10个话题" title="" href="/tags.php?/nlp%BC%BC%C7%C9/">
+              nlp技巧 (10)
+            </a>
+            
+            <a data-original-title="15个话题" title="" href="/tags.php?/%BD%CC%C1%B7%BC%BC%CA%F5%B0%B8%C0%FD/">
+              教练技术案例 (15)
+            </a>
+            
+            <a data-original-title="1个话题" title="" href="/tags.php?/%BD%CC%C1%B7%BC%BC%CA%F5%D7%CA%C1%CF/">
+              教练技术资料 (1)
+            </a>
+            
+            <a data-original-title="4个话题" title="" href="/tags.php?/%BD%CC%C1%B7%BC%BC%CA%F5%C0%ED%C2%DB/">
+              教练技术理论 (4)
+            </a>
+            
+            <a data-original-title="4个话题" title="" href="/tags.php?/%C0%EE%D6%D0%D3%A8%CA%D3%C6%B5/">
+              李中莹视频 (4)
+            </a>
+            
+            <a data-original-title="6个话题" title="" href="/tags.php?/%C5%E0%D1%B5%B5%E7%D3%B0/">
+              培训电影 (6)
+            </a>
+            
+            <a data-original-title="3个话题" title="" href="/tags.php?/%C8%F8%CC%E1%D1%C7/">
+              萨提亚 (3)
+            </a>
+            
+            <a data-original-title="1个话题" title="" href="/tags.php?/%B7%EB%CF%FE%C7%BF%CA%D3%C6%B5/">
+              冯晓强视频 (1)
+            </a>
+            
+            <a data-original-title="11个话题" title="" href="/tags.php?/%D5%BE%C4%DA%B9%AB%B8%E6/">
+              站内公告 (11)
+            </a>
+            
+            <a data-original-title="8个话题" title="" href="/tags.php?/nlp%B0%B8%C0%FD/">
+              nlp案例 (8)
+            </a>
+            
+            <a data-original-title="6个话题" title="" href="/tags.php?/%D1%A7%D4%B1%B7%D6%CF%ED/">
+              学员分享 (6)
+            </a>
+            
+            <a data-original-title="5个话题" title="" href="/tags.php?/nlp%CA%E9%BC%AE/">
+              nlp书籍 (5)
+            </a>
+            
+            <a data-original-title="5个话题" title="" href="/tags.php?/%D6%EC%BD%A8%BE%FC%CA%D3%C6%B5/">
+              朱建军视频 (5)
+            </a>
+            
+            <a data-original-title="1个话题" title="" href="/tags.php?/%CD%C5%B6%D3%BC%A4%C0%F8/">
+              团队激励 (1)
+            </a>
+            
+            <a data-original-title="7个话题" title="" href="/tags.php?/%BE%DB%BB%E1%D3%CE%CF%B7/">
+              聚会游戏 (7)
+            </a>
+            
+            <a data-original-title="3个话题" title="" href="/tags.php?/nlp%B4%CA%D3%EF/">
+              nlp词语 (3)
+            </a>
+            
+            <a data-original-title="3个话题" title="" href="/tags.php?/%BD%CC%C1%B7%BC%BC%CA%F5%B9%CA%CA%C2/">
+              教练技术故事 (3)
+            </a>
+            
+            <a data-original-title="9个话题" title="" href="/tags.php?/%B9%DC%C0%ED%B9%CA%CA%C2/">
+              管理故事 (9)
+            </a>
+            
+            <a data-original-title="1个话题" title="" href="/tags.php?/%BE%C6%D7%C0%D3%CE%CF%B7/">
+              酒桌游戏 (1)
+            </a>
+            
+            <a data-original-title="16个话题" title="" href="/tags.php?/%D4%B4%CD%B7%D1%A7%CE%CA/">
+              源头学问 (16)
+            </a>
+            
+            <a data-original-title="2个话题" title="" href="/tags.php?/%BD%CC%C1%B7%BC%BC%CA%F5%B6%CC%D1%B6/">
+              教练技术短讯 (2)
+            </a>
+            
+            <a data-original-title="1个话题" title="" href="/tags.php?/%C5%E0%D1%B5%D4%D3%CC%B8/">
+              培训杂谈 (1)
+            </a>
+            
+            <a data-original-title="1个话题" title="" href="/tags.php?/%B9%B5%CD%A8%BC%BC%C7%C9/">
+              沟通技巧 (1)
+            </a>
+            
+            <a data-original-title="1个话题" title="" href="/tags.php?/%CD%F8%D3%D1%B7%D6%CF%ED/">
+              网友分享 (1)
+            </a>
+            
+            <a data-original-title="1个话题" title="" href="/tags.php?/%BD%CC%C1%B7%B6%CC%D1%B6/">
+              教练短讯 (1)
+            </a>
+            
+            <a data-original-title="1个话题" title="" href="/tags.php?/nlp%B6%CC%D1%B6/">
+              nlp短讯 (1)
+            </a>
+            
+            <a data-original-title="5个话题" title="" href="/tags.php?/NLP%C7%D7%D7%D3/">
+              NLP亲子 (5)
+            </a>
+            
+
+          </div>
+        </div>
+        
+        
+        <div class="widget d_postlist">
+          <div class="title">
+            <h2>
+              猜你喜欢
+            </h2>
+          </div>
+          <ul>
+          
+          
+          <li>
+              <a href="/zpxgj/pxgs/96.html" title="企业管理故事之-如何养好花：立足根本">
+                <span class="thumbnail">
+                  <img src="/uploads/lztp/125.jpg" alt="企业管理故事之-如何养好花：立足根本">
+                </span>
+                <span class="text">
+                  企业管理故事之-如何养好花：立足根本
+                </span>
+                <span class="muted">
+                  2014-10-11
+                </span>
+                <span class="muted">
+                  评论
+                </span>
+              </a>
+            </li>
+<li>
+              <a href="/zpxgj/pxgs/95.html" title="企业管理故事之-小猴种瓜：双赢的最大效益">
+                <span class="thumbnail">
+                  <img src="/uploads/lztp/124.jpg" alt="企业管理故事之-小猴种瓜：双赢的最大效益">
+                </span>
+                <span class="text">
+                  企业管理故事之-小猴种瓜：双赢的最大效益
+                </span>
+                <span class="muted">
+                  2014-10-11
+                </span>
+                <span class="muted">
+                  评论
+                </span>
+              </a>
+            </li>
+<li>
+              <a href="/zpxgj/pxgs/94.html" title="企业管理故事之-上帝看得见：心诚则质好">
+                <span class="thumbnail">
+                  <img src="/uploads/lztp/123.jpg" alt="企业管理故事之-上帝看得见：心诚则质好">
+                </span>
+                <span class="text">
+                  企业管理故事之-上帝看得见：心诚则质好
+                </span>
+                <span class="muted">
+                  2014-10-11
+                </span>
+                <span class="muted">
+                  评论
+                </span>
+              </a>
+            </li>
+<li>
+              <a href="/zpxgj/pxgs/93.html" title="企业管理故事之-君患于军：领导的惑乱">
+                <span class="thumbnail">
+                  <img src="/uploads/lztp/122.jpg" alt="企业管理故事之-君患于军：领导的惑乱">
+                </span>
+                <span class="text">
+                  企业管理故事之-君患于军：领导的惑乱
+                </span>
+                <span class="muted">
+                  2014-10-11
+                </span>
+                <span class="muted">
+                  评论
+                </span>
+              </a>
+            </li>
+<li>
+              <a href="/zpxgj/pxgs/92.html" title="企业管理故事之-为人才买公司：企业是人才的竞争">
+                <span class="thumbnail">
+                  <img src="/uploads/lztp/121.jpg" alt="企业管理故事之-为人才买公司：企业是人才的竞争">
+                </span>
+                <span class="text">
+                  企业管理故事之-为人才买公司：企业是人才的竞争
+                </span>
+                <span class="muted">
+                  2014-10-11
+                </span>
+                <span class="muted">
+                  评论
+                </span>
+              </a>
+            </li>
+     
+            
+            
+            
+            
+
+          </ul>
+        </div>
+        <!--<div class="widget d_banner">
+          <div class="d_banner_inner">
+            
+              /*360*300，创建于2013-6-19*/
+              var cpro_id = "u1305741";
+            </script>
+            
+            </script>
+            <div id="BAIDU_DUP_wrapper_u1305741_1">
+              <iframe id="cproIframe_u1305741" src="/gong/images/acom_003.htm" marginwidth="0"
+              marginheight="0" scrolling="no" allowtransparency="true" align="center,center"
+              height="300" width="360" frameborder="0">
+              </iframe>
+            </div>
+            
+            </script>
+          </div>
+        </div>-->
+        <div class="widget d_comment">
+        
+          <div class="title">
+            <h2>
+              最新吐槽
+            </h2>
+          </div>
+          <ul>
+          
+           <li>
+              <a href="/plus/view.php?aid=18" title="NLP教练技术《导师版》工上的评论">
+                <img alt="" src="/gong/images/default.png" class="avatar avatar-48 photo"
+                height="48" width="48">
+                <div class="muted">
+                  <i>
+                    惟瑞居士：
+                  </i>
+                 感谢郭老师，把这些资料分享出来，以后更需要像您学习。
+                
+                </div>
+              </a>
+            </li><li>
+              <a href="/plus/view.php?aid=17" title="教练技术《教练版》工具包上的评论">
+                <img alt="" src="/gong/images/default.png" class="avatar avatar-48 photo"
+                height="48" width="48">
+                <div class="muted">
+                  <i>
+                    惟瑞居士：
+                  </i>
+                 瑶瑶 的原帖：这套资料的书籍一共是几本？书籍一共11本，详情可以看解说视频，里边讲
+                
+                </div>
+              </a>
+            </li><li>
+              <a href="/plus/view.php?aid=17" title="教练技术《教练版》工具包上的评论">
+                <img alt="" src="/gong/images/default.png" class="avatar avatar-48 photo"
+                height="48" width="48">
+                <div class="muted">
+                  <i>
+                    瑶瑶：
+                  </i>
+                 这套资料的书籍一共是几本？
+                
+                </div>
+              </a>
+            </li><li>
+              <a href="/plus/view.php?aid=105" title="回忆教练技术带给我的信仰上的评论">
+                <img alt="" src="/gong/images/default.png" class="avatar avatar-48 photo"
+                height="48" width="48">
+                <div class="muted">
+                  <i>
+                    鼠标：
+                  </i>
+                 这个课程多少钱？
+                
+                </div>
+              </a>
+            </li><li>
+              <a href="/plus/view.php?aid=105" title="回忆教练技术带给我的信仰上的评论">
+                <img alt="" src="/gong/images/default.png" class="avatar avatar-48 photo"
+                height="48" width="48">
+                <div class="muted">
+                  <i>
+                    落花：
+                  </i>
+                 看起来挺鼓舞人的，那个成功哲学，给你的感觉是怎么回事？ 惟瑞居士回复： 改天我会分
+                
+                </div>
+              </a>
+            </li><li>
+              <a href="/plus/view.php?aid=18" title="NLP教练技术《导师版》工上的评论">
+                <img alt="" src="/gong/images/default.png" class="avatar avatar-48 photo"
+                height="48" width="48">
+                <div class="muted">
+                  <i>
+                    蝶舞：
+                  </i>
+                 资料很强大，希望郭老师以后能在学习上指导一二，不胜感激！
+                
+                </div>
+              </a>
+            </li>     
+            
+          </ul>
+        </div>
+        <div class="widget widget_links">
+          <div class="title">
+            <h2>
+              友情链接
+            </h2>
+          </div>
+          <ul class="xoxo blogroll">
+          <li><a href='http://www.jlgjw.com/' target='_blank'>教练工具屋</a> </li><li><a href='http://www.9aart.com/' target='_blank'>逸伦艺术培训</a> </li><li><a href='http://www.tntcgjcw.com/' target='_blank'>唐能通</a> </li><li><a href='http://www.221432.com/' target='_blank'>西安自考</a> </li><li><a href='http://www.592169.com/' target='_blank'>521宝藏网</a> </li>
+          </ul>
+        </div>
+      </aside>
+    </section>
+    <footer class="footer">
+      <div class="footer-inner">
+        <div class="copyright pull-left">
+          <a href="http://yusi123.com/" title="欲思博客">
+            欲思博客
+          </a>
+          版权所有，保留一切权利 ! Theme
+          <a href="http://yusi123.com/3233.html">
+            Yusi
+          </a>
+          ·
+          <a href="http://yusi123.com/sitemap.xml" title="站点地图">
+            站点地图
+          </a>
+          ? 2011-2014 · 赣ICP备13005641号 · 托管于
+          <a rel="nofollow" target="_blank" href="http://yusi123.com/go/aliyun">
+            阿里云
+          </a>
+          &amp;
+          <a rel="nofollow" target="_blank" href="http://yusi123.com/go/qiniu">
+            七牛
+          </a>
+        </div>
+        <div class="trackcode pull-right">
+         
+          
+          <a href="http://tongji.baidu.com/hm-web/welcome/ico?s=b52ad73b0742bc99858449915680c213"
+          target="_blank">
+            网站统计
+          </a>
+        </div>
+      </div>
+    </footer>
+    <div style="display: none;" class="rollto">
+      <button class="btn btn-inverse" data-type="totop" title="回顶部">
+        <i class="fa fa-arrow-up">
+        </i>
+      </button>
+    </div>
+    
+<!--
+  window._deel = {
+	name: '欲思博客',
+	url: 'http://yusi123.com/wp-content/themes/yusi',
+	ajaxpager: 'on',
+	commenton: 0,
+	roll: [2, 5],
+	appkey: {
+	  tqq: '801497376',
+	  tsina: '3036462609'
+	}
+  }
+  if (document.domain == "images.yusi123.com") {
+	window.location.href = 'http://yusi123.com/?referrer=http://images.yusi123.com';
+  }
+</script>    -->
+
+  </body>
+
+</html>

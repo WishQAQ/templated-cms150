@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=gbk">
+<meta charset=gbk>
+<meta http-equiv="X-UA-Compatible" content="IE=10,IE=9,IE=8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<link type="text/css" media="all" href="/gong/css/gong.css"
+rel="stylesheet">
+<title>培训师工具屋- 专注NLP教练技术 体会感悟人生！</title>
+<meta name="keywords" content="欲思博客,网赚博客,福利,wordpress教程,前端开发">
+<meta name="description" content="欲思博客是一个关注前端开发、网站建设、wordpress主题的独立博客，有时也分享一些个人福利和网络赚钱心得！">
+<link type="text/css" media="all" href="/gong/css/gong.css" rel="stylesheet">
+<link href='http://www.youziku.com/webfont/CSS/2a9e38be0c2d14642bad578680088b78' rel='stylesheet' type='text/css'/>
+<link type="text/css" media="all" href="/gong/css/share.css" rel="stylesheet">
+
+
+
+
+
+<!--
+function CheckLogin(){
+	  var taget_obj = document.getElementById('_ajax_feedback');
+	  myajax = new DedeAjax(taget_obj,false,false,'','','');
+	  myajax.SendGet2("/member/ajax_feedback.php");
+	  DedeXHTTP = null;
+}
+function postBadGood(ftype,fid)
+{
+	var taget_obj = document.getElementById(ftype+fid);
+	var saveid = GetCookie('badgoodid');
+	if(saveid != null)
+	{
+		var saveids = saveid.split(',');
+		var hasid = false;
+		saveid = '';
+		j = 1;
+		for(i=saveids.length-1;i>=0;i--)
+		{
+			if(saveids[i]==fid && hasid) continue;
+			else {
+				if(saveids[i]==fid && !hasid) hasid = true;
+				saveid += (saveid=='' ? saveids[i] : ','+saveids[i]);
+				j++;
+				if(j==10 && hasid) break;
+				if(j==9 && !hasid) break;
+			}
+		}
+		if(hasid) { alert('您刚才已表决过了喔！'); return false;}
+		else saveid += ','+fid;
+		SetCookie('badgoodid',saveid,1);
+	}
+	else
+	{
+		SetCookie('badgoodid',fid,1);
+	}
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	myajax.SendGet2("/plus/feedback.php?aid="+fid+"&action="+ftype+"&fid="+fid);
+}
+function postDigg(ftype,aid)
+{
+	var taget_obj = document.getElementById('newdigg');
+	var saveid = GetCookie('diggid');
+	if(saveid != null)
+	{
+		var saveids = saveid.split(',');
+		var hasid = false;
+		saveid = '';
+		j = 1;
+		for(i=saveids.length-1;i>=0;i--)
+		{
+			if(saveids[i]==aid && hasid) continue;
+			else {
+				if(saveids[i]==aid && !hasid) hasid = true;
+				saveid += (saveid=='' ? saveids[i] : ','+saveids[i]);
+				j++;
+				if(j==20 && hasid) break;
+				if(j==19 && !hasid) break;
+			}
+		}
+		if(hasid) { alert("您已经顶过该帖，请不要重复顶帖 ！"); return; }
+		else saveid += ','+aid;
+		SetCookie('diggid',saveid,1);
+	}
+	else
+	{
+		SetCookie('diggid',aid,1);
+	}
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	var url = "/plus/digg_ajax.php?action="+ftype+"&id="+aid;
+	myajax.SendGet2(url);
+}
+function getDigg(aid)
+{
+	var taget_obj = document.getElementById('newdigg');
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	myajax.SendGet2("/plus/digg_ajax.php?id="+aid);
+	DedeXHTTP = null;
+}
+-->
+</script>
+
+
+    <!--[if lt IE 9]>
+      
+      </script>
+      
+      </script>
+    <![endif]-->
+    <!--[if lte IE 8]>
+    <![endif]-->
+
+  </head>
+  <body class="home blog">
+
+    <div id="top-part">
+	<div id="top-bar" class="navbar navbar-inverse">
+		<div id="logo">
+			<hgroup itemscope itemtype="http://schema.org/WPHeader">
+			<h1 class="logoimg"><a href="http://www.wpdaxue.com/" title="WordPress大学" rel="home">WordPress大学</a></h1>
+			</hgroup>
+		</div>
+		<ul class="nav">
+			<li class="dropdown" id="profile-messages"><a title="" href="#" data-toggle="dropdown" data-target="#profile-messages" class="dropdown-toggle"><i class="icon icon-fixed-width icon-signin"></i><span class="text">登录</span><b class="caret"></b></a>
+			<ul class="dropdown-menu">
+				<form class="user-login" name="loginform" action="http://www.wpdaxue.com/login?redirect_to=http%3A%2F%2Fwww.wpdaxue.com%2F" method="post">
+					<li><i class="icon-fixed-width icon-user"></i><input class="ipt" placeholder="用户名" type="text" name="log" value="" size="18"></li>
+					<li><i class="icon-fixed-width icon-lock"></i><input class="ipt" placeholder="密码" type="password" name="pwd" value="" size="18"></li>
+					<li><input name="rememberme" id="rememberme" type="checkbox" checked="checked" value="forever"/> 记住我的登录信息</li>
+					<li class="btn"><input class="login-btn" type="submit" name="submit" value="登录"></li>
+					<li><a class="pw-reset" rel="nofollow" href="http://www.wpdaxue.com/login?action=lostpassword"><i class="icon-info-sign"></i> 忘记密码？</a></li>
+					<input type="hidden" name="redirect_to" value=""/><input type="hidden" name="wpuf_login" value="true"/><input type="hidden" name="action" value="login"/><input type="hidden" id="_wpnonce" name="_wpnonce" value="e2bc99b6dd"/><input type="hidden" name="_wp_http_referer" value="/"/>
+				</form>
+			</ul>
+			</li>
+			<li class="user-btn user-reg"><a href="http://www.wpdaxue.com/register" title="注册" rel="nofollow"><i class="icon-fixed-width icon-key"></i><span class="text">注册</span></a></li>
+			<li id="qqqun" class="other-nav"><a target="_blank" title="工具屋 交流群 ( 190027354 )-请填写"工具屋"作为验证信息" href="http://shang.qq.com/wpa/qunwpa?idkey=269e8b2350c50c2c4c04cc63d9d77c1c802b75e17f8c1df59ab5e582f950b197" rel="nofollow"><i class="icon-fixed-width icon-group"></i> 加入Q群</a></li>
+			<li id="swb" class="other-nav"><wb:follow-button uid="3076732547" type="red_2" height="24"></wb:follow-button></li>
+		</ul>
+		<div id="search">
+			<div class="toggle-search">
+				<i class="icon-fixed-width icon-search icon-white"></i>
+			</div>
+			<div class="search-expand"  >
+				<div class="search-expand-inner">
+					<form  class="searchform themeform" action="/plus/search.php">
+						<div>
+							<input type="text" class="search" name="q" x-webkit-speech=""  value="输入内容并按回车键" />
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+    <header id="header" role="banner">
+        <nav id="main-nav" role="navigation" >
+
+	<ul>
+         <li  class=" submenu"><a href="/" title="培训师工具屋"><i class="icon-fixed-width icon-home"></i>首页</a></li>
+
+
+     <li class=""><a  id="1"  href="/zmryt/" >
+                 <i class="icon-fixed-width  icon-001 "></i>每日一贴</a>              
+              <ul class="sub-menu">       
+                     
+             </ul>    
+        </li><li class=""><a  id="2"  href="/zjpwk/" >
+                 <i class="icon-fixed-width  icon-002 "></i>教练文库</a>              
+              <ul class="sub-menu">       
+                       
+                 <li><a href="/zjpwk/jljs/">教练技术</a> </li>  
+           
+                 <li><a href="/zjpwk/nlp/">NLP</a> </li>  
+           
+                 <li><a href="/zjpwk/cm/">催眠</a> </li>  
+           
+                 <li><a href="/zjpwk/xtpl/">系统排列</a> </li>  
+           
+                 <li><a href="/zjpwk/wxzl/">完型治疗</a> </li>  
+           
+                 <li><a href="/zjpwk/qzgx/">亲子关系</a> </li>  
+           
+                 <li><a href="/zjpwk/tdxl/">团队训练</a> </li>  
+           
+                 <li><a href="/zjpwk/ytxw/">源头学问</a> </li>  
+           
+                 <li><a href="/zjpwk/nlpsj/">nlp书籍</a> </li>  
+           
+                 <li><a href="/zjpwk/qt/">其它</a> </li>  
+         
+             </ul>    
+        </li><li class=""><a  id="3"  href="/zpxgj/" >
+                 <i class="icon-fixed-width  icon-003 "></i>培训工具</a>              
+              <ul class="sub-menu">       
+                       
+                 <li><a href="/zpxgj/pxgs/">培训故事</a> </li>  
+           
+                 <li><a href="/zpxgj/pxyx/">培训游戏</a> </li>  
+           
+                 <li><a href="/zpxgj/pxdy/">培训电影</a> </li>  
+           
+                 <li><a href="/zpxgj/pxqc/">培训器材</a> </li>  
+         
+             </ul>    
+        </li> 
+
+
+
+
+
+
+
+
+
+<li class=" submenu"><a rel="nofollow" href=""><i class="icon-fixed-width icon-comments"></i>在线留言</a></li>
+
+
+
+<!--<li class=" submenu"><a href="http://www.wpdaxue.com/tutorials"><i class="icon-fixed-width icon-book"></i>WordPress建站 <span class="caret"></span></a>
+		<ul class="sub-menu">
+			<li><a href="http://www.wpdaxue.com/tutorials/start">新手入门</a></li>
+			<li><a href="http://www.wpdaxue.com/tutorials/tips">基础教程</a></li>
+			<li><a href="http://www.wpdaxue.com/tutorials/wordpress-seo">网站SEO</a></li>
+			<li><a href="http://www.wpdaxue.com/tutorials/admin-panel">后台定制</a></li>
+			<li><a href="http://www.wpdaxue.com/tutorials/user-management">用户管理</a></li>
+			<li><a href="http://www.wpdaxue.com/tutorials/management">网站维护</a></li>
+		</ul>
+		</li>
+		<li><a href="http://www.wpdaxue.com/develop"><i class="icon-fixed-width icon-beaker"></i>WordPress开发</a></li>
+		<li><a href="http://www.wpdaxue.com/wordpress-host"><i class="icon-fixed-width icon-cloud"></i>WordPress主机</a></li>
+		<li class=" submenu"><a href="http://www.wpdaxue.com/question"><i class="icon-fixed-width icon-question-sign"></i>问答中心 <span class="caret"></span></a>
+		<ul class="sub-menu">
+			<li><a href="http://www.wpdaxue.com/question">所有问题</a></li>
+			<li><a href="http://www.wpdaxue.com/ask-question">我要提问</a></li>
+		</ul>
+		</li>
+		<li><a href="http://www.wpdaxue.com/announce"><i class="icon-fixed-width icon-coffee"></i>大学相关</a></li>
+		<li><a rel="nofollow" href="http://www.wpdaxue.com/guestbook"><i class="icon-fixed-width icon-comments"></i>在线留言</a></li>-->
+        
+  
+	</ul>
+	<div class="clear">
+	</div>
+	</nav></header>
+</div>  
+
+<div id="main-content">
+			<div id="content-header">
+				<div  id="breadcrumb">
+								<a itemprop="breadcrumb" href="/" title="返回首页" class="tip-bottom"><i class="icon-home"></i>首页</a><i class="icon-angle-right"></i><span class="current"><a href='http://www.005.com/'>网站首页</a> > <a href='/zgywm/'>关于我们</a> > <a href='/zgywm/fhlb/'>今日发货列表</a> > </span>
+   
+				</div>
+			</div>
+            
+            
+			<div class="container-fluid">
+						<!--顶部广告位-->
+		                <div class="row-fluid gtop mobile-no">
+			<div class="span6">
+			
+                            
+			</div>
+			<div class="span6">
+				
+			</div>
+		</div>
+                        <!--顶部广告位-->
+				
+                <div class="row-fluid">
+					<div class="span8">
+						<div class="widget-box">
+							<article id="post-16663" class="widget-content single-post">
+                            
+								<header id="post-header">
+									<h1 class="post-title" itemprop="headline">
+										潍坊-韩先生-NLP绝版书籍-已发货
+									</h1>
+									<div class="clear">
+									</div>
+									<p class="post-meta">
+										<span class="time">
+											<i class="icon-time">
+											</i>
+											2014-06-09 04:09
+										</span>
+										<span class="eye">
+											<i class="icon-eye-open">
+											</i>
+											
+										</span>
+										<span class="comm">
+											<i class="icon-comment-alt">
+											</i>
+											<a href="/zgywm/fhlb/173.html#comments" title="潍坊-韩先生-NLP绝版书籍-已发货上的评论">
+												
+											</a>
+										</span>
+									</p>
+									<div class="clear">
+									</div>
+								</header>
+                               
+                                
+								<div class="entry" itemprop="articleBody">
+									<div class="gpost-above">
+										<div class="old-message">
+											广告位 广告位  广告位
+											<a href="#" target="_blank" style="color:#F25637;font-weight:bolder;">
+												点此查看详情
+											</a>
+											！
+										</div>
+									</div>
+
+                                    <p><span style="padding:0px;margin:0px;color:#666666;font-size:15px;letter-spacing:1px;line-height:25px;text-indent:30px;background-color:#ffffff;font-family:微软雅黑, geneva, sans-serif;">山东潍坊-韩先生-NLP绝版书籍-已发货</span><span style="padding:0px;margin:0px;color:#666666;font-size:15px;letter-spacing:1px;line-height:25px;text-indent:30px;font-family:微软雅黑, geneva, sans-serif;background-color:#ffffff;">；手机尾号：9899； 快递单号已发至您手机，请保持手机畅通！祝您天天都有好心情！</span></p>
+									<div class="old-message">
+										请尊重我们的辛苦付出，未经允许，请不要转载
+										<a href="/">
+											培训师工具屋
+										</a>
+										的文章！
+									</div>
+								</div>
+                                
+
+								<footer class="entry-meta">
+									<p class="post-tag">
+										标签：
+									</p>
+                                    
+									
+									<div class="bdsharebuttonbox post-share">
+										<a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间">
+										</a>
+										<a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博">
+										</a>
+										<a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博">
+										</a>
+										<a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网">
+										</a>
+										<a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信">
+										</a>
+										<a href="#" class="bds_more" data-cmd="more">
+										</a>
+										<a class="bds_count" data-cmd="count">
+										</a>
+									</div>
+                                    
+                                    
+									<div class="gpost-below mobile-no">
+										<a href="http://www.wpdaxue.com/go/phpclubs" rel="nofollow" title="PHPclubs云主机 - 高性价比 Linode 主机"
+										target="_blank">
+											<img src="http://pic.wpdaxue.com/2014/10/cloudleft-wpdaxue.jpg" alt="PHPclubs云主机 - 高性价比 Linode 主机"
+											/>
+										</a>
+									</div>
+									
+								</footer>
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+								<div class="post-navigation">
+									<div class="post-previous">
+										<a href='/zgywm/fhlb/172.html'>昆明-黄先生-应用版工具包-已发货</a> 
+									</div>
+									<div class="post-next">
+                                     <a href='/zgywm/fhlb/176.html'>唐山-魏先生-教练版工具包-已发货</a> 
+                                    
+									</div>
+								</div>
+							</article>
+						</div>
+						<section id="related-posts" class="widget-box">
+							<h3>
+								相关文章
+							</h3>
+							<div class="widget-content">
+                            
+                             <div class="related-item">
+									<div class="post-thumbnail">
+										<a href="/zgywm/fhlb/168.html" title="天津-韩先生-导师版工具包-已发货"
+										rel="bookmark">
+<img class="lazy" src="/images/defaultpic.gif" alt="天津-韩先生-导师版工具包-已发货"style="height:120px; width:180px"/>
+											
+										</a>
+                                        
+									</div>
+                                    
+									<a href="/zgywm/fhlb/168.html" title="天津-韩先生-导师版工具包-已发货"
+									rel="bookmark">
+										天津-韩先生-导师版工具包-已发货
+									</a>
+									<p class="post-meta">
+										2014-05-31
+									</p>
+								</div>
+    
+                                
+                                
+                                
+								<div class="clear">
+								</div>
+							</div>
+						</section>
+                        
+                        
+                        
+                        
+						<div class="widget-box">
+							<div id="respond" class="no_webshot">
+		<form action="#" method="post" name="feedback" onsubmit="return false;">
+          <input type="hidden" name="dopost" value="send" />
+          <input type="hidden" name="comtype" value="comments">
+          <input type="hidden" name="aid" value="173" />
+          <input type="hidden" name="fid" id='feedbackfid' value="0" />
+          <input type="hidden" name="feedbacktype" value="feedback" /> 
+          <input type="hidden" name="notuser" id="dcmp-submit-guest" />
+                
+		<div class="comt-title">
+			<div class="comt-avatar pull-left">
+				<img alt='' src='/gong/images/default.png' class='avatar avatar-28 photo avatar-default' height='54' width='54' />			</div>
+			<div class="comt-author pull-left">
+			发表我的评论
+            </div>
+			<a id="cancel-comment-reply-link" class="pull-right" href="javascript:;">取消评论</a>
+		</div>
+		
+		<div class="comt">
+			<div class="comt-box">
+				<textarea placeholder="写点什么..." class="input-block-level comt-area" name="comment" id="comment" cols="100%" rows="3" tabindex="1" onkeydown="if(event.ctrlKey&amp;&amp;event.keyCode==13){document.getElementById('submit').click();return false};"></textarea>
+				<div class="comt-ctrl">
+					<button class="btn btn-primary pull-right" type="button" onClick='PostComment()' name="submit" id="submit" tabindex="5"><i class="fa fa-check-square-o"></i> 提交评论</button>
+
+			<div class="comt-tips pull-right">
+            <input type='hidden' name='comment_post_ID' value='3686' id='comment_post_ID' />
+             <input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+             <p style="display: none;">
+             <input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="c4e31270b6" />
+             </p>
+             
+             </div>
+				<span data-type="comment-insert-smilie" class="muted comt-smilie"><i class="fa fa-smile-o"></i>表情</span>
+				
+                </div>
+			</div>
+
+				<div class="comt-comterinfo" id="comment-author-info" >
+						<h4>您的回复是我们的动力！</h4>
+                        
+						<ul>
+						  <li class="form-inline"><label class="hide" for="author">昵称</label><input class="ipt" type="text" name="username" id="author" value="游客" tabindex="2" placeholder="昵称"><span class="help-inline">昵称 (必填)</span></li>
+						  <li class="form-inline"><input class="ipt" type="hidden" name="email" id="email" value="" tabindex="3" placeholder="邮箱" /></li>
+
+              <li class="form-inline"><label class="hide" for="url">验证码</label>
+              <input type="text" name="validate" size="4" class="ipt" style="text-transform:uppercase;"/><span class="help-inline">验证码</span>
+              <img src= "/include/vdimgck.php" id="validateimg" style="cursor:pointer" onclick="this.src=this.src+'?'" title="点击我更换图片" alt="点击我更换图片"  class="vdimg"/></li>                             
+						</ul>
+                        
+		  </div>
+		  </div>
+
+		
+	</form>
+	</div>
+<div id="postcomments">
+	<h3 id="comments">
+		网友最新评论
+	</h3>
+<ol class="commentlist">
+
+    <div class="pinglun-list" id='commetcontentNew'></div>
+    <div class="pinglun-list" id="commetcontent">
+	</div>
+	</ol>
+	<div class="pagenav">
+			</div>
+</div>
+<!--
+//由于评论载入时使用异步传输，因此必须在最后一步加载（DIGG和评论框须放在评论内容前面）
+//如果一定需要提前的把myajax.SendGet改为myajax.SendGet2，但可能会引起页面阻滞
+-->
+
+function LoadCommets(page)
+{
+		var taget_obj = document.getElementById('commetcontent');
+		var waithtml = "<div style='line-height:50px'><img src='/images/loadinglit.gif' />评论加载中...</div>";
+		var myajax = new DedeAjax(taget_obj, true, true, '', 'x', waithtml);
+		myajax.SendGet2("/plus/feedback_ajax.php?dopost=getlist&aid=173&page="+page);
+		DedeXHTTP = null;
+}
+function PostComment()
+{
+		var f = document.feedback;
+		var msg = document.getElementById("comment").value;
+		var nface = '6';
+		var nfeedbacktype = 'feedback';
+		var nvalidate = '';
+		var nnotuser = '';
+		var nusername = '';
+		var npwd = '';
+		var taget_obj = $DE('commetcontentNew');
+		var waithtml = "<div style='line-height:30px'><img src='/images/loadinglit.gif' />正在发送中...</div>";
+		if(msg.length < 10)
+		{
+			alert("请至少输入10个字！");
+			return;
+		}
+		if(f.validate)
+		{
+			if(f.validate.value=='') {
+				alert("请填写验证码！");
+				return;
+			}
+			else {
+				nvalidate = f.validate.value;
+			}
+		}
+		if(msg.length > 500)
+		{
+			alert("你的评论是不是太长了？请填写500字以内的评论。");
+			return;
+		}
+		if(f.feedbacktype) {
+			for(var i=0; i < f.feedbacktype.length; i++)
+				if(f.feedbacktype[i].checked) nfeedbacktype = f.feedbacktype[i].value;
+		}
+		/*
+		if(f.face) {
+			for(var j=0; j < f.face.length; j++)
+				if(f.face[j].checked) nface = f.face[j].value;
+		}
+		*/
+		if(f.notuser.checked) nnotuser = '1';
+		if(f.username) nusername = f.username.value;
+		if(f.pwd) npwd = f.pwd.value;
+		if(f.msg) msg = f.msg.value;
+		
+		var myajax = new DedeAjax(taget_obj, false, true, '', '', waithtml);
+		myajax.sendlang = 'gb2312';
+		myajax.AddKeyN('dopost', 'send');
+		myajax.AddKeyN('aid', '173');
+		myajax.AddKeyN('fid', f.fid.value);
+		myajax.AddKeyN('face', nface);
+		myajax.AddKeyN('feedbacktype', nfeedbacktype);
+		myajax.AddKeyN('validate', nvalidate);
+		myajax.AddKeyN('notuser', nnotuser);
+		myajax.AddKeyN('username', nusername);
+		myajax.AddKeyN('pwd', npwd);
+		myajax.AddKeyN('msg', msg);
+		myajax.SendPost2('/plus/feedback_ajax.php');
+		//msg = '';
+		CKEDITOR.instances.msg.setData('');
+		//taget_obj.removeAttribute('id');
+		f.fid.value = 0;
+		if(f.validate)
+		{
+			if($DE('validateimg')) $DE('validateimg').src = "/include/vdimgck.php?"+f.validate.value;
+			f.validate.value = '';
+		}
+		
+}
+function quoteCommet(fid)
+{
+	    document.feedback.fid.value = fid;
+}
+  
+function ajaxFeedback(aid, fid, type)
+{
+	
+	var taget_obj = $DE('ajaxfeedback_'+fid);
+	if(taget_obj.innerHTML == '')
+	{
+		var myajax = new DedeAjax(taget_obj, true, true, '', 'x');
+		myajax.SendGet2("/plus/feedback.php?aid="+aid+"&fid="+fid+"&action=quote&type=ajax");
+		eval('var result = typeof CKEDITOR.instances.msg_'+fid);
+		if(result != 'undefined')
+		{
+			// 删除实例
+			eval('var edit = CKEDITOR.instances.msg_'+fid);
+			CKEDITOR.remove(edit);
+		}
+		CKEDITOR.replace(document.getElementById('msg_'+fid) , CKEDITOR.instances.msg.config);
+		scroll(0, taget_obj.offsetTop - 120);
+		var formname = 'f = document.ajaxfeedback_'+fid;
+		eval(formname);
+		if(f.validate)
+		{
+			if($DE('vdimg_'+fid)) $DE('vdimg_'+fid).src = "/include/vdimgck.php?"+f.validate.value;
+			f.validate.value = '';
+		}
+		
+		DedeXHTTP = null;
+	}
+}
+
+
+
+function ajaxQuotePost(fid)
+{
+	var formname = 'f = document.ajaxfeedback_'+fid;
+	eval(formname);
+	//var f = document.formname;
+	//var f = f[0];
+	var nvalidate = '';
+	var nnotuser = '';
+	var nusername = '';
+	var npwd = '';
+	var taget_obj = $DE('commetcontentNew');
+	var waithtml = "<div style='line-height:30px'><img src='/images/loadinglit.gif' />正在发送中...</div>";
+	eval('var msg = CKEDITOR.instances.msg_'+fid+'.getData()');
+
+	if(f.validate)
+	{
+		if(f.validate.value=='') {
+			alert("请填写验证码！");
+			return;
+		}
+		else {
+			nvalidate = f.validate.value;
+		}
+	}
+	var myajax = new DedeAjax(taget_obj, false, true, '', '', waithtml);
+	
+	if(f.notuser.checked) nnotuser = '1';
+	if(f.username) nusername = f.username.value;
+	if(f.pwd) npwd = f.pwd.value;
+	
+	myajax.sendlang = 'gb2312';
+	myajax.AddKeyN('dopost', 'send');
+	myajax.AddKeyN('aid', '173');
+	myajax.AddKeyN('fid', f.fid.value);
+	myajax.AddKeyN('type', 'ajax');
+	myajax.AddKeyN('comtype', f.comtype.value);
+	myajax.AddKeyN('isconfirm','yes');
+	
+	myajax.AddKeyN('typeid', f.typeid.value);
+	myajax.AddKeyN('quotemsg', f.quotemsg.value);
+	myajax.AddKeyN('validate', nvalidate);
+	myajax.AddKeyN('notuser', nnotuser);
+	myajax.AddKeyN('username', nusername);
+	myajax.AddKeyN('pwd', npwd);
+	myajax.AddKeyN('msg', msg);
+	myajax.SendPost2('/plus/feedback_ajax.php');
+	//alert(f.quotemsg.value);
+	if($DE('ajaxfeedback_'+fid).innerHTML != null)
+	{
+		$DE('ajaxfeedback_'+fid).innerHTML = '';
+	}
+	scroll(0, taget_obj.offsetTop);
+}
+LoadCommets(1);
+</script>
+<!-- //评论内容区结束 -->    
+						</div>
+					</div>
+                    
+
+                    
+					<aside class="span4 sidebar-right hide-sidebar" >
+		<!--  右侧广告5个-->
+            
+			<div class="widget-box widget align-center">
+				<div class="widget-content">
+                
+                
+				
+				
+                
+                
+				</div>
+			</div>
+          <!--  右侧广告5个-->
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+						<div id="posts-list-widget-9" class="widget-box widget widget-posts">
+							<div class="widget-title">
+								<span class="icon">
+									<i class="icon-list">
+									</i>
+								</span>
+								<h3>
+									最新文章
+								</h3>
+							</div>
+							<div class="widget-content">
+								 <li>
+						<div class="widget-thumb">
+							<a class="post-thumbnail" href="/zgywm/fhlb/189.html" title="贵州-宋先生-导师版工具包-已发货" rel="bookmark"><img class="lazy" src="/images/defaultpic.gif" style="height:45px; width:45px"/></a>
+                            <a href="/zgywm/fhlb/189.html" title="贵州-宋先生-导师版工具包-已发货">贵州-宋先生-导师版工具包-已发货</a><span class="date">2014-06-18</span>
+						</div>
+				    </li>
+<li>
+						<div class="widget-thumb">
+							<a class="post-thumbnail" href="/zgywm/fhlb/187.html" title="天津-孟先生-教练版工具包-已发货" rel="bookmark"><img class="lazy" src="/images/defaultpic.gif" style="height:45px; width:45px"/></a>
+                            <a href="/zgywm/fhlb/187.html" title="天津-孟先生-教练版工具包-已发货">天津-孟先生-教练版工具包-已发货</a><span class="date">2014-06-17</span>
+						</div>
+				    </li>
+<li>
+						<div class="widget-thumb">
+							<a class="post-thumbnail" href="/zgywm/fhlb/181.html" title="朝阳-赵先生-教练版工具包-已发货" rel="bookmark"><img class="lazy" src="/images/defaultpic.gif" style="height:45px; width:45px"/></a>
+                            <a href="/zgywm/fhlb/181.html" title="朝阳-赵先生-教练版工具包-已发货">朝阳-赵先生-教练版工具包-已发货</a><span class="date">2014-06-12</span>
+						</div>
+				    </li>
+<li>
+						<div class="widget-thumb">
+							<a class="post-thumbnail" href="/zgywm/fhlb/179.html" title="无锡-韦先生-应用版工具包-已发货" rel="bookmark"><img class="lazy" src="/images/defaultpic.gif" style="height:45px; width:45px"/></a>
+                            <a href="/zgywm/fhlb/179.html" title="无锡-韦先生-应用版工具包-已发货">无锡-韦先生-应用版工具包-已发货</a><span class="date">2014-06-11</span>
+						</div>
+				    </li>
+<li>
+						<div class="widget-thumb">
+							<a class="post-thumbnail" href="/zgywm/fhlb/178.html" title="佛山-李先生-导师版工具包-已发货" rel="bookmark"><img class="lazy" src="/images/defaultpic.gif" style="height:45px; width:45px"/></a>
+                            <a href="/zgywm/fhlb/178.html" title="佛山-李先生-导师版工具包-已发货">佛山-李先生-导师版工具包-已发货</a><span class="date">2014-06-11</span>
+						</div>
+				    </li>
+     
+					</ul>
+								<div class="clear">
+								</div>
+							</div>
+						</div>
+						<div id="posts-list-widget-10" class="widget-box widget widget-posts">
+							<div class="widget-title">
+								<span class="icon">
+									<i class="icon-list">
+									</i>
+								</span>
+								<h3>
+									热门推荐
+								</h3>
+							</div>
+							<div class="widget-content">
+								<ul>
+                    <li>
+						<div class="widget-thumb">
+							<a class="post-thumbnail" href="/zgywm/fhlb/142.html" title="郑州-闫先生-导师版更新-已发货" rel="bookmark"><img class="lazy" src="/images/defaultpic.gif" style="height:45px; width:45px"/></a>
+                            <a href="/zgywm/fhlb/142.html" title="郑州-闫先生-导师版更新-已发货">郑州-闫先生-导师版更新-已发货</a><span class="date">2014-05-21</span>
+						</div>
+				    </li>
+<li>
+						<div class="widget-thumb">
+							<a class="post-thumbnail" href="/zgywm/fhlb/118.html" title="重庆-王小姐-导师版更新-已发货" rel="bookmark"><img class="lazy" src="/images/defaultpic.gif" style="height:45px; width:45px"/></a>
+                            <a href="/zgywm/fhlb/118.html" title="重庆-王小姐-导师版更新-已发货">重庆-王小姐-导师版更新-已发货</a><span class="date">2014-05-16</span>
+						</div>
+				    </li>
+<li>
+						<div class="widget-thumb">
+							<a class="post-thumbnail" href="/zgywm/fhlb/178.html" title="佛山-李先生-导师版工具包-已发货" rel="bookmark"><img class="lazy" src="/images/defaultpic.gif" style="height:45px; width:45px"/></a>
+                            <a href="/zgywm/fhlb/178.html" title="佛山-李先生-导师版工具包-已发货">佛山-李先生-导师版工具包-已发货</a><span class="date">2014-06-11</span>
+						</div>
+				    </li>
+<li>
+						<div class="widget-thumb">
+							<a class="post-thumbnail" href="/zgywm/fhlb/85.html" title="上海-陈小姐-导师版工具包-已发货" rel="bookmark"><img class="lazy" src="/images/defaultpic.gif" style="height:45px; width:45px"/></a>
+                            <a href="/zgywm/fhlb/85.html" title="上海-陈小姐-导师版工具包-已发货">上海-陈小姐-导师版工具包-已发货</a><span class="date">2014-05-10</span>
+						</div>
+				    </li>
+<li>
+						<div class="widget-thumb">
+							<a class="post-thumbnail" href="/zgywm/fhlb/117.html" title="安徽-马先生-导师版更新-已发货" rel="bookmark"><img class="lazy" src="/images/defaultpic.gif" style="height:45px; width:45px"/></a>
+                            <a href="/zgywm/fhlb/117.html" title="安徽-马先生-导师版更新-已发货">安徽-马先生-导师版更新-已发货</a><span class="date">2014-05-16</span>
+						</div>
+				    </li>
+  
+					</ul>
+								<div class="clear">
+								</div>
+							</div>
+						</div>
+						<div id="cm-tagcloud-2" class="widget-box widget widget-tagcloud">
+							<div class="widget-title">
+								<span class="icon">
+									<i class="icon-list">
+									</i>
+								</span>
+								<h3>
+									标签云
+								</h3>
+							</div>
+							<div class="widget-content">
+								<div class="tagcloud">
+            
+            <a data-original-title="20个话题" title="" href="/tag/gerensuibi_35_1.html">
+              个人随笔 (20)
+            </a>
+            
+            <a data-original-title="19个话题" title="" href="/tag/jiaolianjishujiqiao_26_1.html">
+              教练技术技巧 (19)
+            </a>
+            
+            <a data-original-title="7个话题" title="" href="/tag/dianshangxinlixue_398_1.html">
+              电商心理学 (7)
+            </a>
+            
+            <a data-original-title="10个话题" title="" href="/tag/nlpjiqiao_40_1.html">
+              nlp技巧 (10)
+            </a>
+            
+            <a data-original-title="15个话题" title="" href="/tag/jiaolianjishuanli_28_1.html">
+              教练技术案例 (15)
+            </a>
+            
+            <a data-original-title="1个话题" title="" href="/tag/jiaolianjishuziliao_29_1.html">
+              教练技术资料 (1)
+            </a>
+            
+            <a data-original-title="4个话题" title="" href="/tag/jiaolianjishulilun_36_1.html">
+              教练技术理论 (4)
+            </a>
+            
+            <a data-original-title="4个话题" title="" href="/tag/lizhongyingshipin_397_1.html">
+              李中莹视频 (4)
+            </a>
+            
+            <a data-original-title="6个话题" title="" href="/tag/peixundianying_23_1.html">
+              培训电影 (6)
+            </a>
+            
+            <a data-original-title="3个话题" title="" href="/tag/satiya_9_1.html">
+              萨提亚 (3)
+            </a>
+            
+            <a data-original-title="1个话题" title="" href="/tag/fengxiaoqiangshipin_46_1.html">
+              冯晓强视频 (1)
+            </a>
+            
+            <a data-original-title="11个话题" title="" href="/tag/zhannagonggao_14_1.html">
+              站内公告 (11)
+            </a>
+            
+            <a data-original-title="8个话题" title="" href="/tag/nlpanli_39_1.html">
+              nlp案例 (8)
+            </a>
+            
+            <a data-original-title="6个话题" title="" href="/tag/xueyuanfenxiang_20_1.html">
+              学员分享 (6)
+            </a>
+            
+            <a data-original-title="5个话题" title="" href="/tag/nlpshuji_49_1.html">
+              nlp书籍 (5)
+            </a>
+            
+            <a data-original-title="5个话题" title="" href="/tag/zhujianjunshipin_45_1.html">
+              朱建军视频 (5)
+            </a>
+            
+            <a data-original-title="1个话题" title="" href="/tag/tuanduijili_30_1.html">
+              团队激励 (1)
+            </a>
+            
+            <a data-original-title="7个话题" title="" href="/tag/juhuiyouxi_16_1.html">
+              聚会游戏 (7)
+            </a>
+            
+            <a data-original-title="3个话题" title="" href="/tag/nlpciyu_37_1.html">
+              nlp词语 (3)
+            </a>
+            
+            <a data-original-title="3个话题" title="" href="/tag/jiaolianjishugushi_47_1.html">
+              教练技术故事 (3)
+            </a>
+            
+            <a data-original-title="9个话题" title="" href="/tag/guanligushi_31_1.html">
+              管理故事 (9)
+            </a>
+            
+            <a data-original-title="1个话题" title="" href="/tag/jiuzhuoyouxi_48_1.html">
+              酒桌游戏 (1)
+            </a>
+            
+            <a data-original-title="16个话题" title="" href="/tag/yuantouxuewen_43_1.html">
+              源头学问 (16)
+            </a>
+            
+            <a data-original-title="2个话题" title="" href="/tag/jiaolianjishuduanxun_399_1.html">
+              教练技术短讯 (2)
+            </a>
+            
+            <a data-original-title="1个话题" title="" href="/tag/peixunzatan_400_1.html">
+              培训杂谈 (1)
+            </a>
+            
+            <a data-original-title="1个话题" title="" href="/tag/goutongjiqiao_401_1.html">
+              沟通技巧 (1)
+            </a>
+            
+            <a data-original-title="1个话题" title="" href="/tag/wangyoufenxiang_403_1.html">
+              网友分享 (1)
+            </a>
+            
+            <a data-original-title="1个话题" title="" href="/tag/jiaolianduanxun_404_1.html">
+              教练短讯 (1)
+            </a>
+            
+            <a data-original-title="1个话题" title="" href="/tag/nlpduanxun_405_1.html">
+              nlp短讯 (1)
+            </a>
+            
+            <a data-original-title="5个话题" title="" href="/tag/NLPqinzi_44_1.html">
+              NLP亲子 (5)
+            </a>
+            
+								</div>
+							</div>
+						</div>
+						<div id="newcomments-2" class="widget-box widget widget-new-comments">
+							<div class="widget-title">
+								<span class="icon">
+									<i class="icon-list">
+									</i>
+								</span>
+								<h3>
+									最新评论
+								</h3>
+							</div>
+							<div class="widget-content">
+								<ul>
+                                
+                                  <li>
+              <a href="/plus/view.php?aid=18" title="NLP教练技术《导师版》工上的评论">
+                <img alt="" src="/gong/images/default.png" class="avatar avatar-48 photo"
+                height="48" width="48">
+                <div class="muted">
+                  <i>
+                    惟瑞居士：
+                  </i>
+                 感谢郭老师，把这些资料分享出来，以后更需要像您学习。
+                
+                </div>
+              </a>
+            </li><li>
+              <a href="/plus/view.php?aid=17" title="教练技术《教练版》工具包上的评论">
+                <img alt="" src="/gong/images/default.png" class="avatar avatar-48 photo"
+                height="48" width="48">
+                <div class="muted">
+                  <i>
+                    惟瑞居士：
+                  </i>
+                 瑶瑶 的原帖：这套资料的书籍一共是几本？书籍一共11本，详情可以看解说视频，里边讲
+                
+                </div>
+              </a>
+            </li><li>
+              <a href="/plus/view.php?aid=17" title="教练技术《教练版》工具包上的评论">
+                <img alt="" src="/gong/images/default.png" class="avatar avatar-48 photo"
+                height="48" width="48">
+                <div class="muted">
+                  <i>
+                    瑶瑶：
+                  </i>
+                 这套资料的书籍一共是几本？
+                
+                </div>
+              </a>
+            </li><li>
+              <a href="/plus/view.php?aid=105" title="回忆教练技术带给我的信仰上的评论">
+                <img alt="" src="/gong/images/default.png" class="avatar avatar-48 photo"
+                height="48" width="48">
+                <div class="muted">
+                  <i>
+                    鼠标：
+                  </i>
+                 这个课程多少钱？
+                
+                </div>
+              </a>
+            </li><li>
+              <a href="/plus/view.php?aid=105" title="回忆教练技术带给我的信仰上的评论">
+                <img alt="" src="/gong/images/default.png" class="avatar avatar-48 photo"
+                height="48" width="48">
+                <div class="muted">
+                  <i>
+                    落花：
+                  </i>
+                 看起来挺鼓舞人的，那个成功哲学，给你的感觉是怎么回事？ 惟瑞居士回复： 改天我会分
+                
+                </div>
+              </a>
+            </li><li>
+              <a href="/plus/view.php?aid=18" title="NLP教练技术《导师版》工上的评论">
+                <img alt="" src="/gong/images/default.png" class="avatar avatar-48 photo"
+                height="48" width="48">
+                <div class="muted">
+                  <i>
+                    蝶舞：
+                  </i>
+                 资料很强大，希望郭老师以后能在学习上指导一二，不胜感激！
+                
+                </div>
+              </a>
+            </li>     
+
+								</ul>
+							</div>
+						</div>
+					</aside>
+
+				</div>
+			</div>
+		</div>
+        
+        
+        
+        
+<!--底部通用-->
+
+<footer id="footer" class="row-fluid" role="contentinfo" itemscope="" itemtype="http://schema.org/WPFooter">
+<div class="span12 footer-nav">
+	<ul>
+		<li><a rel="nofollow" href="">关于本站</a></li>
+		<li><a href="">投稿合作</a></li>
+		<li><a href="">撰稿人</a></li>
+		<li><a rel="nofollow" href="">广告投放</a></li>
+		<li><a href="">文章存档</a></li>
+		<li><a rel="nofollow" href="">标签云集</a></li>
+		<li><a rel="nofollow" href="">在线留言</a></li>
+	</ul>
+</div>
+<div class="span12 footer-info">
+	<p>
+		Copyright &copy; 2002-2014 培训师工具屋 版权所有   <noscript><a href="http://www.51.la/?15599164" target="_blank"><img alt="&#x6211;&#x8981;&#x5566;&#x514D;&#x8D39;&#x7EDF;&#x8BA1;" src="http://img.users.51.la/15599164.asp" style="border:none" /></a></noscript>
+	</p>
+
+</div>
+</footer>
+
+
+
+<div class="returnTop" title="返回顶部">
+	<span class="s"></span><span class="b"></span> 返回顶部"
+</div>
+
+
+<!--底部通用-->
+  </body>
+
+</html>

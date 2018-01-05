@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<meta name="robots" content="all" />
+<meta name="author" content="Monkeii,www.1h1y.cn" />
+<meta name="generator" content="dedecms v5.7 gbk" />
+<meta name="template" content="1H1Y 2.0" />
+<title>管理员留言回复_<?php echo $cfg_webname; ?></title>
+<link href="<?php echo $cfg_templeturl; ?>/default/style/style.css" rel="stylesheet" type="text/css" media="screen" />
+</head>
+<body>
+<div id="header">
+	<div id="navMenu">
+		<ul>
+      	<li><a href='http://www.1h1y.cn'><span>一花一叶</span></a></li>
+      	<li><a href='http://www.1h1y.cn/blog'><span>博 客</span></a></li>
+      	<li><a href='http://www.1h1y.cn/about'><span>关 于</span></a></li>
+      	<li><a href='http://www.1h1y.cn/plus/guestbook.php'><span>留 言</span></a></li> 
+    </ul>
+  </div>
+  <div id="subMenu">
+  	<h1>一花一叶°</h1>
+		<h4>宅小屋，观天下；心淡定，享安乐！</h4>
+		<ul>
+        <li><a href="http://www.1h1y.cn/data/rss/2.xml" onfocus="this.blur();" target="_blank"><img src="<?php echo $cfg_templeturl; ?>/default/images/icon_rss.jpg" onmouseover="javascript:this.src='<?php echo $cfg_templeturl; ?>/default/images/icon_rss_hover.jpg'"  onmouseout="javascript:this.src='<?php echo $cfg_templeturl; ?>/default/images/icon_rss.jpg'" alt="订阅我 得永生!" title="订阅我 得永生!" /></a></li>
+        <li><a href="http://t.sina.com.cn/1h1y" onfocus="this.blur();" target="_blank"><img src="<?php echo $cfg_templeturl; ?>/default/images/icon_weibo.jpg" onmouseover="javascript:this.src='<?php echo $cfg_templeturl; ?>/default/images/icon_weibo_hover.jpg'"  onmouseout="javascript:this.src='<?php echo $cfg_templeturl; ?>/default/images/icon_weibo.jpg'" alt="新浪微博 求围观!" title="新浪微博 求围观!"/></a></li>
+        <li><a href="mailto:monkeii.lee@gmail.com" onfocus="this.blur();" target="_blank"><img src="<?php echo $cfg_templeturl; ?>/default/images/icon_mail.jpg" onmouseover="javascript:this.src='<?php echo $cfg_templeturl; ?>/default/images/icon_mail_hover.jpg'"  onmouseout="javascript:this.src='<?php echo $cfg_templeturl; ?>/default/images/icon_mail.jpg'" alt="发邮件给一花一叶吧!" title="发邮件给一花一叶吧!"/></a></li>
+    </ul>
+  </div>
+</div>
+<div id="container">
+<div id="main">
+	<div id="place">
+		<strong>你现在想：</strong>&nbsp;&nbsp;<a href='guestbook.php'>[返回留言板]</a> &nbsp;&nbsp; <a href="<?php echo $cfg_basehost;?>/blog">[返回博客]</a>
+	</div>
+	<br/>
+	<div id="messageActionOther">
+  <form method="post" action="guestbook.php">
+  <input type="hidden" name="action" value="admin">
+  <input type="hidden" name="id" value="<?php echo $id; ?>">
+  <input type="hidden" name="job" value="editok">
+	<a name='write'></a>
+		<div class="messageMsg">
+			<div class="messageUserinfo">
+				昵&nbsp;&nbsp;&nbsp;称（必填）：<input type="text" maxlength="10" name="uname" size="30" value="<?php echo $g_name; ?>" class="messageUserinfoInput"/>
+			</div>
+			<div class="messageUserinfo">
+				验证码（必填）：<input name="validate" type="text" id="vdcode2" class="messageUserinfoInput" style="width:218px;text-transform:uppercase;" />&nbsp;&nbsp;&nbsp;&nbsp;<img src='../include/vdimgck.php'>
+			</div>
+			<div class="messageUserinfo">
+				网&nbsp;&nbsp;&nbsp;址（选填）：<input maxlength="80" type="text" name="homepage" size="20" class="messageUserinfoInput" />
+			</div>
+		</div>
+		<div class="messageText">
+			<textarea name="msg" cols="38" rows="5" class="messageArea"><?php echo $row['msg']; ?></textarea>
+		</div>
+		<div class="messageText">
+			<?php GetEditor('remsg', "<font color=#D02F53>管理员回复：</font>", 250, "MemberLit"); ?>
+		</div>
+		<div class="messagePost">
+			<input maxlength="1000" type="submit" name="Submit" value="提 交" class="messagePostBtn" />
+		</div>
+	</form>	
+	</div>
+</div>
+<div id="sidebar">
+	<div id="ad_1">
+  	<a href="#"><img src="<?php echo $cfg_templeturl; ?>/default/images/ad_1.jpg" alt="一花一叶公益广告" title="一花一叶广告位"/></a>
+  </div>
+  <div id="sidebarBox">
+  	<div class="boxTop">
+  		<h2>留言须知</h2>
+  	</div>
+  	<div class="guestbookSiderba">
+  		<ul>
+      <li>1、为了留言板的简洁，请勿在此</li>
+      <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;发表任何形式的广告、政治、</li>
+      <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;辱骂等言论；</li>
+      <li>2、本留言区只为非日志内容交流</li>
+      <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;而设，有关日志内容评论请移</li>
+      <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;步至相关日志再进行评论；</li>
+      <li>3、申请友情链接请先做好本博客</li>
+      <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;的链接，然后留下你的博客名</li>
+      <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;跟地址，本人对友情链接保留</li>
+      <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;最终的决定权；</li>
+      <li>4、如有紧急事宜请发邮件至邮箱：</li>
+      <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;monkeii.lee#gmail.com；</li>
+      </ul>
+  	</div>
+  </div>
+</div>
+</div>
+<div class="clearfix"></div>
+<div id="subFoot">	
+	<div id="Copyright">
+		<div class="themeBy">
+		  <h1>Theme by <a href="http://www.1h1y.cn" target="_blank" title="Monkeii.Lee's Bolg:http://www.1h1y.cn"><strong>Monkeii.Lee</strong></a> &copy 2011-2012 1h1y.cn &nbsp;- &nbsp;
+			  &nbsp;<a href="http://www.1h1y.cn" target="_blank" title="一花一叶 | 宅小屋，观天下；心自在，享生活！"><strong>一花一叶出品</strong></a>
+		  </h1>
+	  </div>
+		<div class="powerBy">
+			<a href="http://www.dedecms.com/" onfocus="this.blur();" target="_blank"><img src="<?php echo $cfg_templeturl; ?>/default/images/powerby.jpg" onmouseover="javascript:this.src='<?php echo $cfg_templeturl; ?>/default/images/powerby_hover.jpg'"  onmouseout="javascript:this.src='<?php echo $cfg_templeturl; ?>/default/images/powerby.jpg'" alt="Power By Dedecms" /></a>
+		</div>
+	</div>
+</div>
+</body>
+</html>

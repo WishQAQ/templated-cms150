@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset={dede:global.cfg_soft_lang/}" />
+<title>{dede:global.cfg_webname/}</title>
+<meta name="description" content="{dede:global.cfg_description/}" />
+<meta name="keywords" content="{dede:global.cfg_keywords/}" />
+<!--[if IE 6]>
+	<script>alert('你的IE浏览器版本太低，请使用更高版本或Chrome')</script>
+<![endif]-->
+<link rel="stylesheet" type="text/css" href="{dede:global.cfg_templets_skin/}/images/index.css">
+<script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/all.js"></script>
+<!--[if IE 6]>
+<script type="text/javascript" src="{dede:global.cfg_templets_skin/}/images/DD_belatedPNG.js"></script>
+<script>
+DD_belatedPNG.fix('.png_bg');
+</script>
+<![endif]-->
+<script language="javascript" type="text/javascript" src="{dede:global.cfg_cmsurl/}/include/dedeajax2.js"></script>
+</head>
+
+<body>
+{dede:include filename="head.htm"/} 
+<!--中部分开始--> 
+<!--中间区域-->
+<div class="gong"> 
+  <!--中间区域  zuo-->
+  <div class="dqwz">
+    <p>当前位置: <a href="{dede:global.cfg_cmsurl/}/">工具屋首页</a> &gt; <a href='tags.php'>TAG标签</a> &gt; {dede:field.title /}</p>
+  </div>
+  <section>
+    <article class="left" >
+      <div class="tag_htm">
+        <li class="tagcloud" style="border-bottom:none;"> <a href="{dede:global.cfg_basehost/}" style="color:#fff;background-color:#6C6C6C">全部标签</a> </li>
+        {dede:tag row='60' sort='new' getall='1'}
+        <li class="tagcloud" style="border-bottom:none"> <a href="[field:link/]" style="[field:total runphp=yes]@me=getTagStyle();[/field:total]" title="共有[field:total/]篇关于[field:tag/]的文章">[field:tag/]</a></li>
+        {/dede:tag} </div>
+    </article>
+  </section>
+  <aside class="right" > {dede:include filename="list_right.htm"/} </aside>
+  
+  <!--中部结束--> 
+</div>
+<div class="clear" ></div>
+<!--中部结束--> 
+
+{dede:include filename="footer.htm"/} 
+<!--QR code end-->
+</body>
+</html>
